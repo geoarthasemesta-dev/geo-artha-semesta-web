@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { AnimatedSection } from "../page";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { useRef } from "react";
+import { AnimatedSection } from "./animated-section";
 
 const panoramicShotOil =
   "panoramic-shot-oil-rigs-sea-with-beautiful-sunset 1.svg";

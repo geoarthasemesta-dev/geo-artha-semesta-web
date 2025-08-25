@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { AnimatedSection } from "../page";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import React from "react";
+import { AnimatedSection } from "./animated-section";
 
 const services = [
   {

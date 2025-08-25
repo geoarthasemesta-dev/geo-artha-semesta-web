@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react"; // icon hamburger & close
 import Footer from "./components/footer";
 import ContactSection from "./components/contact-section";
@@ -11,45 +11,6 @@ import ServiceSection from "./components/service-section";
 import AboutCompanySection from "./components/about-company-section";
 import HiroSection from "./components/hero-section";
 import { useMediaQuery } from "./hooks/useMediaQuery";
-
-// Animation variants
-const fadeInUpVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
-  },
-};
-
-// Animated section wrapper
-export const AnimatedSection = ({
-  children,
-  className = "",
-  variants = fadeInUpVariants,
-  ...props
-}: {
-  children: React.ReactNode;
-  className?: string;
-  variants?: any;
-  [key: string]: any;
-}) => {
-  const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
-
-  return (
-    <motion.section
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={variants}
-      className={className}
-      {...props}
-    >
-      {children}
-    </motion.section>
-  );
-};
 
 const Index = () => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState<boolean>(false);

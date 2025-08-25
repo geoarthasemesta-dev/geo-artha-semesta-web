@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { AnimatedSection } from "../page";
+import { AnimatedSection } from "./animated-section";
 
 const heroEngineers = "Layer 1098 1.svg";
 const HiroSection: React.FC = () => {

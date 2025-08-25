@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { AnimatedSection } from "../page";
 import React from "react";
 import { CircleArrowDown, CircleArrowUp } from "lucide-react";
+import { AnimatedSection } from "./animated-section";
 
 const divingVessel = "dsv.svg";
 const cuttingTools = "underwater-cutting.svg";

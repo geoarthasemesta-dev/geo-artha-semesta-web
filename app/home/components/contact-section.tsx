@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AnimatedSection } from "../page";
 import { ArrowRight } from "lucide-react";
+import { AnimatedSection } from "./animated-section";
 
 const contactUs = "Layer 10981 1.svg";
 
