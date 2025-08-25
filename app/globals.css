@@ -56,3 +56,14 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Untuk Chrome, Safari, Edge */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Untuk Firefox */
+* {
+  scrollbar-width: none; /* Hilangkan scrollbar tapi masih bisa scroll */
+  -ms-overflow-style: none; /* Untuk IE & Edge lama */
+}
