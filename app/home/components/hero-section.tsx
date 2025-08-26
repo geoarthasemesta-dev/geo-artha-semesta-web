@@ -195,7 +195,7 @@ const HeroSection: React.FC = () => {
             x: 200,
           }}
           animate={{
-            opacity: 0.3,
+            opacity: 1,
             scale: 1,
             rotate: 0,
             x: 0,
