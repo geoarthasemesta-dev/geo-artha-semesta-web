@@ -5,26 +5,32 @@ import { AnimatedSection } from "./animated-section";
 
 const services = [
   {
+    icon: "search_check.svg",
     title: "Subsea Inspection, Repair & Maintenance (IRM)",
     desc: "Comprehensive subsea inspection, repair, and maintenance to ensure asset integrity and operational safety.",
   },
   {
+    icon: "930e4fb2.svg",
     title: "Pipeline & Cable Repair",
     desc: "Specialized solutions for installing and maintaining subsea pipelines and communication/computer cables.",
   },
   {
+    icon: "construction_24dp.svg",
     title: "Offshore Construction Support",
     desc: "Subsea support for offshore installation, construction, and maintenance projects.",
   },
   {
+    icon: "scuba_diving.svg",
     title: "Commercial Diving Services",
     desc: "Professional diving teams trained and certified to perform underwater tasks in challenging offshore environments.",
   },
   {
+    icon: "nat.svg",
     title: "Underwater Survey & Mapping",
     desc: "Hydrographic and geophysical surveys to provide accurate seabed mapping and structural assessments.",
   },
   {
+    icon: "nest_remote_comfort_sensor.svg",
     title: "ROV (Remotely Operated Vehicle) Operations",
     desc: "Light and observation-class ROVs for inspection, survey, and intervention in deep or hazardous areas.",
   },
@@ -47,10 +53,10 @@ const ServiceSection: React.FC = () => {
   return (
     <AnimatedSection
       id="services"
-      className="bg-white max-w-[100%] mx-auto relative px-5 md:px-20 text-white overflow-hidden"
+      className="bg-white w-full max-w-[100%] mx-auto relative px-5 md:px-20 text-white overflow-hidden"
     >
       {/* Background decorative elements */}
-      <motion.div
+      {/* <motion.div
         className="absolute top-10 right-10 w-32 h-32 bg-[#f97316]/5 rounded-full blur-xl"
         animate={{
           scale: [1, 1.2, 1],
@@ -73,31 +79,20 @@ const ServiceSection: React.FC = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-      />
+      /> */}
 
       <div className="max-w-[100%] mx-auto px-5 md:px-16 py-20 text-[#f97316] z-50">
         {/* Enhanced Title Animation */}
         <motion.h2
           className="text-3xl font-semibold text-center mb-12"
-          initial={{ opacity: 0, y: 30, scale: 0.9 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{
-            duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94],
-            delay: 0.1,
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
           }}
+          transition={{ duration: 1.5 }}
           viewport={{ once: true }}
         >
-          Our{" "}
-          <motion.span
-            className="inline-block bg-gradient-to-r from-[#f97316] to-[#ea580c] bg-clip-text text-transparent"
-            initial={{ opacity: 0, rotateY: 90 }}
-            whileInView={{ opacity: 1, rotateY: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            Services
-          </motion.span>
+          Our Services
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3">
@@ -105,7 +100,7 @@ const ServiceSection: React.FC = () => {
 
           {/* Services Grid with Enhanced Animations */}
           <motion.div
-            className="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto z-20"
+            className="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-8 max-w-6xl mx-auto z-20"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -117,40 +112,22 @@ const ServiceSection: React.FC = () => {
                 initial={{
                   opacity: 0,
                   y: 50,
-                  x: index % 2 === 0 ? -30 : 30,
-                  scale: 0.9,
-                  rotateY: index % 2 === 0 ? -15 : 15,
+                  scale: 1,
                 }}
                 whileInView={{
                   opacity: 1,
                   y: 0,
                   x: 0,
-                  scale: 1,
-                  rotateY: 0,
                 }}
                 transition={{
                   duration: 0.8,
                   delay: index * 0.1 + 0.2,
-                  ease: [0.25, 0.46, 0.45, 0.94],
-                  type: "spring",
-                  stiffness: 100,
-                  damping: 12,
-                }}
-                viewport={{ once: true }}
-                whileHover={{
-                  scale: 1.02,
-                  y: -5,
-                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.1)",
-                  transition: {
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 25,
-                  },
+                  type: "decay",
                 }}
               >
                 {/* Animated Icon Placeholder */}
                 <motion.div
-                  className="w-8 h-8 bg-gradient-to-br from-[#f97316] to-[#ea580c] rounded-lg mb-4 flex items-center justify-center"
+                  className="w-8 h-8 bg-[#122a53] rounded-full mb-4 flex items-center justify-center"
                   initial={{ opacity: 0, scale: 0, rotate: -180 }}
                   whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                   transition={{
@@ -167,16 +144,12 @@ const ServiceSection: React.FC = () => {
                     transition: { duration: 0.4 },
                   }}
                 >
-                  <motion.div
-                    className="w-3 h-3 bg-white rounded-sm"
+                  <motion.img
+                    className="w-3 h-3"
                     animate={{
                       opacity: [1, 0.7, 1],
                     }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      delay: index * 0.3,
-                    }}
+                    src={service.icon}
                   />
                 </motion.div>
 
@@ -220,7 +193,7 @@ const ServiceSection: React.FC = () => {
             ))}
           </motion.div>
           {/* Buttons */}
-          <div className="w-full z-20 flex justify-center mt-4">
+          <div className="w-full z-20 flex justify-center mt-14">
             {isTablet && (
               <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white font-bold rounded-full shadow-lg hover:shadow-2xl transform transition-all duration-300 z-10 border-white border"
@@ -252,7 +225,7 @@ const ServiceSection: React.FC = () => {
 
       {/* Enhanced Background Images */}
       <motion.div
-        className="md:w-[32%] flex justify-center items-center absolute left-0 -bottom-5 z-10"
+        className="md:w-[40%] flex justify-center items-center absolute left-4 -bottom-5 z-10"
         initial={{ opacity: 0, x: -100, scale: 0.8 }}
         whileInView={{ opacity: 1, x: 0, scale: 1 }}
         transition={{
@@ -266,17 +239,13 @@ const ServiceSection: React.FC = () => {
         viewport={{ once: true }}
       >
         <motion.img
-          src="Layer 109812 1.svg"
+          src="one-person.png"
           alt="Services Image"
           className="rounded-3xl shadow-card max-w-full h-auto"
           animate={{
             y: [0, -10, 0],
             rotate: [0, 1, -1, 0],
           }}
-          //   transition={{
-          //     y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-          //     rotate: { duration: 8, repeat: Infinity, ease: "easeInOut" },
-          //   }}
           whileHover={{
             scale: 1.05,
             rotateY: 10,
@@ -286,7 +255,7 @@ const ServiceSection: React.FC = () => {
       </motion.div>
 
       <motion.div
-        className="md:w-[40%] flex justify-center absolute -left-2 bottom-0 z-0"
+        className="w-full md:w-[45%] flex justify-center absolute -left-10 -bottom-24 z-0"
         initial={{ opacity: 0, x: -150, rotate: -20, scale: 0.5 }}
         whileInView={{ opacity: 1, x: 0, rotate: 0, scale: 1 }}
         transition={{
@@ -297,7 +266,7 @@ const ServiceSection: React.FC = () => {
         viewport={{ once: true }}
       >
         <motion.img
-          src="segitiga2 1.svg"
+          src="segitiga-orange.png"
           alt="Decorative geometric element"
           className="rounded-3xl shadow-card max-w-full h-auto"
           animate={{
@@ -311,28 +280,6 @@ const ServiceSection: React.FC = () => {
           }}
         />
       </motion.div>
-
-      {/* Floating Elements */}
-      {[...Array(3)].map((_, index) => (
-        <motion.div
-          key={index}
-          className="absolute w-2 h-2 bg-[#f97316]/20 rounded-full"
-          style={{
-            top: `${20 + index * 20}%`,
-            right: `${10 + index * 15}%`,
-          }}
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.2, 0.6, 0.2],
-            scale: [1, 1.5, 1],
-          }}
-          transition={{
-            duration: 3 + index * 0.5,
-            repeat: Infinity,
-            delay: index * 1,
-          }}
-        />
-      ))}
     </AnimatedSection>
   );
 };

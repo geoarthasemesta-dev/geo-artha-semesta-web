@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { AnimatedSection } from "./animated-section";
 
-const contactUs = "Layer 10981 1.svg";
+const contactUs = "person-contact.png";
 
 const ContactSection: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const ContactSection: React.FC = () => {
         whileInView={{ opacity: 1, x: 0, rotate: 0 }}
         transition={{
           duration: 1.2,
-          delay: 0.3,
+          delay: 0.6,
           ease: [0.25, 0.46, 0.45, 0.94],
         }}
         viewport={{ once: true }}
@@ -34,10 +34,10 @@ const ContactSection: React.FC = () => {
       <motion.div
         className="absolute -left-10 -bottom-2 md:w-[60%] z-0"
         initial={{ opacity: 0, scale: 0.5, rotate: 45 }}
-        whileInView={{ opacity: 0.3, scale: 1, rotate: 0 }}
+        whileInView={{ opacity: 0.8, scale: 1, rotate: 0 }}
         transition={{
           duration: 1.5,
-          delay: 0.6,
+          delay: 0.3,
           ease: [0.34, 1.56, 0.64, 1],
         }}
         viewport={{ once: true }}
@@ -56,8 +56,8 @@ const ContactSection: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.8,
-            delay: 0.1,
+            duration: 1,
+            delay: 0.6,
             ease: [0.4, 0, 0.2, 1],
           }}
           viewport={{ once: true }}
@@ -70,8 +70,8 @@ const ContactSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.8,
-            delay: 0.2,
+            duration: 1.2,
+            delay: 1,
             ease: [0.4, 0, 0.2, 1],
           }}
           viewport={{ once: true }}

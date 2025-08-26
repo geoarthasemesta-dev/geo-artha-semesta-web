@@ -50,13 +50,13 @@ const EquipmentSection: React.FC = () => {
   return (
     <AnimatedSection
       id="equipment"
-      className="bg-gradient-to-tr max-w-[100%] mx-auto from-[#233a65] via-[#0d111a] to-[#122a53] py-20 px-5 md:px-16 text-white"
+      className="bg-gradient-to-tr max-w-[100%] mx-auto from-[#1e2e4c] via-[#233a65] to-[#0c1c38] py-20 px-5 md:px-16 text-white"
     >
       <h2 className="text-center text-3xl font-semibold mb-12">
         Our Equipment
       </h2>
       <motion.div
-        className="max-w-[100%] mx-auto grid grid-cols-1 px-[5%] sm:grid-cols-2 md:grid-cols-3 gap-8"
+        className="max-w-[100%] mx-auto flex flex-wrap justify-center gap-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ staggerChildren: 0.1 }}
@@ -67,13 +67,21 @@ const EquipmentSection: React.FC = () => {
           .map((equipment, index) => (
             <motion.div
               key={index}
-              className="col-span-1 relative bg-gradient-orange rounded-xl overflow-hidden flex flex-col items-center shadow-orange cursor-default hover:shadow-lg hover:scale-105 transition-all duration-300 h-60 group shadow-md shadow-[#fe953e]/50"
-              initial={{ opacity: 0, rotate: -10, scale: 0.9 }}
-              whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
+              className="col-span-1 max-w-[400px] relative bg-gradient-orange rounded-xl overflow-hidden flex flex-col items-center shadow-orange cursor-default hover:shadow-sm transition-all duration-300 h-60 group hover:shadow-amber-50"
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                scale: 1,
+              }}
               transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-                ease: [0.4, 0, 0.2, 1],
+                duration: 1.5,
+                delay: index * 0.1 + 0.2,
+                type: "decay",
               }}
               viewport={{ once: true }}
             >
@@ -90,11 +98,11 @@ const EquipmentSection: React.FC = () => {
                   {equipment.desc}
                 </p>
               </div>
-              <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-gradient-to-t from-[#233a65] to-transparent to-100%"></div>
+              <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-gradient-to-t from-[#ea580c] to-transparent to-100%"></div>
             </motion.div>
           ))}
       </motion.div>
-      <div className="w-full z-50 flex justify-center mt-10">
+      <div className="w-full z-50 flex justify-center mt-20">
         <motion.button
           className="px-8 py-4 bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white font-bold rounded-full shadow-lg hover:shadow-2xl transform transition-all duration-300 z-10 border-white border flex justify-center gap-2"
           onClick={() => {

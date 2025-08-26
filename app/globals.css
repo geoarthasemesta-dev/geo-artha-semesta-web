@@ -67,3 +67,7 @@ body {
   scrollbar-width: none; /* Hilangkan scrollbar tapi masih bisa scroll */
   -ms-overflow-style: none; /* Untuk IE & Edge lama */
 }
+
+html {
+  scroll-behavior: smooth;
+}

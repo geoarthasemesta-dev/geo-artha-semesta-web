@@ -9,7 +9,7 @@ import ProjectExperienceSection from "./components/project-experience-section";
 import EquipmentSection from "./components/equipment-section";
 import ServiceSection from "./components/service-section";
 import AboutCompanySection from "./components/about-company-section";
-import HiroSection from "./components/hero-section";
+import HeroSection from "./components/hero-section";
 import { useMediaQuery } from "./hooks/useMediaQuery";
 
 const Index = () => {
@@ -18,7 +18,15 @@ const Index = () => {
   const isTablet = useMediaQuery("(max-width: 1024px)");
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
+
     setIsDrawerOpen(false); // close drawer setelah klik menu
   };
 
@@ -40,7 +48,7 @@ const Index = () => {
               className="text-white font-bold text-xl tracking-wide h-12 w-14"
             >
               <img
-                src="gas-logo.svg"
+                src="gas-white-logo.png"
                 alt="geo-artha-logo"
                 className="w-full h-full object-contain"
               />
@@ -131,7 +139,7 @@ const Index = () => {
       )}
 
       {/* Hero Section */}
-      <HiroSection />
+      <HeroSection />
       <AboutCompanySection />
       <ServiceSection />
       <EquipmentSection />

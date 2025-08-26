@@ -94,12 +94,28 @@ const ProjectExperienceSection: React.FC = () => {
             <motion.article
               key={index}
               className="min-w-[280px] max-w-xs bg-white backdrop-blur-sm rounded-xl flex-shrink-0 snap-start cursor-pointer hover:scale-105 duration-300 transition overflow-hidden relative"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              // initial={{ opacity: 0, y: 20 }}
+              // whileInView={{ opacity: 1, y: 0 }}
+              // transition={{
+              //   duration: 0.6,
+              //   delay: index * 0.2,
+              //   ease: [0.4, 0, 0.2, 1],
+              // }}
+              // viewport={{ once: true }}
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                x: 0,
+                scale: 1,
+              }}
               transition={{
-                duration: 0.6,
-                delay: index * 0.2,
-                ease: [0.4, 0, 0.2, 1],
+                duration: 1.5,
+                delay: index * 0.3 + 0.2,
+                type: "keyframes",
               }}
               viewport={{ once: true }}
             >

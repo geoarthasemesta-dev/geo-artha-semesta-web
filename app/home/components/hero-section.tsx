@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { AnimatedSection } from "./animated-section";
 
-const heroEngineers = "Layer 1098 1.svg";
-const HiroSection: React.FC = () => {
+const heroEngineers = "two-person.png";
+const HeroSection: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -50,7 +50,7 @@ const HiroSection: React.FC = () => {
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
             >
               Excellence in{" "}
             </motion.span>
@@ -58,14 +58,14 @@ const HiroSection: React.FC = () => {
               className="text-[#f97316] inline-block"
               initial={{ opacity: 0, rotateX: 90 }}
               animate={{ opacity: 1, rotateX: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              transition={{ duration: 1, delay: 0.8 }}
             >
               Subsea Solutions
             </motion.span>
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.1, delay: 1.2 }}
+              transition={{ duration: 2, delay: 1.2 }}
             >
               {" "}
               for the Oil & Gas Industry
@@ -79,7 +79,7 @@ const HiroSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.8,
-              delay: 0.8,
+              delay: 1.5,
               ease: [0.4, 0, 0.2, 1],
             }}
           >
@@ -108,9 +108,9 @@ const HiroSection: React.FC = () => {
                 y: -2,
               }}
               whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 1.4 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 2, type: "decay" }}
             >
               Explore Our Services
             </motion.button>
@@ -124,9 +124,9 @@ const HiroSection: React.FC = () => {
                 y: -2,
               }}
               whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 1.6 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.6, type: "decay" }}
             >
               Contact Us Today
             </motion.button>
@@ -207,7 +207,7 @@ const HiroSection: React.FC = () => {
           }}
         >
           <motion.img
-            src="segitiga 1.svg"
+            src="triangle-sea.png"
             alt="Decorative geometric element"
             className="max-w-full h-auto"
             animate={{
@@ -225,4 +225,4 @@ const HiroSection: React.FC = () => {
   );
 };
 
-export default HiroSection;
+export default HeroSection;

@@ -46,7 +46,7 @@ const AboutCompanySection: React.FC = () => {
         viewport={{ once: true }}
       >
         <motion.img
-          src="segitiga1 2.svg"
+          src="segitiga-transparant.png"
           alt="Decorative geometric element"
           className="max-w-full h-auto"
           animate={{
@@ -73,7 +73,7 @@ const AboutCompanySection: React.FC = () => {
         viewport={{ once: true }}
       >
         <motion.img
-          src="segitiga1 2.svg"
+          src="segitiga-transparant.png"
           alt="Decorative geometric element"
           className="max-w-full h-auto rotate-180"
           animate={{
@@ -99,21 +99,13 @@ const AboutCompanySection: React.FC = () => {
         >
           <motion.h2
             className="text-3xl font-bold text-center mb-8"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 1.5 }}
           >
-            About{" "}
-            <motion.span
-              className="inline-block bg-gradient-to-r from-white to-orange-100 bg-clip-text text-transparent"
-              initial={{ opacity: 0, rotateY: 90 }}
-              whileInView={{ opacity: 1, rotateY: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              PT Geo Artha Semesta
-            </motion.span>
+            About PT Geo Artha Semesta
           </motion.h2>
 
           <motion.div
@@ -137,7 +129,7 @@ const AboutCompanySection: React.FC = () => {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
               }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 2 }}
             >
               PT Geo Artha Semesta is an Indonesian company specializing in
               professional subsea services for the oil and gas industry.
@@ -149,7 +141,7 @@ const AboutCompanySection: React.FC = () => {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
               }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 2.5 }}
             >
               With a team of expert divers, experienced technicians, and modern
               equipment, we deliver reliable support for both offshore and
@@ -174,7 +166,7 @@ const AboutCompanySection: React.FC = () => {
             {
               title: "Excellence",
               desc: "Professional maritime services.",
-              icon: "kapal bulat 1 1.svg",
+              icon: "kapal-bulat.png",
             },
             {
               title: "Innovation",
@@ -278,15 +270,15 @@ const AboutCompanySection: React.FC = () => {
               if (currentIndex === 0) {
                 // Top-left card - comes from center-right
                 direction = { x: 200, y: -100, rotate: 45 };
-                delay = 0.8;
+                delay = 0.5;
               } else if (currentIndex === 2) {
                 // Top-right card - comes from center-left
                 direction = { x: -200, y: -100, rotate: -45 };
-                delay = 1.0;
+                delay = 1;
               } else if (currentIndex === 3) {
                 // Bottom card - comes from center-up
                 direction = { x: 0, y: -150, rotate: 0 };
-                delay = 1.2;
+                delay = 1.5;
               }
 
               return { direction, delay };
