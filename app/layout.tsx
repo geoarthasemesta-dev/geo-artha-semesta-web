@@ -1,12 +1,5 @@
-import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Metadata } from "next";
 import "./globals.css";
-
-// import font Manrope
-const manrope = Manrope({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Excellence in Subsea Solutions for the Oil & Gas Industry",
@@ -74,12 +67,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${manrope.className} antialiased`}>{children}</body>
-    </html>
-  );
+}) {
+  return children;
 }

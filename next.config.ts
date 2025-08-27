@@ -44,6 +44,7 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  appDir: true,
 };
 
 export default nextConfig;

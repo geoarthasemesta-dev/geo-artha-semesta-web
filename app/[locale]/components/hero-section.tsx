@@ -1,13 +1,18 @@
 import { motion } from "framer-motion";
 import { AnimatedSection } from "./animated-section";
 import React from "react";
+import { useClientTranslation } from "@/lib/i18n-client";
+import { useLocale } from "./TranslationProvider";
 
 const heroEngineers = "two-person.png";
 const HeroSection: React.FC = () => {
-  const fullText = "Excellence in Subsea Solutions for the Oil & Gas Industry";
+  const locale = useLocale();
+  const { t } = useClientTranslation(locale);
+
+  const fullText = t("heroSection.greeting");
   const [displayText, setDisplayText] = React.useState("");
   const [isDeleting, setIsDeleting] = React.useState(false);
-  const [index, setIndex] = React.useState(fullText.length);
+  const [index, setIndex] = React.useState<number>(fullText.length);
 
   React.useEffect(() => {
     const typingSpeed = isDeleting ? 50 : 80; // kecepatan ketik & hapus
@@ -63,9 +68,7 @@ const HeroSection: React.FC = () => {
               ease: [0.4, 0, 0.2, 1],
             }}
           >
-            PT Geo Artha Semesta is a reliable professional diving, subsea
-            inspection, rental, and maintenance services to ensure the
-            continuity of your offshore operations.
+            {t("heroSection.description")}
           </motion.p>
 
           {/* Buttons with enhanced hover effects */}
@@ -87,8 +90,12 @@ const HeroSection: React.FC = () => {
                text-sm sm:text-base min-w-0 max-w-[250px]"
               onClick={() => scrollToSection("services")}
             >
-              <span className="block sm:hidden">Our Services</span>
-              <span className="hidden sm:block">Explore Our Services</span>
+              <span className="block sm:hidden">
+                {t("heroSection.ourService")}
+              </span>
+              <span className="hidden sm:block">
+                {t("heroSection.ourServiceDekstop")}
+              </span>
             </button>
 
             <button
@@ -99,8 +106,12 @@ const HeroSection: React.FC = () => {
                text-sm sm:text-base min-w-0 max-w-[250px]"
               onClick={() => scrollToSection("contact")}
             >
-              <span className="block sm:hidden">Contact</span>
-              <span className="hidden sm:block">Contact Us Today</span>
+              <span className="block sm:hidden">
+                {t("heroSection.contactUs")}
+              </span>
+              <span className="hidden sm:block">
+                {t("heroSection.contactUsDekstop")}
+              </span>
             </button>
           </motion.div>
         </div>

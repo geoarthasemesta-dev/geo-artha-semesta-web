@@ -1,12 +1,64 @@
+// import { NextResponse } from "next/server";
+// import type { NextRequest } from "next/server";
+
+// export default async function middleware(req: NextRequest, res: NextResponse) {
+//   const { pathname } = req.nextUrl;
+//   console.log(pathname, "pathname");
+
+//   if (pathname == "/") {
+//     return NextResponse.redirect(new URL("/home", req.nextUrl));
+//   }
+//   return NextResponse.next();
+// }
+
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { languages, defaultLanguage } from "./lib/i18n";
 
-export default async function middleware(req: NextRequest, res: NextResponse) {
-  const { pathname } = req.nextUrl;
-  console.log(pathname, "pathname");
+export function middleware(request: NextRequest) {
+  // Check if there is any supported locale in the pathname
+  const pathname = request.nextUrl.pathname;
 
-  if (pathname == "/") {
-    return NextResponse.redirect(new URL("/home", req.nextUrl));
+  // Check if the pathname is missing a locale
+  const pathnameIsMissingLocale = languages.every(
+    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+  );
+
+  console.log(pathnameIsMissingLocale, "pathnameIsMissingLocale");
+
+  // Redirect if there is no locale
+  if (pathnameIsMissingLocale) {
+    const locale = getLocale(request);
+    return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url));
   }
-  return NextResponse.next();
 }
+
+function getLocale(request: NextRequest): string {
+  // Check cookie
+  const cookieLocale = request.cookies.get("i18next")?.value;
+  if (cookieLocale && languages.includes(cookieLocale as any)) {
+    return cookieLocale;
+  }
+
+  // Check Accept-Language header
+  const acceptLanguage = request.headers.get("Accept-Language");
+  if (acceptLanguage) {
+    const preferredLanguage = acceptLanguage
+      .split(",")[0]
+      .split("-")[0]
+      .toLowerCase();
+
+    if (languages.includes(preferredLanguage as any)) {
+      return preferredLanguage;
+    }
+  }
+
+  return defaultLanguage;
+}
+
+export const config = {
+  matcher: [
+    // Skip all internal paths (_next)
+    // "/((?!_next|api|favicon.ico|sitemap.xml|robots.txt).*)",
+  ],
+};

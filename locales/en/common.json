@@ -1,0 +1,19 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Our Services",
+    "equipment": "Our Equipment",
+    "experience": "Project Experience",
+    "contact": "Contact Us",
+    "drawerTitle": "Menu"
+  },
+  "heroSection": {
+    "greeting": "Excellence in Subsea Solutions for the Oil & Gas Industry",
+    "description": "PT Geo Artha Semesta is a reliable professional diving, subsea inspection, rental, and maintenance services to ensure the continuity of your offshore operations.",
+    "contactUs": "Contact Us",
+    "ourService": "Our Services",
+    "ourServiceDekstop": "Explore Our Services",
+    "contactUsDekstop": "Contact Us Today"
+  }
+}

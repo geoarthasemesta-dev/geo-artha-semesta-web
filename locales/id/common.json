@@ -1,0 +1,19 @@
+{
+  "menu": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "services": "Layanan Kami",
+    "equipment": "Peralatan Kami",
+    "experience": "Pengalaman Proyek",
+    "contact": "Hubungi Kami",
+    "drawerTitle": "Menu"
+  },
+  "heroSection": {
+    "greeting": "Keunggulan dalam Solusi Bawah Laut untuk Industri Minyak & Gas",
+    "description": "PT Geo Artha Semesta adalah penyedia layanan selam profesional, inspeksi bawah laut, penyewaan, dan pemeliharaan yang andal untuk memastikan keberlangsungan operasi lepas pantai Anda.",
+    "contactUs": "Hubungi Kami",
+    "ourService": "Layanan Kami",
+    "ourServiceDekstop": "Jelajahi Layanan Kami",
+    "contactUsDekstop": "Hubungi Kami Hari Ini"
+  }
+}

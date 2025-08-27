@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react"; // icon hamburger & close
+import { Menu, X } from "lucide-react";
 import Footer from "./components/footer";
 import ContactSection from "./components/contact-section";
 import ProjectExperienceSection from "./components/project-experience-section";
@@ -10,10 +10,15 @@ import EquipmentSection from "./components/equipment-section";
 import ServiceSection from "./components/service-section";
 import AboutCompanySection from "./components/about-company-section";
 import HeroSection from "./components/hero-section";
-import { useMediaQuery } from "./hooks/useMediaQuery";
+import LanguageSwitcher from "./components/LanguageSwitche";
+import { useMediaQuery } from "../hooks/useMediaQuery";
+import { useClientTranslation } from "../../lib/i18n-client";
+import { useLocale } from "./components/TranslationProvider";
 
 const Index = () => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState<boolean>(false);
+  const locale = useLocale();
+  const { t } = useClientTranslation(locale);
 
   const isTablet = useMediaQuery("(max-width: 1024px)");
 
@@ -37,14 +42,11 @@ const Index = () => {
   return (
     <div className="min-h-screen text-white bg-white">
       {/* Navigation */}
-      <nav
-        className="fixed top-0 z-50 w-full backdrop-blur-lg shadow-lg bg-gradient-to-tr from-[#233a65] to-[#122a53]"
-        // style={{ background: "var(--background)" }}
-      >
+      <nav className="fixed top-0 z-50 w-full backdrop-blur-lg shadow-lg bg-gradient-to-tr from-[#233a65] to-[#122a53]">
         <div className="max-w-[100%] mx-auto px-5 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <a
-              href="/home"
+              href={`/${locale}`}
               className="text-white font-bold text-xl tracking-wide h-12 w-14"
             >
               <img
@@ -55,47 +57,51 @@ const Index = () => {
             </a>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex space-x-8">
+            <div className="hidden lg:flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection("home")}
                 className="hover:text-primary transition"
               >
-                Home
+                {t("menu.home")}
               </button>
               <button
                 onClick={() => scrollToSection("about")}
                 className="hover:text-primary transition"
               >
-                About Us
+                {t("menu.about")}
               </button>
               <button
                 onClick={() => scrollToSection("services")}
                 className="hover:text-primary transition"
               >
-                Our Services
+                {t("menu.services")}
               </button>
               <button
                 onClick={() => scrollToSection("equipment")}
                 className="hover:text-primary transition"
               >
-                Our Equipment
+                {t("menu.equipment")}
               </button>
               <button
                 onClick={() => scrollToSection("experience")}
                 className="hover:text-primary transition"
               >
-                Project Experience
+                {t("menu.experience")}
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
                 className="hover:text-primary transition"
               >
-                Contact Us
+                {t("menu.contact")}
               </button>
+
+              {/* Language Switcher */}
+              <LanguageSwitcher currentLocale={locale} />
             </div>
 
             {/* Mobile Hamburger */}
-            <div className="lg:hidden">
+            <div className="lg:hidden flex items-center space-x-4">
+              <LanguageSwitcher currentLocale={locale} />
               <button onClick={() => setIsDrawerOpen(true)}>
                 <Menu className="text-white w-7 h-7" />
               </button>
@@ -114,25 +120,29 @@ const Index = () => {
           className="fixed top-0 right-0 h-full w-64 bg-gray-900 text-white shadow-lg z-50 flex flex-col p-6"
         >
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-lg font-bold">Menu</h2>
+            <h2 className="text-lg font-bold">{t("menu.drawerTitle")}</h2>
             <button onClick={() => setIsDrawerOpen(false)}>
               <X className="w-6 h-6" />
             </button>
           </div>
           <nav className="flex flex-col items-start space-y-6">
-            <button onClick={() => scrollToSection("home")}>Home</button>
-            <button onClick={() => scrollToSection("about")}>About Us</button>
+            <button onClick={() => scrollToSection("home")}>
+              {t("menu.home")}
+            </button>
+            <button onClick={() => scrollToSection("about")}>
+              {t("menu.about")}
+            </button>
             <button onClick={() => scrollToSection("services")}>
-              Our Services
+              {t("menu.services")}
             </button>
             <button onClick={() => scrollToSection("equipment")}>
-              Our Equipment
+              {t("menu.equipment")}
             </button>
             <button onClick={() => scrollToSection("experience")}>
-              Project Experience
+              {t("menu.experience")}
             </button>
             <button onClick={() => scrollToSection("contact")}>
-              Contact Us
+              {t("menu.contact")}
             </button>
           </nav>
         </motion.div>
