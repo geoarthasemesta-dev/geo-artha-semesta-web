@@ -98,12 +98,12 @@ const AboutCompanySection: React.FC = () => {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-3xl font-bold text-center mb-8"
+            className="text-2xl md:text-3xl font-bold text-center mb-8"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 1, delay: 0.5 }}
           >
             About PT Geo Artha Semesta
           </motion.h2>
@@ -124,24 +124,24 @@ const AboutCompanySection: React.FC = () => {
             viewport={{ once: true }}
           >
             <motion.p
-              className="max-w-3xl leading-relaxed text-center text-orange-100 text-lg"
+              className="max-w-3xl leading-relaxed text-center text-orange-100 sm:text-base md:text-lg"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
               }}
-              transition={{ duration: 2 }}
+              transition={{ duration: 1, delay: 1 }}
             >
               PT Geo Artha Semesta is an Indonesian company specializing in
               professional subsea services for the oil and gas industry.
             </motion.p>
 
             <motion.p
-              className="max-w-3xl leading-relaxed text-center text-orange-100 text-lg"
+              className="max-w-3xl leading-relaxed text-center text-orange-100 sm:text-base md:text-lg"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
               }}
-              transition={{ duration: 2.5 }}
+              transition={{ duration: 1, delay: 1.5 }}
             >
               With a team of expert divers, experienced technicians, and modern
               equipment, we deliver reliable support for both offshore and
@@ -182,82 +182,22 @@ const AboutCompanySection: React.FC = () => {
             // Center Ship Image (Special Treatment)
             if (index === 1) {
               return (
-                <motion.div
+                <div
                   key={index}
                   className="hidden lg:flex col-span-1 justify-center relative"
-                  initial={{ opacity: 0, scale: 0, rotate: -180 }}
-                  whileInView={{
-                    opacity: 1,
-                    scale: 1,
-                    rotate: 0,
-                    transition: {
-                      type: "spring",
-                      stiffness: 200,
-                      damping: 15,
-                      duration: 1,
-                      delay: 0.3,
-                    },
-                  }}
-                  viewport={{ once: true }}
                 >
                   {/* Animated Rings */}
-                  <motion.div
-                    className="border-2 border-white/30 rounded-full p-4 absolute w-[97%] h-[97%] flex items-center justify-center"
-                    animate={{
-                      rotate: [0, 360],
-                      scale: [1, 1.05, 1],
-                    }}
-                    transition={{
-                      rotate: {
-                        duration: 20,
-                        repeat: Infinity,
-                        ease: "linear",
-                      },
-                      scale: {
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      },
-                    }}
-                  >
-                    <motion.div
-                      className="border-2 border-white/20 rounded-full w-[97%] h-[97%]"
-                      animate={{ rotate: [360, 0] }}
-                      transition={{
-                        duration: 15,
-                        repeat: Infinity,
-                        ease: "linear",
-                      }}
-                    />
-                  </motion.div>
+                  <div className="border-2 border-white/30 rounded-full p-4 absolute w-[97%] h-[97%] flex items-center justify-center">
+                    <div className="border-2 border-white/20 rounded-full w-[97%] h-[97%]" />
+                  </div>
 
                   {/* Ship Image with Floating Animation */}
                   <motion.img
                     src={item.icon}
                     alt={item.title}
                     className="z-10 relative"
-                    animate={{
-                      y: [0, -8, 0],
-                      rotate: [0, 2, -2, 0],
-                    }}
-                    transition={{
-                      y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
-                      rotate: {
-                        duration: 6,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      },
-                    }}
-                    whileHover={{
-                      scale: 1.1,
-                      transition: {
-                        type: "spring",
-                        stiffness: 400,
-                        damping: 25,
-                      },
-                    }}
                   />
-                </motion.div>
+                </div>
               );
             }
 

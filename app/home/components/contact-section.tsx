@@ -13,41 +13,21 @@ const ContactSection: React.FC = () => {
       className="max-w-[100%] mx-auto bg-white px-5 md:p-20 py-20 relative overflow-hidden"
     >
       {/* Background decorative images */}
-      <motion.div
-        className="absolute -left-12 -bottom-4 md:w-1/2 z-10"
-        initial={{ opacity: 0, x: -100, rotate: -10 }}
-        whileInView={{ opacity: 1, x: 0, rotate: 0 }}
-        transition={{
-          duration: 1.2,
-          delay: 0.6,
-          ease: [0.25, 0.46, 0.45, 0.94],
-        }}
-        viewport={{ once: true }}
-      >
+      <div className="absolute -left-12 -bottom-4 md:w-1/2 z-10">
         <img
           src={contactUs}
           alt="Two engineers wearing helmets, one holding a laptop, smiling in professional setting"
           className="rounded-3xl max-w-full h-auto"
         />
-      </motion.div>
+      </div>
 
-      <motion.div
-        className="absolute -left-10 -bottom-2 md:w-[60%] z-0"
-        initial={{ opacity: 0, scale: 0.5, rotate: 45 }}
-        whileInView={{ opacity: 0.8, scale: 1, rotate: 0 }}
-        transition={{
-          duration: 1.5,
-          delay: 0.3,
-          ease: [0.34, 1.56, 0.64, 1],
-        }}
-        viewport={{ once: true }}
-      >
+      <div className="absolute -left-10 -bottom-2 md:w-[60%] z-0">
         <img
           src="segitiga3 1.svg"
           alt="Decorative triangle"
           className="max-w-full h-auto"
         />
-      </motion.div>
+      </div>
 
       {/* Content Layer */}
       <div className="relative z-10">
@@ -57,7 +37,7 @@ const ContactSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
             duration: 1,
-            delay: 0.6,
+            delay: 1,
             ease: [0.4, 0, 0.2, 1],
           }}
           viewport={{ once: true }}
@@ -66,11 +46,11 @@ const ContactSection: React.FC = () => {
         </motion.h2>
 
         <motion.p
-          className="mb-8 max-w-xl text-lg text-black"
+          className="mb-8 max-w-xl text-black sm:text-base md:text-lg"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 1.2,
+            duration: 1.5,
             delay: 1,
             ease: [0.4, 0, 0.2, 1],
           }}
@@ -85,7 +65,7 @@ const ContactSection: React.FC = () => {
           <div className="col-span-1"></div>
 
           {/* Form Container */}
-          <div className="col-span-1 px-[5%] relative z-20">
+          <div className="col-span-1 lg:px-[5%] relative z-20">
             <motion.form
               initial={{ opacity: 0, x: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
@@ -95,7 +75,7 @@ const ContactSection: React.FC = () => {
                 ease: [0.4, 0, 0.2, 1],
               }}
               viewport={{ once: true }}
-              className=" backdrop-blur-sm px-[5%] py-8 rounded-2xl shadow-2xl border border-white/20"
+              className=" backdrop-blur-sm px-[2%] lg:px-[5%] py-8 rounded-2xl shadow-2xl border border-white/20"
             >
               {/* Form Fields with staggered animation */}
               <motion.div

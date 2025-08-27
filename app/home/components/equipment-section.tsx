@@ -65,25 +65,9 @@ const EquipmentSection: React.FC = () => {
         {equipment
           .slice(0, showMore ? equipment.length : limit)
           .map((equipment, index) => (
-            <motion.div
+            <div
               key={index}
               className="col-span-1 max-w-[400px] relative bg-gradient-orange rounded-xl overflow-hidden flex flex-col items-center shadow-orange cursor-default hover:shadow-sm transition-all duration-300 h-60 group hover:shadow-amber-50"
-              initial={{
-                opacity: 0,
-                y: 50,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                x: 0,
-                scale: 1,
-              }}
-              transition={{
-                duration: 1.5,
-                delay: index * 0.1 + 0.2,
-                type: "decay",
-              }}
-              viewport={{ once: true }}
             >
               <img
                 src={equipment.img}
@@ -91,15 +75,41 @@ const EquipmentSection: React.FC = () => {
                 className="rounded-lg shadow-md mb-4 object-cover h-full w-full absolute left-0 right-0 z-0 "
               />
               <div className="flex flex-col h-full justify-end gap-2 p-5 z-10">
-                <h3 className="font-bold text-lg mb-2 text-white text-center">
+                <motion.h3
+                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1 + 0.4,
+                  }}
+                  viewport={{ once: true }}
+                  className="font-bold text-lg mb-2 text-white text-center"
+                >
                   {equipment.title}
-                </h3>
-                <p className="text-sm text-white/90 text-center">
+                </motion.h3>
+                <motion.p
+                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1 + 0.6,
+                  }}
+                  viewport={{ once: true }}
+                  className="text-sm text-white/90 text-center"
+                >
                   {equipment.desc}
-                </p>
+                </motion.p>
               </div>
-              <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-gradient-to-t from-[#ea580c] to-transparent to-100%"></div>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.5,
+                }}
+                className="absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-gradient-to-t from-[#ea580c] to-transparent to-100%"
+              ></motion.div>
+            </div>
           ))}
       </motion.div>
       <div className="w-full z-50 flex justify-center mt-20">

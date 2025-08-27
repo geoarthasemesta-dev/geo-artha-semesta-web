@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </nav>
-        <div className="col-span-5 md:col-span-1 flex gap-4 items-end">
+        {/* <div className="col-span-5 md:col-span-1 flex gap-4 items-end">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
             <rect width="4" height="12" x="2" y="9" />
             <circle cx="4" cy="4" r="2" />
           </svg>
-        </div>
+        </div> */}
         <p className=" opacity-60 col-span-5 text-sm md:text-[14px] flex flex-wrap gap-2 md:gap-4 justify-center md:justify-start">
           © 2024 PT Geo Artha Semesta. All rights reserved.
           <span>Terms of Service |</span>

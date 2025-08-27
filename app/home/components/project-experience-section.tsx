@@ -35,9 +35,17 @@ const ProjectExperienceSection: React.FC = () => {
       id="experience"
       className="px-5 md:px-16 py-20 bg-linear-to-r from-[#f75320] via-[#fb742e] to-[#fe953e] text-white max-w-[100%] mx-auto relative"
     >
-      <h2 className="text-center text-3xl font-semibold mb-12">
+      <motion.h2
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        transition={{ duration: 1.5 }}
+        viewport={{ once: true }}
+        className="text-center text-3xl font-semibold mb-12"
+      >
         Our Track Record
-      </h2>
+      </motion.h2>
       <div className="flex gap-4 items-center relative">
         {/* Left Navigation Button */}
         {/* <button
@@ -52,7 +60,7 @@ const ProjectExperienceSection: React.FC = () => {
           className="flex overflow-x-auto gap-4 md:gap-8 snap-x snap-mandatory scrollbar-hide md:px-10 py-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ staggerChildren: 0.2 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 0.6 }}
           viewport={{ once: true }}
           style={{
             scrollbarWidth: "none", // Firefox
@@ -91,33 +99,9 @@ const ProjectExperienceSection: React.FC = () => {
               desc: "Commercial diving operations for subsea installation and maintenance. The scope covered welding repairs, bolt tensioning, anode replacement, and general maintenance to ensure continued operational excellence of offshore facilities.",
             },
           ].map((project, index) => (
-            <motion.article
+            <article
               key={index}
-              className="min-w-[280px] max-w-xs bg-white backdrop-blur-sm rounded-xl flex-shrink-0 snap-start cursor-pointer hover:scale-105 duration-300 transition overflow-hidden relative"
-              // initial={{ opacity: 0, y: 20 }}
-              // whileInView={{ opacity: 1, y: 0 }}
-              // transition={{
-              //   duration: 0.6,
-              //   delay: index * 0.2,
-              //   ease: [0.4, 0, 0.2, 1],
-              // }}
-              // viewport={{ once: true }}
-              initial={{
-                opacity: 0,
-                y: 50,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                x: 0,
-                scale: 1,
-              }}
-              transition={{
-                duration: 1.5,
-                delay: index * 0.3 + 0.2,
-                type: "keyframes",
-              }}
-              viewport={{ once: true }}
+              className="min-w-[280px] max-w-xs bg-white backdrop-blur-sm rounded-xl flex-shrink-0 snap-start cursor-pointer overflow-hidden relative"
             >
               <img
                 src={project.image}
@@ -130,17 +114,42 @@ const ProjectExperienceSection: React.FC = () => {
 
               {/* Content dengan z-index lebih tinggi */}
               <div className="grid gap-2 p-6 pt-0 -mt-10 relative z-20">
-                <h3 className="font-bold text-lg -mb-2 text-[#f97316]">
+                <motion.h3
+                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{
+                    duration: 1,
+                    delay: index * 0.1 + 0.4,
+                  }}
+                  viewport={{ once: true }}
+                  className="font-bold text-lg -mb-2 text-[#f97316]"
+                >
                   {project.title}
-                </h3>
-                <h4 className="font-semibold text-sm text-[#f97316] mb-2">
+                </motion.h3>
+                <motion.h4
+                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{
+                    duration: 1,
+                    delay: index * 0.1 + 0.4,
+                  }}
+                  className="font-semibold text-sm text-[#f97316] mb-2"
+                >
                   {project.subtitle}
-                </h4>
-                <p className="text-sm leading-relaxed text-black">
+                </motion.h4>
+                <motion.p
+                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{
+                    duration: 1,
+                    delay: index * 0.1 + 0.4,
+                  }}
+                  className="text-sm leading-relaxed text-black"
+                >
                   {project.desc}
-                </p>
+                </motion.p>
               </div>
-            </motion.article>
+            </article>
           ))}
         </motion.div>
 
