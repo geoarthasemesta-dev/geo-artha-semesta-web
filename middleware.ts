@@ -1,16 +1,3 @@
-// import { NextResponse } from "next/server";
-// import type { NextRequest } from "next/server";
-
-// export default async function middleware(req: NextRequest, res: NextResponse) {
-//   const { pathname } = req.nextUrl;
-//   console.log(pathname, "pathname");
-
-//   if (pathname == "/") {
-//     return NextResponse.redirect(new URL("/home", req.nextUrl));
-//   }
-//   return NextResponse.next();
-// }
-
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { languages, defaultLanguage } from "./lib/i18n";
@@ -18,6 +5,11 @@ import { languages, defaultLanguage } from "./lib/i18n";
 export function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
   const pathname = request.nextUrl.pathname;
+
+  // ✅ jika root "/" arahkan ke default locale (misalnya /en)
+  if (pathname === "/") {
+    return NextResponse.redirect(new URL(`/${defaultLanguage}`, request.url));
+  }
 
   // Check if the pathname is missing a locale
   const pathnameIsMissingLocale = languages.every(
