@@ -2,47 +2,29 @@ import { motion } from "framer-motion";
 import React from "react";
 import { AnimatedSection } from "./animated-section";
 import { useMediaQuery } from "@/app/hooks/useMediaQuery";
-
-const services = [
-  {
-    id: 1,
-    icon: "/search_check.svg",
-    title: "Subsea Inspection, Repair & Maintenance (IRM)",
-    desc: "Comprehensive subsea inspection, repair, and maintenance to ensure asset integrity and operational safety.",
-  },
-  {
-    id: 2,
-    icon: "/930e4fb2.svg",
-    title: "Pipeline & Cable Repair",
-    desc: "Specialized solutions for installing and maintaining subsea pipelines and communication/computer cables.",
-  },
-  {
-    id: 3,
-    icon: "/construction_24dp.svg",
-    title: "Offshore Construction Support",
-    desc: "Subsea support for offshore installation, construction, and maintenance projects.",
-  },
-  {
-    id: 4,
-    icon: "/scuba_diving.svg",
-    title: "Commercial Diving Services",
-    desc: "Professional diving teams trained and certified to perform underwater tasks in challenging offshore environments.",
-  },
-  {
-    id: 5,
-    icon: "/nat.svg",
-    title: "Underwater Survey & Mapping",
-    desc: "Hydrographic and geophysical surveys to provide accurate seabed mapping and structural assessments.",
-  },
-  {
-    id: 6,
-    icon: "/nest_remote_comfort_sensor.svg",
-    title: "ROV (Remotely Operated Vehicle) Operations",
-    desc: "Light and observation-class ROVs for inspection, survey, and intervention in deep or hazardous areas.",
-  },
-];
+import { useLocale } from "../bilingual/TranslationProvider";
+import { useClientTranslation } from "@/lib/i18n-client";
 
 const ServiceSection: React.FC = () => {
+  const locale = useLocale();
+  const { t } = useClientTranslation(locale);
+
+  const serviceData = t("serviceSection.services", { returnObjects: true }) as {
+    id: number;
+    icon: string;
+    title: string;
+    desc: string;
+  }[];
+
+  const ourServices = Array.isArray(serviceData)
+    ? (serviceData as {
+        id: number;
+        icon: string;
+        title: string;
+        desc: string;
+      }[])
+    : [];
+
   const [limit, setLimit] = React.useState(6);
   const [showMore, setShowMore] = React.useState(false);
 
@@ -72,7 +54,7 @@ const ServiceSection: React.FC = () => {
           transition={{ duration: 1.5 }}
           viewport={{ once: true }}
         >
-          Our Services
+          {t("serviceSection.title")}
         </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3">
@@ -85,7 +67,7 @@ const ServiceSection: React.FC = () => {
             // whileInView={{ opacity: 1 }}
             // viewport={{ once: true }}
           >
-            {services.slice(0, limit).map((service, index) => (
+            {ourServices.slice(0, limit).map((service, index) => (
               <div
                 key={index}
                 className="p-6 rounded-xl border-gray-50 border shadow-lg border-border hover:shadow-lg transition cursor-default bg-white md:bg-transparent md:backdrop-blur-lg"
@@ -196,7 +178,9 @@ const ServiceSection: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 1.4 }}
               >
-                {showMore ? "Show Less" : "Show More"}
+                {showMore
+                  ? t("serviceSection.viewLess")
+                  : t("serviceSection.viewMore")}
               </motion.button>
             )}
           </div>

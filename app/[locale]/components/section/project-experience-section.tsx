@@ -3,23 +3,46 @@ import { motion } from "framer-motion";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { useRef } from "react";
 import { AnimatedSection } from "./animated-section";
+import { useLocale } from "../bilingual/TranslationProvider";
+import { useClientTranslation } from "@/lib/i18n-client";
 
-const panoramicShotOil =
-  "panoramic-shot-oil-rigs-sea-with-beautiful-sunset 1.svg";
-const petroleumGasContainer =
-  "petroleum-gas-container-ship-oil-refinery-background-energy-nautical-transportation 1.svg";
+// const panoramicShotOil =
+//   "panoramic-shot-oil-rigs-sea-with-beautiful-sunset 1.svg";
+// const petroleumGasContainer =
+//   "petroleum-gas-container-ship-oil-refinery-background-energy-nautical-transportation 1.svg";
 
 const ProjectExperienceSection: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: -320, // Scroll by card width + gap
-        behavior: "smooth",
-      });
-    }
-  };
+  const locale = useLocale();
+  const { t } = useClientTranslation(locale);
+
+  const projectExperients = t("projectExperienceSection.project", {
+    returnObjects: true,
+  }) as {
+    title: string;
+    desc: string;
+    image: string;
+    subtitle: string;
+  }[];
+
+  const project = Array.isArray(projectExperients)
+    ? (projectExperients as {
+        title: string;
+        desc: string;
+        image: string;
+        subtitle: string;
+      }[])
+    : [];
+
+  // const scrollLeft = () => {
+  //   if (scrollRef.current) {
+  //     scrollRef.current.scrollBy({
+  //       left: -320, // Scroll by card width + gap
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
 
   const scrollRight = () => {
     if (scrollRef.current) {
@@ -44,7 +67,7 @@ const ProjectExperienceSection: React.FC = () => {
         viewport={{ once: true }}
         className="text-center text-3xl font-semibold mb-12"
       >
-        Our Track Record
+        {t("projectExperienceSection.title")}
       </motion.h2>
       <div className="flex gap-4 items-center relative">
         {/* Left Navigation Button */}
@@ -67,38 +90,7 @@ const ProjectExperienceSection: React.FC = () => {
             msOverflowStyle: "none", // IE and Edge
           }}
         >
-          {[
-            {
-              image: panoramicShotOil,
-              title: "Offshore Natuna (2022)",
-              subtitle: "Pipeline Inspection",
-              desc: "Comprehensive subsea inspection of a 90 km offshore pipeline including both DNV and client scopes. The project involved visual inspection, cathodic protection measurement and thickness gauging to ensure the pipeline's structural integrity and operational safety.",
-            },
-            {
-              image: petroleumGasContainer,
-              title: "Java Sea (2020)",
-              subtitle: "Platform Maintenance",
-              desc: "Routine inspection and maintenance of subsea structures supporting offshore platforms. The project included marine growth removal, NDT testing and repair works, wreck removal, ensuring compliance with offshore safety and performance standards.",
-            },
-            {
-              image: petroleumGasContainer,
-              title: "Makassar Strait (2021)",
-              subtitle: "Subsea Cable Repair",
-              desc: "Emergency repair on an offshore communication cable as a result of 50 meters. The scope of work included locating the damaged section, deploying divers for cutting and cable restoration, subsea and surface restoration of subsea data transmission.",
-            },
-            {
-              image: petroleumGasContainer,
-              title: "Banda Sea (2023)",
-              subtitle: "ROV Inspection",
-              desc: "Remote operated vehicle inspection of underwater infrastructure. The project included detailed visual documentation, structural assessment, and data collection for preventive maintenance planning and operational optimization.",
-            },
-            {
-              image: petroleumGasContainer,
-              title: "Celebes Sea (2022)",
-              subtitle: "Diving Operations",
-              desc: "Commercial diving operations for subsea installation and maintenance. The scope covered welding repairs, bolt tensioning, anode replacement, and general maintenance to ensure continued operational excellence of offshore facilities.",
-            },
-          ].map((project, index) => (
+          {project.map((project, index) => (
             <article
               key={index}
               className="min-w-[280px] max-w-xs bg-white backdrop-blur-sm rounded-xl flex-shrink-0 snap-start cursor-pointer overflow-hidden relative"
@@ -118,7 +110,7 @@ const ProjectExperienceSection: React.FC = () => {
                   initial={{ opacity: 0, y: 20, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{
-                    duration: 1,
+                    duration: 0.7,
                     delay: index * 0.1 + 0.4,
                   }}
                   viewport={{ once: true }}
@@ -130,7 +122,7 @@ const ProjectExperienceSection: React.FC = () => {
                   initial={{ opacity: 0, y: 20, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{
-                    duration: 1,
+                    duration: 0.7,
                     delay: index * 0.1 + 0.4,
                   }}
                   className="font-semibold text-sm text-[#f97316] mb-2"
@@ -141,7 +133,7 @@ const ProjectExperienceSection: React.FC = () => {
                   initial={{ opacity: 0, y: 20, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{
-                    duration: 1,
+                    duration: 0.7,
                     delay: index * 0.1 + 0.4,
                   }}
                   className="text-sm leading-relaxed text-black"
@@ -154,16 +146,20 @@ const ProjectExperienceSection: React.FC = () => {
         </motion.div>
 
         {/* Right Navigation Button */}
-        <button
-          onClick={scrollRight}
-          className="hidden lg:flex absolute z-30 md:top-1/2 md:-translate-y-1/2 right-0 w-20 h-20 items-center hover:scale-105 duration-300 border justify-center bg-white/10 rounded-full backdrop-blur-sm"
-        >
-          <ChevronRight size={30} />
-        </button>
+        {project.length > 3 && (
+          <button
+            onClick={scrollRight}
+            className="hidden lg:flex absolute z-30 md:top-1/2 md:-translate-y-1/2 right-0 w-20 h-20 items-center hover:scale-105 duration-300 border justify-center bg-white/10 rounded-full backdrop-blur-sm"
+          >
+            <ChevronRight size={30} />
+          </button>
+        )}
       </div>
 
       {/* Right gradient overlay */}
-      <div className="hidden lg:block absolute z-20 top-1/2 right-0 md:-translate-y-1/2 h-full w-[15%] bg-linear-to-r from-transparent via-[#fb742e] to-[#fb742e] pointer-events-none"></div>
+      {project.length > 3 && (
+        <div className="hidden lg:block absolute z-20 top-1/2 right-0 md:-translate-y-1/2 h-full w-[15%] bg-linear-to-r from-transparent via-[#fb742e] to-[#fb742e] pointer-events-none"></div>
+      )}
 
       {/* Left gradient overlay */}
       {/* <div className="hidden lg:block absolute z-20 top-1/2 left-0 md:-translate-y-1/2 h-full w-[15%] bg-linear-to-l from-transparent via-[#fb742e] to-[#fb742e] pointer-events-none"></div> */}

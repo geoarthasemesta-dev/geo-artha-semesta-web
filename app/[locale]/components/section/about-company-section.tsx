@@ -1,7 +1,26 @@
 import { motion } from "framer-motion";
 import { AnimatedSection } from "./animated-section";
+import { useLocale } from "../bilingual/TranslationProvider";
+import { useClientTranslation } from "@/lib/i18n-client";
 
 const AboutCompanySection: React.FC = () => {
+  const locale = useLocale();
+  const { t } = useClientTranslation(locale);
+
+  const missionsData = t("aboutSection.mission", { returnObjects: true }) as {
+    title: string;
+    desc: string;
+    icon: string;
+  }[];
+
+  const missions = Array.isArray(missionsData)
+    ? (missionsData as {
+        title: string;
+        desc: string;
+        icon: string;
+      }[])
+    : [];
+
   return (
     <AnimatedSection
       id="about"
@@ -105,7 +124,7 @@ const AboutCompanySection: React.FC = () => {
             }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            About PT Geo Artha Semesta
+            {t("aboutSection.title")}
           </motion.h2>
 
           <motion.div
@@ -131,8 +150,7 @@ const AboutCompanySection: React.FC = () => {
               }}
               transition={{ duration: 1, delay: 1 }}
             >
-              PT Geo Artha Semesta is an Indonesian company specializing in
-              professional subsea services for the oil and gas industry.
+              {t("aboutSection.description")}
             </motion.p>
 
             <motion.p
@@ -143,9 +161,7 @@ const AboutCompanySection: React.FC = () => {
               }}
               transition={{ duration: 1, delay: 1.5 }}
             >
-              With a team of expert divers, experienced technicians, and modern
-              equipment, we deliver reliable support for both offshore and
-              nearshore operations.
+              {t("aboutSection.vision")}
             </motion.p>
           </motion.div>
         </motion.div>
@@ -157,28 +173,7 @@ const AboutCompanySection: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {[
-            {
-              title: "Safety First",
-              desc: "Safety is our top priority.",
-              icon: "Vector (2).svg",
-            },
-            {
-              title: "Excellence",
-              desc: "Professional maritime services.",
-              icon: "kapal-bulat.png",
-            },
-            {
-              title: "Innovation",
-              desc: "Always solutions with the latest subsea technology.",
-              icon: "Vector (3).svg",
-            },
-            {
-              title: "Commitment",
-              desc: "Reliability and on-time execution.",
-              icon: "Vector (4).svg",
-            },
-          ].map((item, index) => {
+          {missions.map((item, index) => {
             // Center Ship Image (Special Treatment)
             if (index === 1) {
               return (

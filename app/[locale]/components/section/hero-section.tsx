@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { AnimatedSection } from "./animated-section";
 import React from "react";
 import { useClientTranslation } from "@/lib/i18n-client";
-import { useLocale } from "./TranslationProvider";
+import { useLocale } from "../bilingual/TranslationProvider";
 
 const heroEngineers = "two-person.png";
 const HeroSection: React.FC = () => {

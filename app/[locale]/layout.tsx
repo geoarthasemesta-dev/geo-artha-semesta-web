@@ -1,5 +1,5 @@
 import { Manrope } from "next/font/google";
-import { TranslationProvider } from "./components/TranslationProvider";
+import { TranslationProvider } from "./components/bilingual/TranslationProvider";
 import { languages } from "@/lib/i18n";
 import { notFound } from "next/navigation";
 

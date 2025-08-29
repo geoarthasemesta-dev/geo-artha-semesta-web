@@ -3,10 +3,14 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { AnimatedSection } from "./animated-section";
+import { useLocale } from "../bilingual/TranslationProvider";
+import { useClientTranslation } from "@/lib/i18n-client";
 
 const contactUs = "person-contact.png";
 
 const ContactSection: React.FC = () => {
+  const locale = useLocale();
+  const { t } = useClientTranslation(locale);
   return (
     <AnimatedSection
       id="contact"
@@ -42,7 +46,7 @@ const ContactSection: React.FC = () => {
           }}
           viewport={{ once: true }}
         >
-          Get in Touch
+          {t("contactSection.title")}
         </motion.h2>
 
         <motion.p
@@ -56,8 +60,7 @@ const ContactSection: React.FC = () => {
           }}
           viewport={{ once: true }}
         >
-          We'd love to hear from you. Please fill out the form below and our
-          team will get back to you as soon as possible.
+          {t("contactSection.subtitle")}
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -89,7 +92,7 @@ const ContactSection: React.FC = () => {
                   htmlFor="name"
                   className="block text-gray-700 font-medium mb-2"
                 >
-                  Full Name*
+                  {t("contactSection.fullname")}*
                 </label>
                 <input
                   type="text"
@@ -199,7 +202,7 @@ const ContactSection: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
-                  Submit
+                  {t("contactSection.button")}
                   <ArrowRight />
                 </motion.button>
               </motion.div>

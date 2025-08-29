@@ -1,8 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useLocale } from "../bilingual/TranslationProvider";
+import { useClientTranslation } from "@/lib/i18n-client";
 
 const Footer: React.FC = () => {
+  const locale = useLocale();
+  const { t } = useClientTranslation(locale);
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -27,7 +31,7 @@ const Footer: React.FC = () => {
                 onClick={() => scrollToSection("home")}
                 className="hover:text-primary transition"
               >
-                Home
+                {t("menu.home")}
               </button>
             </li>
             <li>
@@ -35,7 +39,7 @@ const Footer: React.FC = () => {
                 onClick={() => scrollToSection("about")}
                 className="hover:text-primary transition"
               >
-                About Us
+                {t("menu.about")}
               </button>
             </li>
             <li>
@@ -43,7 +47,7 @@ const Footer: React.FC = () => {
                 onClick={() => scrollToSection("services")}
                 className="hover:text-primary transition"
               >
-                Our Services
+                {t("menu.services")}
               </button>
             </li>
             <li>
@@ -51,7 +55,7 @@ const Footer: React.FC = () => {
                 onClick={() => scrollToSection("equipment")}
                 className="hover:text-primary transition"
               >
-                Our Equipment
+                {t("menu.equipment")}
               </button>
             </li>
             <li>
@@ -59,7 +63,7 @@ const Footer: React.FC = () => {
                 onClick={() => scrollToSection("experience")}
                 className="hover:text-primary transition"
               >
-                Project Experience
+                {t("menu.experience")}
               </button>
             </li>
             <li>
@@ -67,7 +71,7 @@ const Footer: React.FC = () => {
                 onClick={() => scrollToSection("contact")}
                 className="hover:text-primary transition"
               >
-                Contact Us
+                {t("menu.contact")}
               </button>
             </li>
           </ul>

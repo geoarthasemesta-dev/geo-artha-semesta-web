@@ -10,10 +10,161 @@
   },
   "heroSection": {
     "greeting": "Keunggulan dalam Solusi Bawah Laut untuk Industri Minyak & Gas",
-    "description": "PT Geo Artha Semesta adalah penyedia layanan selam profesional, inspeksi bawah laut, penyewaan, dan pemeliharaan yang andal untuk memastikan keberlangsungan operasi lepas pantai Anda.",
+    "description": "PT Geo Artha Semesta adalah penyedia jasa profesional yang andal dalam penyelaman, inspeksi bawah laut, penyewaan, dan perawatan untuk memastikan keberlangsungan operasi lepas pantai Anda.",
     "contactUs": "Hubungi Kami",
     "ourService": "Layanan Kami",
     "ourServiceDekstop": "Jelajahi Layanan Kami",
     "contactUsDekstop": "Hubungi Kami Hari Ini"
+  },
+  "aboutSection": {
+    "title": "Tentang PT Geo Artha Semesta",
+    "description": "PT Geo Artha Semesta adalah perusahaan Indonesia yang mengkhususkan diri dalam layanan bawah laut profesional untuk industri minyak dan gas.",
+    "vision": "Dengan tim penyelam ahli, teknisi berpengalaman, dan peralatan modern, kami memberikan dukungan andal untuk operasi lepas pantai maupun dekat pantai.",
+    "mission": [
+      {
+        "title": "Keselamatan Utama",
+        "desc": "Keselamatan adalah prioritas utama kami.",
+        "icon": "Vector (2).svg"
+      },
+      {
+        "title": "Keunggulan",
+        "desc": "Layanan maritim profesional.",
+        "icon": "kapal-bulat.png"
+      },
+      {
+        "title": "Inovasi",
+        "desc": "Selalu menghadirkan solusi dengan teknologi bawah laut terbaru.",
+        "icon": "Vector (3).svg"
+      },
+      {
+        "title": "Komitmen",
+        "desc": "Keandalan dan pelaksanaan tepat waktu.",
+        "icon": "Vector (4).svg"
+      }
+    ]
+  },
+  "serviceSection": {
+    "title": "Layanan Kami",
+    "viewMore": "Semua Layanan",
+    "viewLess": "Lebih Sedikit",
+    "services": [
+      {
+        "id": 1,
+        "icon": "/search_check.svg",
+        "title": "Inspeksi, Perbaikan & Pemeliharaan Bawah Laut (IRM)",
+        "desc": "Layanan inspeksi, perbaikan, dan pemeliharaan bawah laut yang komprehensif untuk memastikan integritas aset dan keselamatan operasional."
+      },
+      {
+        "id": 2,
+        "icon": "/930e4fb2.svg",
+        "title": "Perbaikan Pipa & Kabel Bawah Laut",
+        "desc": "Solusi khusus untuk pemasangan dan pemeliharaan pipa bawah laut serta kabel komunikasi/komputer."
+      },
+      {
+        "id": 3,
+        "icon": "/construction_24dp.svg",
+        "title": "Dukungan Konstruksi Lepas Pantai",
+        "desc": "Dukungan bawah laut untuk proyek instalasi, konstruksi, dan pemeliharaan di lepas pantai."
+      },
+      {
+        "id": 4,
+        "icon": "/scuba_diving.svg",
+        "title": "Layanan Penyelaman Komersial",
+        "desc": "Tim penyelam profesional yang terlatih dan bersertifikat untuk melaksanakan pekerjaan bawah air di lingkungan lepas pantai yang menantang."
+      },
+      {
+        "id": 5,
+        "icon": "/nat.svg",
+        "title": "Survey & Pemetaan Bawah Laut",
+        "desc": "Survey hidrografi dan geofisika untuk menyediakan pemetaan dasar laut yang akurat serta penilaian struktur."
+      },
+      {
+        "id": 6,
+        "icon": "/nest_remote_comfort_sensor.svg",
+        "title": "Operasi ROV (Remotely Operated Vehicle)",
+        "desc": "Penggunaan ROV kelas ringan dan observasi untuk inspeksi, survei, dan intervensi di area laut dalam atau berbahaya."
+      }
+    ]
+  },
+  "equipmentSection": {
+    "title": "Peralatan Kami",
+    "viewMore": "Semua Peralatan",
+    "viewLess": "Lebih Sedikit",
+    "equipment": [
+      {
+        "title": "Kapal Pendukung Penyelaman (DSV)",
+        "desc": "Dilengkapi dengan sistem penyelaman untuk mendukung kegiatan penyelaman lepas pantai dan operasi bawah laut.",
+        "img": "dsv.svg"
+      },
+      {
+        "title": "Peralatan Pemotongan & Pengelasan Bawah Laut",
+        "desc": "Peralatan canggih untuk pemotongan dan pengelasan bawah laut dalam pekerjaan perbaikan dan fabrikasi.",
+        "img": "underwater-cutting.svg"
+      },
+      {
+        "title": "Sistem ROV (Light Work-Class & Observation Class)",
+        "desc": "Kendaraan bawah laut yang dioperasikan dari jarak jauh untuk inspeksi, survei, dan tugas pendukung di lingkungan bawah laut.",
+        "img": "rov-system.svg"
+      },
+      {
+        "title": "Sistem Penyelaman dengan Udara & Gas Campuran",
+        "desc": "Sistem gas penyelaman canggih yang dirancang untuk operasi bawah laut dengan standar keselamatan tinggi.",
+        "img": "air-mixed-gas-diving-system.svg"
+      },
+      {
+        "title": "Peralatan Survei Hidrografi",
+        "desc": "Instrumen presisi tinggi untuk pemetaan dasar laut, penentuan posisi, dan survei bawah laut.",
+        "img": "hydropgraphic-survey-equipment.svg"
+      },
+      {
+        "title": "Peralatan Uji Tak Merusak (NDT) Bawah Laut",
+        "desc": "Peralatan mutakhir untuk inspeksi struktur dan penilaian integritas tanpa menimbulkan kerusakan.",
+        "img": "underwater-ndt.svg"
+      }
+    ]
+  },
+  "projectExperienceSection": {
+    "title": "Rekam Jejak Kami",
+    "project": [
+      {
+        "image": "panoramic-shot-oil-rigs-sea-with-beautiful-sunset 1.svg",
+        "title": "Lepas Pantai Natuna (2022)",
+        "subtitle": "Inspeksi Pipa",
+        "desc": "Inspeksi bawah laut menyeluruh pada pipa lepas pantai sepanjang 90 km mencakup lingkup DNV dan klien. Proyek ini meliputi inspeksi visual, pengukuran proteksi katodik, dan pengukuran ketebalan untuk memastikan integritas struktur dan keselamatan operasional pipa."
+      },
+      {
+        "image": "petroleum-gas-container-ship-oil-refinery-background-energy-nautical-transportation 1.svg",
+        "title": "Laut Jawa (2020)",
+        "subtitle": "Pemeliharaan Platform",
+        "desc": "Inspeksi rutin dan pemeliharaan struktur bawah laut penopang platform lepas pantai. Proyek mencakup pembersihan pertumbuhan laut, pengujian NDT, pekerjaan perbaikan, hingga pengangkatan bangkai kapal, guna memastikan kepatuhan terhadap standar keselamatan dan kinerja lepas pantai."
+      },
+      {
+        "image": "petroleum-gas-container-ship-oil-refinery-background-energy-nautical-transportation 1.svg",
+        "title": "Selat Makassar (2021)",
+        "subtitle": "Perbaikan Kabel Bawah Laut",
+        "desc": "Perbaikan darurat pada kabel komunikasi lepas pantai sepanjang 50 meter. Pekerjaan mencakup pelacakan bagian yang rusak, pengerahan penyelam untuk pemotongan dan pemulihan kabel, serta pemulihan transmisi data bawah laut dan permukaan."
+      },
+      {
+        "image": "petroleum-gas-container-ship-oil-refinery-background-energy-nautical-transportation 1.svg",
+        "title": "Laut Banda (2023)",
+        "subtitle": "Inspeksi ROV",
+        "desc": "Inspeksi infrastruktur bawah laut menggunakan kendaraan yang dioperasikan dari jarak jauh (ROV). Proyek mencakup dokumentasi visual detail, penilaian struktur, dan pengumpulan data untuk perencanaan pemeliharaan preventif serta optimalisasi operasional."
+      },
+      {
+        "image": "petroleum-gas-container-ship-oil-refinery-background-energy-nautical-transportation 1.svg",
+        "title": "Laut Sulawesi (2022)",
+        "subtitle": "Operasi Penyelaman",
+        "desc": "Operasi penyelaman komersial untuk instalasi dan pemeliharaan bawah laut. Lingkup pekerjaan mencakup perbaikan las, pengencangan baut, penggantian anoda, serta pemeliharaan umum guna memastikan keunggulan operasional fasilitas lepas pantai."
+      }
+    ]
+  },
+  "contactSection": {
+    "title": "Hubungi Kami",
+    "subtitle": "Kami ingin sekali mendengar dari Anda. Silakan isi formulir di bawah ini dan tim kami akan segera menghubungi Anda.",
+    "fullname": "Nama Lengkap",
+    "email": "Email",
+    "phone": "No.Telepon",
+    "message": "Tulis pesanmu disini",
+    "button": "Kirim"
   }
 }

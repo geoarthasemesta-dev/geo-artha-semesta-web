@@ -3,48 +3,29 @@ import { motion } from "framer-motion";
 import React from "react";
 import { CircleArrowDown, CircleArrowUp } from "lucide-react";
 import { AnimatedSection } from "./animated-section";
-
-const divingVessel = "dsv.svg";
-const cuttingTools = "underwater-cutting.svg";
-const rovSystem = "rov-system.svg";
-const divingSystem = "air-mixed-gas-diving-system.svg";
-const surveyEquipment = "hydropgraphic-survey-equipment.svg";
-const ndtKits = "underwater-ndt.svg";
-
-const equipment = [
-  {
-    title: "Diving Support Vessel (DSV)",
-    desc: "Equipped with dive systems to support offshore diving and subsea operations.",
-    img: divingVessel,
-  },
-  {
-    title: "Underwater Cutting & Welding Tools",
-    desc: "Advanced tools for underwater cutting and welding for subsea repair and fabrication work.",
-    img: cuttingTools,
-  },
-  {
-    title: "ROV System (Light Work-Class & Observation Class)",
-    desc: "Remotely operated vehicles used for inspection, surveys, and assistance tasks in subsea environments.",
-    img: rovSystem,
-  },
-  {
-    title: "Air & Mixed Gas Diving System",
-    desc: "Advanced diving gases designed for secure underwater operations ensuring high safety standards.",
-    img: divingSystem,
-  },
-  {
-    title: "Hydrographic Survey Equipment",
-    desc: "High precision instruments for seabed mapping, positioning, and underwater surveying.",
-    img: surveyEquipment,
-  },
-  {
-    title: "Underwater NDT (Non-Destructive Testing) Kits",
-    desc: "State-of-the-art equipment for structural inspection and integrity assessment without causing damage.",
-    img: ndtKits,
-  },
-];
+import { useLocale } from "../bilingual/TranslationProvider";
+import { useClientTranslation } from "@/lib/i18n-client";
 
 const EquipmentSection: React.FC = () => {
+  const locale = useLocale();
+  const { t } = useClientTranslation(locale);
+
+  const equipmentData = t("equipmentSection.equipment", {
+    returnObjects: true,
+  }) as {
+    title: string;
+    desc: string;
+    img: string;
+  }[];
+
+  const equipment = Array.isArray(equipmentData)
+    ? (equipmentData as {
+        title: string;
+        desc: string;
+        img: string;
+      }[])
+    : [];
+
   const [limit, setLimit] = React.useState(6);
   const [showMore, setShowMore] = React.useState(false);
   return (
@@ -53,7 +34,7 @@ const EquipmentSection: React.FC = () => {
       className="bg-gradient-to-tr max-w-[100%] mx-auto from-[#1e2e4c] via-[#233a65] to-[#0c1c38] py-20 px-5 md:px-16 text-white"
     >
       <h2 className="text-center text-3xl font-semibold mb-12">
-        Our Equipment
+        {t("equipmentSection.title")}
       </h2>
       <motion.div
         className="max-w-[100%] mx-auto flex flex-wrap justify-center gap-8"
@@ -134,7 +115,9 @@ const EquipmentSection: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 1.4 }}
         >
-          {showMore ? "View Less" : "View More"}
+          {showMore
+            ? t("equipmentSection.viewLess")
+            : t("equipmentSection.viewMore")}
           {showMore ? <CircleArrowUp /> : <CircleArrowDown />}
         </motion.button>
       </div>
