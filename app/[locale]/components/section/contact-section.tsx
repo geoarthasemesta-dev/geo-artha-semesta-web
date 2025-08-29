@@ -99,7 +99,7 @@ const ContactSection: React.FC = () => {
                   id="name"
                   required
                   className="w-full px-4 py-3 border border-[#233a65] text-black placeholder:text-gray-400 rounded-lg focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/20 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md"
-                  placeholder="Enter your name"
+                  placeholder={t("contactSection.fullnamePlaceholder")}
                 />
               </motion.div>
 
@@ -121,7 +121,7 @@ const ContactSection: React.FC = () => {
                   id="email"
                   required
                   className="w-full px-4 py-3 border border-[#233a65] text-black placeholder:text-gray-400 rounded-lg focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/20 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md"
-                  placeholder="Enter your email"
+                  placeholder={t("contactSection.emailPlaceholder")}
                 />
               </motion.div>
 
@@ -180,7 +180,7 @@ const ContactSection: React.FC = () => {
                   id="message"
                   required
                   className="w-full min-h-[150px] px-4 py-3 border border-[#233a65] text-black placeholder:text-gray-400 rounded-lg focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/20 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md resize-none"
-                  placeholder="Write your message here..."
+                  placeholder={t("contactSection.message")}
                 ></textarea>
               </motion.div>
 

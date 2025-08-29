@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </nav>
-        {/* <div className="col-span-5 md:col-span-1 flex gap-4 items-end">
+        <div className="col-span-5 md:col-span-1 flex gap-4 items-end">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
@@ -84,10 +84,10 @@ const Footer: React.FC = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="lucide lucide-instagram-icon lucide-instagram"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-instagram-icon lucide-instagram hover:text-pink-500 transition-colors duration-300 cursor-pointer"
           >
             <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -101,16 +101,16 @@ const Footer: React.FC = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="lucide lucide-linkedin-icon lucide-linkedin"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-linkedin-icon lucide-linkedin hover:text-blue-500 transition-colors duration-300 cursor-pointer"
           >
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
             <rect width="4" height="12" x="2" y="9" />
             <circle cx="4" cy="4" r="2" />
           </svg>
-        </div> */}
+        </div>
         <p className=" opacity-60 col-span-5 text-sm md:text-[14px] flex flex-wrap gap-2 md:gap-4 justify-center md:justify-start">
           © 2024 PT Geo Artha Semesta. All rights reserved.
           <span>Terms of Service |</span>

@@ -162,7 +162,9 @@
     "title": "Hubungi Kami",
     "subtitle": "Kami ingin sekali mendengar dari Anda. Silakan isi formulir di bawah ini dan tim kami akan segera menghubungi Anda.",
     "fullname": "Nama Lengkap",
+    "fullnamePlaceholder": "Masukkan nama lengkap",
     "email": "Email",
+    "emailPlaceholder": "Masukkan alamat email",
     "phone": "No.Telepon",
     "message": "Tulis pesanmu disini",
     "button": "Kirim"
