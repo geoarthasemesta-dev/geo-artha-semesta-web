@@ -5,11 +5,14 @@ import { languages, defaultLanguage } from "./lib/i18n";
 export function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
   const pathname = request.nextUrl.pathname;
+  console.log(pathname, "pathname");
 
   // ✅ jika root "/" arahkan ke default locale (misalnya /en)
-  if (pathname === "/") {
-    return NextResponse.redirect(new URL(`/${defaultLanguage}`, request.url));
-  }
+  // if (pathname === "/") {
+  //   return NextResponse.redirect(
+  //     new URL(`/${defaultLanguage || "en"}`, request.url)
+  //   );
+  // }
 
   // Check if the pathname is missing a locale
   const pathnameIsMissingLocale = languages.every(
@@ -50,7 +53,12 @@ function getLocale(request: NextRequest): string {
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next)
-    // "/((?!_next|api|favicon.ico|sitemap.xml|robots.txt).*)",
+    /*
+     * Match all request paths except:
+     * - api routes
+     * - _next (Next.js internals)
+     * - static files (images, fonts, etc.)
+     */
+    "/((?!api|_next|favicon.ico|robots.txt|sitemap.xml)(?!.*\\.).*)",
   ],
 };

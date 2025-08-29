@@ -25,10 +25,11 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
-      <body className={`${manrope.className} antialiased`}>
-        <TranslationProvider locale={locale}>{children}</TranslationProvider>
-      </body>
-    </html>
+    // <html lang={locale}>
+    //   <body className={`${manrope.className} antialiased`}>
+    //     <TranslationProvider locale={locale}>{children}</TranslationProvider>
+    //   </body>
+    // </html>
+    <TranslationProvider locale={locale}>{children}</TranslationProvider>
   );
 }
