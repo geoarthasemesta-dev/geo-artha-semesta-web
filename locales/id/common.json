@@ -166,7 +166,9 @@
     "email": "Email",
     "emailPlaceholder": "Masukkan alamat email",
     "phone": "No.Telepon",
-    "message": "Tulis pesanmu disini",
-    "button": "Kirim"
+    "message": "Pesan",
+    "messagePlaceholder": "Tulis pesanmu disini",
+    "button": "Kirim",
+    "loading": "Mengirim..."
   }
 }

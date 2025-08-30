@@ -166,7 +166,9 @@
     "email": "Email",
     "emailPlaceholder": "Enter your email",
     "phone": "Phone Number",
-    "message": "Write your message here",
-    "button": "Submit"
+    "message": "Message",
+    "messagePlaceholder": "Write your message here",
+    "button": "Submit",
+    "loading": "Sending..."
   }
 }

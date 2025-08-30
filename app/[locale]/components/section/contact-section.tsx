@@ -1,16 +1,59 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { AnimatedSection } from "./animated-section";
 import { useLocale } from "../bilingual/TranslationProvider";
 import { useClientTranslation } from "@/lib/i18n-client";
+import { ContactFormData } from "@/types/contact";
+import { useContactForm } from "@/app/hooks/useContactForm";
 
 const contactUs = "person-contact.png";
 
 const ContactSection: React.FC = () => {
   const locale = useLocale();
   const { t } = useClientTranslation(locale);
+  const { submitForm, isLoading, response, clearResponse } =
+    useContactForm(locale);
+
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+    locale,
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    clearResponse(); // Clear previous response
+
+    const result = await submitForm(formData);
+
+    if (result.success) {
+      // Reset form jika berhasil
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+        locale,
+      });
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   return (
     <AnimatedSection
       id="contact"
@@ -70,6 +113,7 @@ const ContactSection: React.FC = () => {
           {/* Form Container */}
           <div className="col-span-1 lg:px-[5%] relative z-20">
             <motion.form
+              onSubmit={handleSubmit}
               initial={{ opacity: 0, x: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               transition={{
@@ -78,8 +122,24 @@ const ContactSection: React.FC = () => {
                 ease: [0.4, 0, 0.2, 1],
               }}
               viewport={{ once: true }}
-              className=" backdrop-blur-sm px-[2%] lg:px-[5%] py-8 rounded-2xl shadow-2xl border border-white/20"
+              className="backdrop-blur-sm px-[2%] lg:px-[5%] py-8 rounded-2xl shadow-2xl border border-white/20"
             >
+              {/* Response Message */}
+              {response && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className={`mb-6 p-4 rounded-lg ${
+                    response.success
+                      ? "bg-green-100 text-green-700 border border-green-200"
+                      : "bg-red-100 text-red-700 border border-red-200"
+                  }`}
+                >
+                  {response.message}
+                </motion.div>
+              )}
+
               {/* Form Fields with staggered animation */}
               <motion.div
                 className="mb-6"
@@ -97,8 +157,12 @@ const ContactSection: React.FC = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-[#233a65] text-black placeholder:text-gray-400 rounded-lg focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/20 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md"
+                  disabled={isLoading}
+                  className="w-full px-4 py-3 border border-[#233a65] text-black placeholder:text-gray-400 rounded-lg focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/20 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder={t("contactSection.fullnamePlaceholder")}
                 />
               </motion.div>
@@ -119,8 +183,12 @@ const ContactSection: React.FC = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-[#233a65] text-black placeholder:text-gray-400 rounded-lg focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/20 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md"
+                  disabled={isLoading}
+                  className="w-full px-4 py-3 border border-[#233a65] text-black placeholder:text-gray-400 rounded-lg focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/20 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder={t("contactSection.emailPlaceholder")}
                 />
               </motion.div>
@@ -142,11 +210,16 @@ const ContactSection: React.FC = () => {
                   <select
                     name="subject"
                     id="subject"
-                    defaultValue={""}
-                    className="w-full appearance-none px-4 py-3 border border-[#233a65] text-black placeholder:text-gray-400 rounded-lg focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/20 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md pr-10" // tambahkan pr-10 agar ada ruang untuk icon
+                    value={formData.subject}
+                    onChange={handleChange}
+                    disabled={isLoading}
+                    className="w-full appearance-none px-4 py-3 border border-[#233a65] text-black placeholder:text-gray-400 rounded-lg focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/20 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md pr-10 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
+                    <option value="">Pilih Subject</option>
                     <option value="General Inquiry">General Inquiry</option>
                     <option value="Job Opportunity">Job Opportunity</option>
+                    <option value="Partnership">Partnership</option>
+                    <option value="Support">Technical Support</option>
                     <option value="Other">Other</option>
                   </select>
 
@@ -176,12 +249,25 @@ const ContactSection: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 viewport={{ once: true }}
               >
+                <label
+                  htmlFor="message"
+                  className="block text-gray-700 font-medium mb-2"
+                >
+                  {t("contactSection.message")}*
+                </label>
                 <textarea
                   id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   required
-                  className="w-full min-h-[150px] px-4 py-3 border border-[#233a65] text-black placeholder:text-gray-400 rounded-lg focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/20 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md resize-none"
-                  placeholder={t("contactSection.message")}
-                ></textarea>
+                  disabled={isLoading}
+                  className="w-full min-h-[150px] px-4 py-3 border border-[#233a65] text-black placeholder:text-gray-400 rounded-lg focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/20 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  placeholder={
+                    t("contactSection.messagePlaceholder") ||
+                    "Tulis pesan Anda di sini..."
+                  }
+                />
               </motion.div>
 
               <motion.div
@@ -193,17 +279,31 @@ const ContactSection: React.FC = () => {
               >
                 <motion.button
                   type="submit"
-                  className="w-full bg-gradient-to-tr from-[#233a65] to-[#122a53] max-w-[200px] font-bold py-3 px-4 rounded-full transition duration-300 text-white hover:shadow-xl transform hover:scale-105 active:scale-95 flex justify-center gap-2"
-                  whileHover={{
-                    boxShadow:
-                      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-                    y: -2,
-                  }}
-                  whileTap={{ scale: 0.95 }}
+                  disabled={isLoading}
+                  className="w-full bg-gradient-to-tr from-[#233a65] to-[#122a53] max-w-[200px] font-bold py-3 px-4 rounded-full transition duration-300 text-white hover:shadow-xl transform hover:scale-105 active:scale-95 flex justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  whileHover={
+                    !isLoading
+                      ? {
+                          boxShadow:
+                            "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                          y: -2,
+                        }
+                      : {}
+                  }
+                  whileTap={!isLoading ? { scale: 0.95 } : {}}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
-                  {t("contactSection.button")}
-                  <ArrowRight />
+                  {isLoading ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                      {t("contactSection.loading")}
+                    </>
+                  ) : (
+                    <>
+                      {t("contactSection.button")}
+                      <ArrowRight />
+                    </>
+                  )}
                 </motion.button>
               </motion.div>
             </motion.form>
