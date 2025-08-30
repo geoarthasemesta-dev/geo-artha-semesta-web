@@ -7,19 +7,26 @@ const envSchema = yup.object({
   // Next
   NEXT_PUBLIC_BASE_URL: yup.string().required(),
 
-  // Brevo
-  BREVO_HOST: yup.string().required(),
-  BREVO_PORT: yup.string().required(),
-  BREVO_EMAIL_AUTH: yup.string().required(),
-  BREVO_SMTP_USERNAME: yup.string().required(),
-  BREVO_SMTP_PASSWORD: yup.string().required(),
+  // // Brevo
+  // BREVO_HOST: yup.string().required(),
+  // BREVO_PORT: yup.string().required(),
+  // BREVO_EMAIL_AUTH: yup.string().required(),
+  // BREVO_SMTP_USERNAME: yup.string().required(),
+  // BREVO_SMTP_PASSWORD: yup.string().required(),
 
-  // Brevo API
-  BREVO_API_KEY: yup.string().required(),
-  BREVO_BASE_API: yup.string().required(),
+  // // Brevo API
+  // BREVO_API_KEY: yup.string().required(),
+  // BREVO_BASE_API: yup.string().required(),
 
-  //SMTP Auth From Cpanel
+  //Email Configuration
+  SMTP_HOST: yup.string().required(),
+  SMTP_PORT: yup.string().required(),
+  SMTP_USER: yup.string().required(),
+  SMTP_PASS: yup.string().required(),
   ADMIN_EMAIL: yup.string().required(),
+
+  //Base url db
+  BASE_API_ACCESS_DB: yup.string().required(),
 });
 
 const validatedEnv = () => {
@@ -37,7 +44,7 @@ const validatedEnv = () => {
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
-  // env: validatedEnv(),
+  env: validatedEnv(),
   images: {
     domains: ["storage.googleapis.com"],
   },
