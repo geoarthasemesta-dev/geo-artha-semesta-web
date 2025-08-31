@@ -8,9 +8,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Excellence in Subsea Solutions for the Oil & Gas Industry",
+  title: "Geo Artha Semesta",
   description:
-    "Professional subsea inspection, repair, maintenance, pipeline repair, offshore construction support, commercial diving, underwater survey, and ROV operations for the oil & gas industry.",
+    "PT. Geo Artha Semesta is a reliable professional subsea inspection, repair, maintenance, pipeline repair, offshore construction support, commercial diving, underwater survey, and ROV operations for the oil & gas industry.",
   keywords: [
     "Subsea Inspection",
     "Subsea Repair and Maintenance",
@@ -68,6 +68,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -78,6 +79,7 @@ export default function RootLayout({
   // return children;
   return (
     <html lang="en">
+      <head />
       <body className={`${manrope.className} antialiased`}>{children}</body>
     </html>
   );
