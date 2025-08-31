@@ -1,8 +1,8 @@
 export const emailTranslations = {
   en: {
     adminEmail: {
-      subject: "New Message from User | PT. Geo Artha Semesta",
-      title: "New Message from Contact Form",
+      subject: "New Message from User",
+      title: "New Message from Contact Form PT. Geo Artha Semesta",
       fields: {
         name: "Name",
         email: "Email",
@@ -30,8 +30,8 @@ export const emailTranslations = {
   },
   id: {
     adminEmail: {
-      subject: "Pesan Baru dari Pengguna | PT. Geo Artha Semesta",
-      title: "Pesan Baru dari Contact Form",
+      subject: "Pesan Baru dari Pengguna",
+      title: "Pesan Baru dari Contact Form PT. Geo Artha Semesta",
       fields: {
         name: "Nama",
         email: "Email",
