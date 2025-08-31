@@ -70,7 +70,7 @@ export async function sendContactEmail(
     // Auto-reply ke pengirim dalam bahasa yang dipilih
     const autoReplyContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <div style="background: linear-gradient(135deg, #173059 0%, ##132b54 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
+        <div style="background: linear-gradient(135deg, #173059 0%, #132b54 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
           <h2 style="color: white; margin: 0; font-size: 24px;">
             ${translations.autoReply.title}
           </h2>

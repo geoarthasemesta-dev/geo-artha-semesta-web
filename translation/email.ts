@@ -1,7 +1,7 @@
 export const emailTranslations = {
   en: {
     adminEmail: {
-      subject: "New Message from User",
+      subject: "PT. Geo Artha Semesta - You've Got a New Message",
       title: "New Message from Contact Form PT. Geo Artha Semesta",
       fields: {
         name: "Name",
@@ -10,7 +10,7 @@ export const emailTranslations = {
         message: "Message",
       },
       footer:
-        "This email was sent automatically from the website contact form.",
+        "This email was sent automatically from the website geoarthasemesta.com",
     },
     autoReply: {
       subject: "Confirmation - Your message has been received",
@@ -30,7 +30,7 @@ export const emailTranslations = {
   },
   id: {
     adminEmail: {
-      subject: "Pesan Baru dari Pengguna",
+      subject: "PT. Geo Artha Semesta - Ada Pesan Baru untuk Kamu",
       title: "Pesan Baru dari Contact Form PT. Geo Artha Semesta",
       fields: {
         name: "Nama",
@@ -38,7 +38,7 @@ export const emailTranslations = {
         subject: "Subject",
         message: "Pesan",
       },
-      footer: "Email ini dikirim otomatis dari website contact form.",
+      footer: "Email ini dikirim otomatis dari website geoarthasemesta.com.",
     },
     autoReply: {
       subject: "Konfirmasi - Pesan Anda telah diterima",
