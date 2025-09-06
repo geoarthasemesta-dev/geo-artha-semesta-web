@@ -38,11 +38,11 @@ const HeroSection: React.FC = () => {
   return (
     <AnimatedSection
       id="home"
-      className="pt-24 bg-gradient-to-tr from-[#233a65] to-[#122a53] pb-20 px-5 md:px-16 max-w-[100%] mx-auto relative min-h-screen flex lg:items-center overflow-hidden"
+      className="pt-24 bg-gradient-to-tr from-[#233a65] to-[#122a53] pb-44 lg:pb-20 px-5 md:px-16 max-w-[100%] mx-auto relative min-h-screen flex lg:items-center overflow-hidden"
     >
       {/* Main Content Container */}
-      <div className="flex flex-col md:flex-row mt-[5%] lg:items-center gap-8 z-20 w-full">
-        <div className="space-y-6 flex-1">
+      <div className="flex flex-col md:flex-row mt-[5%] text-center lg:text-left md:justify-center lg:items-center gap-8 z-20 w-full">
+        <div className="space-y-6 lg:flex-1 p-[5%]">
           <motion.h1
             className="text-3xl sm:text-4xl font-extrabold max-w-xl leading-tight min-h-[120px] text-white md:min-h-[90px]"
             initial={{ opacity: 0, y: 30 }}
@@ -59,7 +59,7 @@ const HeroSection: React.FC = () => {
 
           {/* Description */}
           <motion.p
-            className="text-gray-200 max-w-lg leading-relaxed sm:text-base md:text-lg"
+            className="text-gray-200 max-w-xl leading-relaxed sm:text-base md:text-lg md:font-semibold lg:font-normal"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -73,7 +73,7 @@ const HeroSection: React.FC = () => {
 
           {/* Buttons with enhanced hover effects */}
           <motion.div
-            className="flex gap-2 sm:gap-4 max-w-full"
+            className="flex items-center justify-center lg:justify-start flex-col md:flex-row gap-2 sm:gap-4 max-w-full"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -87,7 +87,7 @@ const HeroSection: React.FC = () => {
                bg-gradient-to-r from-[#f97316] to-[#ea580c] 
                text-white font-bold rounded-full shadow-lg 
                hover:shadow-2xl transform transition-all duration-300 
-               text-sm sm:text-base min-w-0 max-w-[250px]"
+               text-sm sm:text-base min-w-0 max-w-[250px] w-full"
               onClick={() => scrollToSection("services")}
             >
               <span className="block sm:hidden">
@@ -103,7 +103,7 @@ const HeroSection: React.FC = () => {
                border-2 border-white/30 text-white font-bold 
                rounded-full backdrop-blur-sm hover:bg-white/10 
                transform transition-all duration-300 hover:border-white/60 
-               text-sm sm:text-base min-w-0 max-w-[250px]"
+               text-sm sm:text-base min-w-0 max-w-[250px] w-full"
               onClick={() => scrollToSection("contact")}
             >
               <span className="block sm:hidden">
@@ -116,8 +116,9 @@ const HeroSection: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      {/* Images */}
-      <div className="absolute bottom-0 right-0">
+
+      {/* view dekstop */}
+      <div className="lg:block hidden absolute bottom-0 right-0">
         {/* Main Engineer Image */}
         <div className="relative z-10 -mb-20 w-[90%]">
           <img
@@ -136,6 +137,22 @@ const HeroSection: React.FC = () => {
             className="max-w-full h-auto"
           />
         </div>
+      </div>
+
+      {/* view tablet */}
+      <div className="flex lg:hidden absolute bottom-0 right-0 z-10 w-full justify-center">
+        <img
+          src={heroEngineers}
+          alt="Two engineers wearing helmets, one holding a laptop, smiling in professional setting"
+          className="w-[50%] h-full object-center"
+        />
+      </div>
+      <div className="flex lg:hidden absolute -bottom-0 right-0 z-0 w-full justify-center">
+        <img
+          src="segitiga 1 (1).png"
+          alt="Decorative geometric element"
+          className="w-[100%] h-full object-center"
+        />
       </div>
     </AnimatedSection>
   );
