@@ -359,7 +359,7 @@ const AboutCompanySection: React.FC = () => {
               );
             })}
           </motion.div>
-          <div className="flex lg:hidden h-auto items-center">
+          <div className="flex lg:hidden h-auto items-center justify-center">
             <div className="flex col-span-1 justify-center items-center relative">
               {/* Animated Rings */}
               <div className="border-2 border-white/30 rounded-full p-4 absolute w-[97%] h-[97%] flex items-center justify-center">

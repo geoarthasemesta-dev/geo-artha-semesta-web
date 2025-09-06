@@ -47,7 +47,7 @@ const ProjectExperienceSection: React.FC = () => {
   const scrollRight = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
-        left: 320, // Scroll by card width + gap
+        left: 365, // Scroll by card width + gap
         behavior: "smooth",
       });
     }
@@ -93,16 +93,16 @@ const ProjectExperienceSection: React.FC = () => {
           {project.map((project, index) => (
             <article
               key={index}
-              className="min-w-[280px] max-w-xs bg-white backdrop-blur-sm rounded-xl flex-shrink-0 snap-start cursor-pointer overflow-hidden relative"
+              className="min-w-[280px] max-w-[350px] bg-white backdrop-blur-sm rounded-xl flex-shrink-0 snap-start cursor-pointer overflow-hidden relative"
             >
               <img
                 src={project.image}
                 alt="Project"
-                className="shadow-md object-cover h-48 w-full"
+                className="shadow-md object-cover h-60 w-full"
               />
 
               {/* Gradient overlay - posisikan di atas image */}
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white to-transparent to-85% pointer-events-none z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white to-transparent to-80% pointer-events-none z-10"></div>
 
               {/* Content dengan z-index lebih tinggi */}
               <div className="grid gap-2 p-6 pt-0 -mt-10 relative z-20">
@@ -149,7 +149,7 @@ const ProjectExperienceSection: React.FC = () => {
         {project.length > 3 && (
           <button
             onClick={scrollRight}
-            className="hidden lg:flex absolute z-30 md:top-1/2 md:-translate-y-1/2 right-0 w-20 h-20 items-center hover:scale-105 duration-300 border justify-center bg-white/10 rounded-full backdrop-blur-sm"
+            className="flex absolute z-30 top-44 md:top-1/2 md:-translate-y-1/2 -right-5 md:-right-6 lg:right-0 scale-75 md:scale-100 w-20 h-20 items-center hover:scale-105 duration-300 border-2 justify-center bg-white/10 rounded-full backdrop-blur-sm"
           >
             <ChevronRight size={30} />
           </button>
@@ -158,7 +158,7 @@ const ProjectExperienceSection: React.FC = () => {
 
       {/* Right gradient overlay */}
       {project.length > 3 && (
-        <div className="hidden lg:block absolute z-20 top-1/2 right-0 md:-translate-y-1/2 h-full w-[15%] bg-linear-to-r from-transparent via-[#fb742e] to-[#fb742e] pointer-events-none"></div>
+        <div className="hidden md:block absolute z-20 top-0 md:top-1/2 right-1.5 md:right-0 md:-translate-y-1/2 h-full md:w-[20%] lg:w-[15%] bg-linear-to-r from-transparent via-[#fb742e] to-[#fb742e] pointer-events-none"></div>
       )}
 
       {/* Left gradient overlay */}

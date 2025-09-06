@@ -144,10 +144,10 @@ const HeroSection: React.FC = () => {
         <img
           src={heroEngineers}
           alt="Two engineers wearing helmets, one holding a laptop, smiling in professional setting"
-          className="w-[50%] h-full object-center"
+          className="w-[60%] h-full object-center"
         />
       </div>
-      <div className="flex lg:hidden absolute -bottom-0 right-0 z-0 w-full justify-center">
+      <div className="flex lg:hidden absolute bottom-0 right-0 z-0 w-full justify-center">
         <img
           src="segitiga 1 (1).png"
           alt="Decorative geometric element"

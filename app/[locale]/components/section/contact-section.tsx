@@ -57,7 +57,7 @@ const ContactSection: React.FC = () => {
   return (
     <AnimatedSection
       id="contact"
-      className="max-w-[100%] mx-auto bg-white px-5 md:p-20 py-20 relative overflow-hidden"
+      className="max-w-[100%] mx-auto bg-white px-5 pb-80 lg:p-20 py-20 relative overflow-hidden"
     >
       {/* Background decorative images */}
       <div className="absolute -left-12 -bottom-4 md:w-1/2 z-10">

@@ -28,7 +28,7 @@ const ServiceSection: React.FC = () => {
   const [limit, setLimit] = React.useState(6);
   const [showMore, setShowMore] = React.useState(false);
 
-  const isTablet = useMediaQuery("(max-width: 1024px)");
+  const isTablet = useMediaQuery("(max-width: 1200px)");
 
   React.useEffect(() => {
     if (isTablet) {
@@ -41,7 +41,7 @@ const ServiceSection: React.FC = () => {
   return (
     <AnimatedSection
       id="services"
-      className="bg-white w-full max-w-[100%] mx-auto relative px-5 md:px-20 text-white overflow-hidden"
+      className="bg-whit pb-60 md:pb-80 lg:pb-0  w-full max-w-[100%] mx-auto relative px-5 md:px-20 text-white overflow-hidden"
     >
       <div className="max-w-[100%] mx-auto px-5 md:px-16 py-20 text-[#f97316] z-50">
         {/* Enhanced Title Animation */}
@@ -60,32 +60,12 @@ const ServiceSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3">
           <div className="col-span-1"></div>
 
-          {/* Services Grid with Enhanced Animations */}
-          <div
-            className="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-8 max-w-6xl mx-auto z-20"
-            // initial={{ opacity: 0 }}
-            // whileInView={{ opacity: 1 }}
-            // viewport={{ once: true }}
-          >
-            {ourServices.slice(0, limit).map((service, index) => (
+          {/* Services Grid with Enhanced Animations and Fixed Horizontal Scroll */}
+          <div className="flex overflow-x-auto overflow-y-hidden snap-x snap-mandatory scrollbar-hide md:grid md:col-span-2 md:grid-cols-2 gap-2 md:gap-8 md:max-w-6xl md:mx-auto z-20 pb-4">
+            {ourServices.map((service, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl border-gray-50 border shadow-lg border-border hover:shadow-lg transition cursor-default bg-white md:bg-transparent md:backdrop-blur-lg"
-                // initial={{
-                //   opacity: 0,
-                //   y: 50,
-                //   scale: 1,
-                // }}
-                // whileInView={{
-                //   opacity: 1,
-                //   y: 0,
-                //   x: 0,
-                // }}
-                // transition={{
-                //   duration: 0.8,
-                //   delay: index * 0.1 + 0.2,
-                //   type: "decay",
-                // }}
+                className="flex-shrink-0 w-64 md:w-auto p-6 rounded-xl border-gray-50 border shadow-lg border-border hover:shadow-lg transition cursor-default bg-transparent backdrop-blur-lg snap-start relative"
               >
                 {/* Animated Icon Placeholder */}
                 <motion.div
@@ -112,6 +92,7 @@ const ServiceSection: React.FC = () => {
                       opacity: [1, 0.7, 1],
                     }}
                     src={service.icon}
+                    alt={service.title}
                   />
                 </motion.div>
 
@@ -145,7 +126,7 @@ const ServiceSection: React.FC = () => {
 
                 {/* Animated Border Effect */}
                 <motion.div
-                  className="absolute inset-0 rounded-xl border-2 border-transparent hover:border-[#f97316] transition duration-300"
+                  className="absolute inset-0 rounded-xl border-2 border-transparent hover:border-[#f97316] transition duration-300 pointer-events-none"
                   // whileHover={{
                   //   borderColor: "rgba(249, 115, 22, 0.2)",
                   //   transition: { duration: 0.3 },
@@ -154,94 +135,39 @@ const ServiceSection: React.FC = () => {
               </div>
             ))}
           </div>
-          {/* Buttons */}
-          <div className="w-full z-20 flex justify-center mt-14">
-            {isTablet && (
-              <motion.button
-                className="px-8 py-4 bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white font-bold rounded-full shadow-lg hover:shadow-2xl transform transition-all duration-300 z-10 border-white border"
-                onClick={() => {
-                  if (isTablet && !showMore) {
-                    setLimit(6);
-                    setShowMore(!showMore);
-                  } else if (showMore) {
-                    setLimit(4);
-                    setShowMore(!showMore);
-                  }
-                }}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 25px 50px -12px rgba(249, 115, 22, 0.5)",
-                  y: -2,
-                }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 1.4 }}
-              >
-                {showMore
-                  ? t("serviceSection.viewLess")
-                  : t("serviceSection.viewMore")}
-              </motion.button>
-            )}
-          </div>
         </div>
       </div>
 
-      {/* Enhanced Background Images */}
-      <div
-        className="md:w-[40%] flex justify-center items-center absolute left-4 -bottom-5 z-10"
-        // initial={{ opacity: 0, x: -100, scale: 0.8 }}
-        // whileInView={{ opacity: 1, x: 0, scale: 1 }}
-        // transition={{
-        //   delay: 0.3,
-        //   duration: 1,
-        //   ease: [0.25, 0.46, 0.45, 0.94],
-        //   type: "spring",
-        //   stiffness: 100,
-        //   damping: 15,
-        // }}
-        // viewport={{ once: true }}
-      >
+      {/*Dekstop Enhanced Background Images */}
+      <div className="hidden lg:flex md:w-[40%] justify-center items-center absolute left-4 -bottom-5 z-10">
         <img
           src="one-person.png"
           alt="Services Image"
           className="rounded-3xl shadow-card max-w-full h-auto"
-          // animate={{
-          //   y: [0, -10, 0],
-          //   rotate: [0, 1, -1, 0],
-          // }}
-          // whileHover={{
-          //   scale: 1.05,
-          //   rotateY: 10,
-          //   transition: { type: "spring", stiffness: 400, damping: 25 },
-          // }}
         />
       </div>
 
-      <div
-        className="w-full md:w-[45%] flex justify-center absolute -left-10 -bottom-24 z-0"
-        // initial={{ opacity: 0, x: -150, rotate: -20, scale: 0.5 }}
-        // whileInView={{ opacity: 1, x: 0, rotate: 0, scale: 1 }}
-        // transition={{
-        //   delay: 0.5,
-        //   duration: 1.2,
-        //   ease: [0.25, 0.46, 0.45, 0.94],
-        // }}
-        // viewport={{ once: true }}
-      >
+      <div className="hidden lg:flex w-full md:w-[45%] justify-center absolute -left-10 -bottom-24 z-0">
         <img
           src="segitiga-orange.png"
           alt="Decorative geometric element"
           className="rounded-3xl shadow-card max-w-full h-auto"
-          // animate={{
-          //   rotate: [0, 2, -2, 0],
-          //   scale: [1, 1.02, 1],
-          // }}
-          // transition={{
-          //   duration: 12,
-          //   repeat: Infinity,
-          //   ease: "linear",
-          // }}
+        />
+      </div>
+
+      {/*Tablet-Mobile Enhanced Background Images */}
+      <div className="flex lg:hidden absolute bottom-0 right-0 z-10 w-full justify-end md:justify-center">
+        <img
+          src="one-person.png"
+          alt="Two engineers wearing helmets, one holding a laptop, smiling in professional setting"
+          className="w-[70%] md:w-[35%] h-full object-center"
+        />
+      </div>
+      <div className="flex lg:hidden absolute -bottom-26 md:-bottom-60 -left-28 md:-left-80 z-0 w-full justify-start md:justify-center">
+        <img
+          src="square-orange.png"
+          alt="Decorative geometric element"
+          className="w-[90%] md:w-[65%] h-full object-center"
         />
       </div>
     </AnimatedSection>

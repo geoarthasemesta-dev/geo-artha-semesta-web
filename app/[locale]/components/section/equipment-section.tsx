@@ -5,10 +5,14 @@ import { CircleArrowDown, CircleArrowUp } from "lucide-react";
 import { AnimatedSection } from "./animated-section";
 import { useLocale } from "../bilingual/TranslationProvider";
 import { useClientTranslation } from "@/lib/i18n-client";
+import { useMediaQuery } from "@/app/hooks/useMediaQuery";
 
 const EquipmentSection: React.FC = () => {
   const locale = useLocale();
   const { t } = useClientTranslation(locale);
+
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isTablet = useMediaQuery("(max-width: 1200px)");
 
   const equipmentData = t("equipmentSection.equipment", {
     returnObjects: true,
@@ -28,6 +32,16 @@ const EquipmentSection: React.FC = () => {
 
   const [limit, setLimit] = React.useState(6);
   const [showMore, setShowMore] = React.useState(false);
+
+  React.useEffect(() => {
+    if (isMobile) {
+      setLimit(2);
+    } else if (isTablet) {
+      setLimit(4);
+    } else {
+      setLimit(6);
+    }
+  }, [isMobile, isTablet]);
   return (
     <AnimatedSection
       id="equipment"
@@ -37,7 +51,7 @@ const EquipmentSection: React.FC = () => {
         {t("equipmentSection.title")}
       </h2>
       <motion.div
-        className="max-w-[100%] mx-auto flex flex-wrap justify-center gap-8"
+        className="max-w-[100%] mx-auto flex flex-wrap justify-center gap-4 md:gap-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ staggerChildren: 0.1 }}
@@ -48,7 +62,7 @@ const EquipmentSection: React.FC = () => {
           .map((equipment, index) => (
             <div
               key={index}
-              className="col-span-1 max-w-[400px] relative bg-gradient-orange rounded-xl overflow-hidden flex flex-col items-center shadow-orange cursor-default hover:shadow-sm transition-all duration-300 h-60 group hover:shadow-amber-50"
+              className="w-[300px] lg:w-full lg:max-w-[400px] relative bg-gradient-orange rounded-xl overflow-hidden flex flex-col items-center shadow-orange cursor-default hover:shadow-sm transition-all duration-300 h-60 group hover:shadow-amber-50"
             >
               <img
                 src={equipment.img}
@@ -93,34 +107,37 @@ const EquipmentSection: React.FC = () => {
             </div>
           ))}
       </motion.div>
-      <div className="w-full z-50 flex justify-center mt-20">
-        <motion.button
-          className="px-8 py-4 bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white font-bold rounded-full shadow-lg hover:shadow-2xl transform transition-all duration-300 z-10 border-white border flex justify-center gap-2"
-          onClick={() => {
-            if (!showMore) {
-              setLimit(equipment.length);
-              setShowMore(!showMore);
-            } else if (showMore) {
-              setLimit(6);
-              setShowMore(!showMore);
-            }
-          }}
-          whileHover={{
-            scale: 1.05,
-            boxShadow: "0 25px 50px -12px rgba(249, 115, 22, 0.5)",
-            y: -2,
-          }}
-          whileTap={{ scale: 0.95 }}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 1.4 }}
-        >
-          {showMore
-            ? t("equipmentSection.viewLess")
-            : t("equipmentSection.viewMore")}
-          {showMore ? <CircleArrowUp /> : <CircleArrowDown />}
-        </motion.button>
-      </div>
+      {(isMobile || isTablet) && (
+        <div className="flex w-full z-50 justify-center mt-5">
+          <motion.button
+            className="flex px-8 py-4 bg-gradient-to-r from-[#f97316] to-[#ea580c] text-white font-bold rounded-full shadow-lg hover:shadow-2xl transform transition-all duration-300 z-10 border-white border justify-center gap-2"
+            onClick={() => {
+              if (!showMore) {
+                setLimit(equipment.length);
+                setShowMore(!showMore);
+              } else if (showMore) {
+                const limit = isMobile ? 2 : 4;
+                setLimit(limit);
+                setShowMore(!showMore);
+              }
+            }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 25px 50px -12px rgba(249, 115, 22, 0.5)",
+              y: -2,
+            }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 1.4 }}
+          >
+            {showMore
+              ? t("equipmentSection.viewLess")
+              : t("equipmentSection.viewMore")}
+            {showMore ? <CircleArrowUp /> : <CircleArrowDown />}
+          </motion.button>
+        </div>
+      )}
     </AnimatedSection>
   );
 };
