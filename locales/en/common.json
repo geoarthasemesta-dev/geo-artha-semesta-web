@@ -10,20 +10,37 @@
   },
   "heroSection": {
     "greeting": "Excellence in Subsea Solutions for the Oil & Gas Industry",
-    "description": "PT Geo Artha Semesta is a reliable professional diving, subsea inspection, rental, and maintenance services to ensure the continuity of your offshore operations.",
+    "description": "PT GEO Artha Semesta is a trusted Indonesian company specializing in professional subsea services. Supported by experienced experts, we deliver high-quality solutions in subsea survey, ROV, diving, inspection, maintenance, and offshore construction support for the oil & gas industry.",
     "contactUs": "Contact Us",
     "ourService": "Our Services",
     "ourServiceDekstop": "Explore Our Services",
     "contactUsDekstop": "Contact Us Today"
   },
   "aboutSection": {
-    "title": "About PT Geo Artha Semesta",
-    "description": "PT Geo Artha Semesta is an Indonesian company specializing in professional subsea services for the oil and gas industry.",
-    "vision": "With a team of expert divers, experienced technicians, and modern equipment, we deliver reliable support for both offshore and nearshore operations.",
+    "title": "About PT GEO Artha Semesta",
+    "description": "PT GEO Artha Semesta is Indonesian National Company specializing in professional subsea services: Subsea Survey, ROV, Diving, Subsea Inspection & Maintenance and Offshore Construction Support to Oil & Gas Industry. \n\r\n Founded and supported by experienced and professional personnel in Subsea services enable us to execute projects according to high standard quality which required by clients.",
+    "visionLabel": "Vision",
+    "vision": "Vision To become Indonesian leading Subsea Contractor by providing excellence Subsea solution; delivering world class assets and resources and ensuring project execution and adherence to the highest HSEQ Standards to Oil and Gas Industry.",
+    "missionLabel": "Mission",
     "mission": [
       {
+        "id": 1,
+        "desc": "Delivering service to customer with quality and safety standard as per required in Contract."
+      },
+      {
+        "id": 2,
+        "desc": "Providing customer with best alternative technical and commercial solution to increase asset reliability by optimizing design, application of new equipment and new technology available"
+      },
+      {
+        "id": 3,
+        "desc": "Building and Managing efficient and effective operation by employing personnel who strive and are reliable to every business challenge."
+      }
+    ],
+    "ourCoreValueLabel": "Our CoreValue",
+    "ourCoreValue": [
+      {
         "title": "Safety First",
-        "desc": "Safety is our top priority.",
+        "desc": " Promotes Health, Safety and Security is our Top Priority.",
         "icon": "Vector (2).svg"
       },
       {
@@ -33,12 +50,12 @@
       },
       {
         "title": "Innovation",
-        "desc": "Always solutions with the latest subsea technology.",
+        "desc": "Promotes the latest subsea technology to provide best and most effective solution.",
         "icon": "Vector (3).svg"
       },
       {
         "title": "Commitment",
-        "desc": "Reliability and on-time execution.",
+        "desc": "Commit to deliver High Quality Services, Professional and Reliable.",
         "icon": "Vector (4).svg"
       }
     ]
@@ -51,38 +68,26 @@
       {
         "id": 1,
         "icon": "/search_check.svg",
-        "title": "Subsea Inspection, Repair & Maintenance (IRM)",
-        "desc": "Comprehensive subsea inspection, repair, and maintenance to ensure asset integrity and operational safety."
+        "title": "Subsea Survey & Positioning",
+        "desc": "Supported by most latest technology equipment and highly qualified surveyors and survey engineers, we provide accurate positioning, fundamental parameter for Subsea survey and engineering operations at sea."
       },
       {
         "id": 2,
-        "icon": "/930e4fb2.svg",
-        "title": "Pipeline & Cable Repair",
-        "desc": "Specialized solutions for installing and maintaining subsea pipelines and communication/computer cables."
+        "icon": "/nest_remote_comfort_sensor.svg",
+        "title": "Remotely Operated Vehicle",
+        "desc": "We provide a light and observation class ROV for inspection, survey and intervention in deep or hazardous area. \r\n\r\n Our SAAB Seaeye Falcon is widely regarded internationally as the standard observation and inspection ROV for operations to depth up to 300 meters with exceptional vehicle control and diagnostic data."
       },
       {
         "id": 3,
-        "icon": "/construction_24dp.svg",
-        "title": "Offshore Construction Support",
-        "desc": "Subsea support for offshore installation, construction, and maintenance projects."
+        "icon": "/scuba_diving.svg",
+        "title": "Subsea Inspection & Maintenance Support",
+        "desc": "We provide comprehensive subsea inspection, repair, and maintenance including but not limited to: Detailed underwater inspection, Pipeline/cable integrity-inspection/surveys, Anode retrofit and anode sled installation to ensure asset integrity and operational safety."
       },
       {
         "id": 4,
-        "icon": "/scuba_diving.svg",
-        "title": "Commercial Diving Services",
-        "desc": "Professional diving teams trained and certified to perform underwater tasks in challenging offshore environments."
-      },
-      {
-        "id": 5,
-        "icon": "/nat.svg",
-        "title": "Underwater Survey & Mapping",
-        "desc": "Hydrographic and geophysical surveys to provide accurate seabed mapping and structural assessments."
-      },
-      {
-        "id": 6,
-        "icon": "/nest_remote_comfort_sensor.svg",
-        "title": "ROV (Remotely Operated Vehicle) Operations",
-        "desc": "Light and observation-class ROVs for inspection, survey, and intervention in deep or hazardous areas."
+        "icon": "/construction_24dp.svg ",
+        "title": "Offshore Construction Support",
+        "desc": "We provide varies of Offshore Construction Support Equipment to rent such as Underwater HP Water Jet, Pipe Cutting, Bolt Tensioner, Generator Set, Mooring Buoy, Underwater Lift Bag, and Gas Detector."
       }
     ]
   },
@@ -90,36 +95,38 @@
     "title": "Our Equipment",
     "viewMore": "View More",
     "viewLess": "View Less",
+    "seeDetail": "See Detail",
+    "seeLess": "See Less",
     "equipment": [
       {
-        "title": "Diving Support Vessel (DSV)",
-        "desc": "Equipped with dive systems to support offshore diving and subsea operations.",
+        "id": 1,
+        "title": "ADL Vantage Pro:",
+        "desc": "Advanced, high-speed, high-power wireless datalink built to survive the rigors of GNSS/RTK surveying and precise positioning.",
         "img": "dsv.svg"
       },
       {
-        "title": "Underwater Cutting & Welding Tools",
-        "desc": "Advanced tools for underwater cutting and welding for subsea repair and fabrication work.",
+        "id": 2,
+        "title": "HPT 3000 USBL Tracking and Communication Transceiver:",
+        "desc": "For tracking underwater vehicles, divers, and equipment with a range up to 4000 m.",
         "img": "underwater-cutting.svg"
       },
       {
-        "title": "ROV System (Light Work-Class & Observation Class)",
-        "desc": "Remotely operated vehicles used for inspection, surveys, and assistance tasks in subsea environments.",
-        "img": "rov-system.svg"
-      },
-      {
-        "title": "Air & Mixed Gas Diving System",
-        "desc": "Advanced diving gases designed for secure underwater operations ensuring high safety standards.",
+        "id": 3,
+        "title": "Vector VS 1000 GNSS:",
+        "desc": "For Marine, Position & Heading Receiver.",
         "img": "air-mixed-gas-diving-system.svg"
       },
       {
-        "title": "Hydrographic Survey Equipment",
-        "desc": "High precision instruments for seabed mapping, positioning, and underwater surveying.",
-        "img": "hydropgraphic-survey-equipment.svg"
+        "id": 4,
+        "title": "Remotely Operated Vehicle (ROV):",
+        "desc": "Falcon Seaeye is considered the most successful underwater electric robotic system of observation class and proven in intricate and demanding missions across industry. It provides exceptional vehicle control and diagnostic data as well as the ability to customize the pilot display. It is lightweight, portable, compact, and is rated to a depth of 300 m.",
+        "img": "rov.jpeg"
       },
       {
-        "title": "Underwater NDT (Non-Destructive Testing) Kits",
-        "desc": "State-of-the-art equipment for structural inspection and integrity assessment without causing damage.",
-        "img": "underwater-ndt.svg"
+        "id": 5,
+        "title": "Dragger X Zone 5800",
+        "desc": "The Dragger X-Zone 5800 is a gas detector that can be used for the measurement of up to six gases. The internal pump and continuous power supply in the explosive area of Zone 0 extend the range of application in mobile gas detection technology.",
+        "img": "Dragger X Zone 5800.jpeg"
       }
     ]
   },
@@ -139,22 +146,16 @@
         "desc": "Routine inspection and maintenance of subsea structures supporting offshore platforms. The project included marine growth removal, NDT testing and repair works, wreck removal, ensuring compliance with offshore safety and performance standards."
       },
       {
-        "image": "petroleum-gas-container-ship-oil-refinery-background-energy-nautical-transportation 1.svg",
+        "image": "WhatsApp Image 2025-09-16 at 00.42.39.jpeg",
         "title": "Makassar Strait (2021)",
         "subtitle": "Subsea Cable Repair",
         "desc": "Emergency repair on an offshore communication cable as a result of 50 meters. The scope of work included locating the damaged section, deploying divers for cutting and cable restoration, subsea and surface restoration of subsea data transmission."
       },
       {
-        "image": "petroleum-gas-container-ship-oil-refinery-background-energy-nautical-transportation 1.svg",
+        "image": "WhatsApp Image 2025-09-16 at 00.47.42.jpeg",
         "title": "Banda Sea (2023)",
         "subtitle": "ROV Inspection",
         "desc": "Remote operated vehicle inspection of underwater infrastructure. The project included detailed visual documentation, structural assessment, and data collection for preventive maintenance planning and operational optimization."
-      },
-      {
-        "image": "petroleum-gas-container-ship-oil-refinery-background-energy-nautical-transportation 1.svg",
-        "title": "Celebes Sea (2022)",
-        "subtitle": "Diving Operations",
-        "desc": "Commercial diving operations for subsea installation and maintenance. The scope covered welding repairs, bolt tensioning, anode replacement, and general maintenance to ensure continued operational excellence of offshore facilities."
       }
     ]
   },

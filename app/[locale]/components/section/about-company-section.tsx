@@ -3,18 +3,108 @@ import { AnimatedSection } from "./animated-section";
 import { useLocale } from "../bilingual/TranslationProvider";
 import { useClientTranslation } from "@/lib/i18n-client";
 
+// Animation variants untuk container
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+// Animation variants untuk text elements
+const textVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+    scale: 0.95,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.25, 0, 1],
+    },
+  },
+};
+
+// Animation variants untuk title dengan efek lebih dramatis
+const titleVariants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+    scale: 0.9,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 1,
+      ease: [0.25, 0.25, 0, 1],
+    },
+  },
+};
+
+// Animation variants untuk mission items dengan stagger
+const missionVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const missionItemVariants = {
+  hidden: {
+    opacity: 0,
+    x: -20,
+    scale: 0.95,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: {
+      duration: 0.7,
+      ease: [0.25, 0.25, 0, 1],
+    },
+  },
+};
+
 const AboutCompanySection: React.FC = () => {
   const locale = useLocale();
   const { t } = useClientTranslation(locale);
 
   const missionsData = t("aboutSection.mission", { returnObjects: true }) as {
+    id: number;
+    desc: string;
+  }[];
+
+  const missions = Array.isArray(missionsData)
+    ? (missionsData as {
+        id: number;
+        desc: string;
+      }[])
+    : [];
+
+  const ourCoreValue = t("aboutSection.ourCoreValue", {
+    returnObjects: true,
+  }) as {
     title: string;
     desc: string;
     icon: string;
   }[];
 
-  const missions = Array.isArray(missionsData)
-    ? (missionsData as {
+  const ourCoreValues = Array.isArray(ourCoreValue)
+    ? (ourCoreValue as {
         title: string;
         desc: string;
         icon: string;
@@ -81,7 +171,7 @@ const AboutCompanySection: React.FC = () => {
       </motion.div>
 
       <motion.div
-        className="absolute hidden md:block -right-4 -bottom-4 w-[50%] z-0"
+        className="absolute hidden md:block -right-96 top-[20%] translate-0.5 w-[80%] z-0"
         initial={{ opacity: 0, x: 100, rotate: 200, scale: 0.5 }}
         whileInView={{ opacity: 0.6, x: 0, rotate: 180, scale: 1 }}
         transition={{
@@ -92,9 +182,9 @@ const AboutCompanySection: React.FC = () => {
         viewport={{ once: true }}
       >
         <motion.img
-          src="segitiga-transparant.png"
+          src="squeare-white.png"
           alt="Decorative geometric element"
-          className="max-w-full h-auto rotate-180"
+          className="max-w-full h-auto rotate-180 opacity-20"
           animate={{
             rotate: [180, 183, 177, 180],
             y: [0, 10, 0],
@@ -136,7 +226,7 @@ const AboutCompanySection: React.FC = () => {
       </motion.div>
 
       <motion.div
-        className="absolute block md:hidden -right-80 -bottom-4 w-[150%] z-0"
+        className="absolute block md:hidden -right-80 bottom-40 w-[150%] z-0"
         initial={{ opacity: 0, x: 100, rotate: 200, scale: 0.5 }}
         whileInView={{ opacity: 0.6, x: 0, rotate: 180, scale: 1 }}
         transition={{
@@ -198,7 +288,7 @@ const AboutCompanySection: React.FC = () => {
             viewport={{ once: true }}
           >
             <motion.p
-              className="max-w-3xl leading-relaxed text-center text-orange-100 sm:text-base md:text-lg"
+              className="max-w-3xl leading-relaxed text-center text-orange-100 sm:text-base md:text-lg whitespace-pre-wrap"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -207,19 +297,176 @@ const AboutCompanySection: React.FC = () => {
             >
               {t("aboutSection.description")}
             </motion.p>
-
-            <motion.p
-              className="max-w-3xl leading-relaxed text-center text-orange-100 sm:text-base md:text-lg"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 1, delay: 1.5 }}
-            >
-              {t("aboutSection.vision")}
-            </motion.p>
           </motion.div>
         </motion.div>
+
+        {/** Vision & Mission */}
+        <motion.div
+          className="w-full h-full min-h-[600px] md:min-h-[600px] relative overflow-hidden rounded-2xl md:rounded-4xl shadow-2xl"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.25, 0.25, 0, 1] }}
+        >
+          {/* Background Image */}
+          <motion.div
+            className="absolute inset-0 w-full h-full"
+            initial={{ scale: 1.2, opacity: 0.7 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, delay: 0.2, ease: [0.25, 0.25, 0, 1] }}
+          >
+            <img
+              className="w-full h-full object-cover object-[80%_center] md:object-center"
+              src="bg-vision&mision.jpg"
+              alt="Vision and Mission Background"
+            />
+          </motion.div>
+
+          {/* Enhanced Gradient Overlay */}
+          <motion.div
+            className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-[#122852]/90 via-50% to-[#122852] lg:bg-gradient-to-r lg:from-transparent lg:via-[#122852]/80 lg:via-75% lg:to-[#122852]"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+          />
+
+          {/* Content Overlay */}
+          <div className="relative z-10 w-full min-h-full grid grid-cols-1 lg:grid-cols-2">
+            {/* Empty space for mobile, image space for desktop */}
+            <div className="hidden lg:block col-span-1"></div>
+
+            {/* Content Container */}
+            <motion.div
+              className="w-full col-span-1 lg:col-span-1 z-20 p-6 md:p-8 lg:p-[5%] flex flex-col justify-center py-16 md:py-20"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.8, delay: 0.6, ease: [0.4, 0, 0.2, 1] }}
+            >
+              {/* Vision Section */}
+              <div className="mb-8 lg:mb-12">
+                <motion.div
+                  className="mb-4"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
+                >
+                  <motion.h2
+                    className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 relative"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.9, ease: "easeOut" }}
+                  >
+                    <span className="relative z-10">
+                      {t("aboutSection.visionLabel")}
+                    </span>
+                  </motion.h2>
+                </motion.div>
+
+                <motion.p
+                  className="max-w-3xl leading-relaxed text-sm md:text-lg lg:text-xl text-gray-100 font-light"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.7,
+                    delay: 1.1,
+                    ease: [0.4, 0, 0.2, 1],
+                  }}
+                >
+                  {t("aboutSection.vision")}
+                </motion.p>
+              </div>
+
+              {/* Mission Section */}
+              <div>
+                <motion.div
+                  className="mb-6"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7, delay: 1.3, ease: "easeOut" }}
+                >
+                  <motion.h2
+                    className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 relative"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 1.4, ease: "easeOut" }}
+                  >
+                    <span className="relative z-10">
+                      {t("aboutSection.missionLabel")}
+                    </span>
+                  </motion.h2>
+                </motion.div>
+
+                {/* Mission List */}
+                <motion.ul
+                  className="space-y-4"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 1.6 }}
+                >
+                  {missions.map((mission, index) => (
+                    <motion.li
+                      key={index}
+                      className="max-w-3xl leading-relaxed text-sm md:text-lg text-gray-100 font-light relative pl-6"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.6,
+                        delay: 1.8 + index * 0.15,
+                        ease: [0.4, 0, 0.2, 1],
+                      }}
+                    >
+                      {/* Custom bullet point */}
+                      <motion.span
+                        className="absolute left-0 top-2 w-2 h-2 bg-gradient-to-r from-blue-400 to-cyan-300 rounded-full"
+                        initial={{ scale: 0, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                          duration: 0.4,
+                          delay: 1.9 + index * 0.15,
+                          ease: "backOut",
+                        }}
+                      />
+                      <motion.span
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                          duration: 0.6,
+                          delay: 2.0 + index * 0.15,
+                          ease: "easeOut",
+                        }}
+                      >
+                        {mission.desc}
+                      </motion.span>
+                    </motion.li>
+                  ))}
+                </motion.ul>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        <motion.h2
+          className="text-2xl md:text-3xl font-bold text-center mb-4 mt-10"
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          {t("aboutSection.ourCoreValueLabel")}
+        </motion.h2>
 
         {/* Features Grid with Enhanced Animations */}
         <div className="w-full flex md:flex-row sm:flex-col flex-col-reverse justify-center gap-10">
@@ -229,7 +476,7 @@ const AboutCompanySection: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {missions.map((item, index) => {
+            {ourCoreValues.map((item, index) => {
               // Center Ship Image (Special Treatment)
               if (index === 1) {
                 return (

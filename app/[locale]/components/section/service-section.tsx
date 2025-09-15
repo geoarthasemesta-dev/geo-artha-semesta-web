@@ -41,9 +41,9 @@ const ServiceSection: React.FC = () => {
   return (
     <AnimatedSection
       id="services"
-      className="bg-whit pb-60 md:pb-80 lg:pb-0  w-full max-w-[100%] mx-auto relative px-5 md:px-20 text-white overflow-hidden"
+      className="bg-white pb-60 md:pb-80 lg:pb-0  w-full max-w-[100%] mx-auto relative px-5 md:px-20 text-white overflow-hidden"
     >
-      <div className="max-w-[100%] mx-auto px-5 md:px-16 py-20 text-[#f97316] z-50">
+      <div className="max-w-[100%] mx-auto px-5 lg:px-16 py-20 text-[#f97316] z-50">
         {/* Enhanced Title Animation */}
         <motion.h2
           className="text-3xl font-semibold text-center mb-12"
@@ -112,7 +112,7 @@ const ServiceSection: React.FC = () => {
 
                 {/* Animated Description */}
                 <motion.p
-                  className="text-sm text-gray-700"
+                  className="text-sm text-gray-700 whitespace-pre-wrap"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{
@@ -139,7 +139,7 @@ const ServiceSection: React.FC = () => {
       </div>
 
       {/*Dekstop Enhanced Background Images */}
-      <div className="hidden lg:flex md:w-[40%] justify-center items-center absolute left-4 -bottom-5 z-10">
+      <div className="hidden lg:flex md:w-[35%] justify-center items-center absolute left-4 -bottom-5 z-10">
         <img
           src="one-person.png"
           alt="Services Image"
