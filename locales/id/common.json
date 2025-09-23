@@ -102,33 +102,51 @@
         "id": 1,
         "title": "ADL Vantage Pro:",
         "desc": "Wireless datalink canggih berkecepatan tinggi dan berdaya tinggi, dirancang untuk tahan terhadap kondisi berat survei GNSS/RTK dan penentuan posisi presisi.",
-        "img": "dsv.svg"
+        "img": "dsv.svg",
+        "category": "Surveying and Positioning Equipment",
+        "availability": "Avilable"
       },
       {
         "id": 2,
         "title": "HPT 3000 USBL Tracking and Communication Transceiver:",
         "desc": "Untuk pelacakan kendaraan bawah laut, penyelam, dan peralatan dengan jangkauan hingga 4000 m.",
-        "img": "underwater-cutting.svg"
+        "img": "underwater-cutting.svg",
+        "category": "Surveying and Positioning Equipment",
+        "availability": "Avilable"
       },
       {
         "id": 3,
         "title": "Vector VS 1000 GNSS:",
         "desc": "Penerima GNSS untuk kelautan, posisi, dan arah (heading).",
-        "img": "air-mixed-gas-diving-system.svg"
+        "img": "air-mixed-gas-diving-system.svg",
+        "category": "Surveying and Positioning Equipment",
+        "availability": "Avilable"
       },
       {
         "id": 4,
         "title": "Remotely Operated Vehicle (ROV):",
         "desc": "Falcon Seaeye dianggap sebagai sistem robotik listrik bawah laut kelas observasi yang paling sukses, serta telah terbukti dalam berbagai misi kompleks dan menantang di berbagai industri. ROV ini memberikan kendali kendaraan yang luar biasa dan data diagnostik yang akurat, serta kemampuan untuk menyesuaikan tampilan pilot. Desainnya ringan, portabel, ringkas, dan mampu beroperasi hingga kedalaman 300 meter.",
-        "img": "rov.jpeg"
+        "img": "rov.jpeg",
+        "category": "Observation Class ROV",
+        "availability": "Avilable"
       },
       {
         "id": 5,
         "title": "Dragger X Zone 5800",
         "desc": "Dragger X-Zone 5800 adalah alat deteksi gas yang dapat digunakan untuk mengukur hingga enam jenis gas. Pompa internal dan suplai daya berkelanjutan di area eksplosif Zona 0 memperluas jangkauan aplikasi dalam teknologi deteksi gas portabel.",
-        "img": "Dragger X Zone 5800.jpeg"
+        "img": "Dragger X Zone 5800.jpeg",
+        "category": "Multi-gas detector / Area monitoring system",
+        "availability": "Avilable"
       }
-    ]
+    ],
+    "equipmentModal": {
+      "category": "Kategory",
+      "industrialEquipment": "Industrial Equipment",
+      "availability": "Availability",
+      "available": "Available",
+      "contactUs": "Hubungi Kami",
+      "close": "Tutup"
+    }
   },
   "projectExperienceSection": {
     "title": "Rekam Jejak Kami",

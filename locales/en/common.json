@@ -102,33 +102,51 @@
         "id": 1,
         "title": "ADL Vantage Pro:",
         "desc": "Advanced, high-speed, high-power wireless datalink built to survive the rigors of GNSS/RTK surveying and precise positioning.",
-        "img": "dsv.svg"
+        "img": "dsv.svg",
+        "category": "Surveying and Positioning Equipment",
+        "availability": "Avilable"
       },
       {
         "id": 2,
         "title": "HPT 3000 USBL Tracking and Communication Transceiver:",
         "desc": "For tracking underwater vehicles, divers, and equipment with a range up to 4000 m.",
-        "img": "underwater-cutting.svg"
+        "img": "underwater-cutting.svg",
+        "category": "Surveying and Positioning Equipment",
+        "availability": "Avilable"
       },
       {
         "id": 3,
         "title": "Vector VS 1000 GNSS:",
         "desc": "For Marine, Position & Heading Receiver.",
-        "img": "air-mixed-gas-diving-system.svg"
+        "img": "air-mixed-gas-diving-system.svg",
+        "category": "Surveying and Positioning Equipment",
+        "availability": "Avilable"
       },
       {
         "id": 4,
         "title": "Remotely Operated Vehicle (ROV):",
         "desc": "Falcon Seaeye is considered the most successful underwater electric robotic system of observation class and proven in intricate and demanding missions across industry. It provides exceptional vehicle control and diagnostic data as well as the ability to customize the pilot display. It is lightweight, portable, compact, and is rated to a depth of 300 m.",
-        "img": "rov.jpeg"
+        "img": "rov.jpeg",
+        "category": "Observation Class ROV",
+        "availability": "Avilable"
       },
       {
         "id": 5,
         "title": "Dragger X Zone 5800",
         "desc": "The Dragger X-Zone 5800 is a gas detector that can be used for the measurement of up to six gases. The internal pump and continuous power supply in the explosive area of Zone 0 extend the range of application in mobile gas detection technology.",
-        "img": "Dragger X Zone 5800.jpeg"
+        "img": "Dragger X Zone 5800.jpeg",
+        "category": "Multi-gas detector / Area monitoring system",
+        "availability": "Avilable"
       }
-    ]
+    ],
+    "equipmentModal": {
+      "category": "Category",
+      "industrialEquipment": "Industrial Equipment",
+      "availability": "Availability",
+      "available": "Available",
+      "contactUs": "Contact Us",
+      "close": "Close"
+    }
   },
   "projectExperienceSection": {
     "title": "Our Track Record",
