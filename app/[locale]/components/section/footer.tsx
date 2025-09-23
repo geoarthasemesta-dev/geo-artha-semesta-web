@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
     <footer className="bg-linear-to-r from-[#f75320] via-[#fb742e] to-[#fe953e] text-white">
       <div className="max-w-[100%] p-[5%] mx-auto px-5 md:px-16 grid grid-cols-1 md:grid-cols-5 gap-10">
         <div className="space-y-2 col-span-5 md:col-span-3">
-          <img src="GAS_logo_black.png" className="w-32 h-32 " alt="" />
+          <img src="GAS_logo_black.png" className="w-24 h-24 " alt="" />
           <h3 className="font-bold uppercase tracking-wide">
             PT Geo Artha Semesta
           </h3>

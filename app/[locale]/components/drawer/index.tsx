@@ -183,12 +183,12 @@ const DrawerComponent: React.FC<DrawerProps> = ({
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.3 }}
             >
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary to-blue-500 rounded-lg flex items-center justify-center">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center">
                   <img
-                    src="gas-white-logo.png"
+                    src="GAS_logo_orange.png"
                     alt="Logo"
-                    className="w-5 h-5"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div>
