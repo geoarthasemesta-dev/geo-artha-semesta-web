@@ -42,7 +42,7 @@ const EquipmentModal: React.FC<EquipmentModalProps> = ({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.8, y: 50 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden relative"
+              className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full  max-h-[90vh] overflow-y-auto overflow-hidden relative"
             >
               {/* Close Button */}
               <button

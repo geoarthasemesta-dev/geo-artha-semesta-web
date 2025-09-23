@@ -170,7 +170,7 @@ const EquipmentSection: React.FC = () => {
                 <div className="flex justify-center">
                   <motion.button
                     onClick={() => openModal(equipment)}
-                    className="mt-3 bg-white/20 w-full max-w-[250px] backdrop-blur-sm text-white font-semibold py-2 px-4 rounded-lg hover:bg-white/30 transition-all duration-200 flex items-center justify-center gap-2"
+                    className="mt-3 bg-white/20 w-full max-w-[250px] backdrop-blur-sm text-white font-semibold py-2 px-4 rounded-lg hover:bg-white/30 transition-all duration-200 flex items-center justify-center gap-2 text-sm"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     initial={{ opacity: 0, y: 10 }}

@@ -14,13 +14,16 @@ const Footer: React.FC = () => {
     <footer className="bg-linear-to-r from-[#f75320] via-[#fb742e] to-[#fe953e] text-white">
       <div className="max-w-[100%] p-[5%] mx-auto px-5 md:px-16 grid grid-cols-1 md:grid-cols-5 gap-10">
         <div className="space-y-2 col-span-5 md:col-span-3">
-          <img src="gas-white-logo.png" className="w-20 h-20 " alt="" />
+          <img src="GAS_logo_black.png" className="w-32 h-32 " alt="" />
           <h3 className="font-bold uppercase tracking-wide">
             PT Geo Artha Semesta
           </h3>
           <address className="not-italic text-sm space-y-1">
-            <p>Jl. Jend. Sudirman No. 27-29, Jakarta Selatan</p>
-            <p>Postal code 12920</p>
+            <p>
+              Jl. Wijaya II No.5, RT.3/RW.1, Pulo, Kec. Kby. Baru, Kota Jakarta
+              Selatan
+            </p>
+            <p>DKI Jakarta 12160</p>
             <p>+62 (21) 1234 0000</p>
           </address>
         </div>

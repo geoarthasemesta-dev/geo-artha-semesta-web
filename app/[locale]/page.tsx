@@ -127,7 +127,7 @@ const Index = () => {
               className="text-white font-bold text-xl tracking-wide h-12 w-14 transition-transform hover:scale-105"
             >
               <img
-                src="gas-white-logo.png"
+                src="GAS_logo_orange.png"
                 alt="geo-artha-logo"
                 className="w-full h-full object-contain"
               />
