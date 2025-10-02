@@ -317,15 +317,15 @@ const AboutCompanySection: React.FC = () => {
             transition={{ duration: 1.2, delay: 0.2, ease: [0.25, 0.25, 0, 1] }}
           >
             <img
-              className="w-full h-full object-cover object-[80%_center] md:object-center"
-              src="bg-vision&mision.jpg"
+              className="w-full h-full object-cover -mt-60 md:object-center lg:m-0"
+              src="background_section_visi_misi.jpg"
               alt="Vision and Mission Background"
             />
           </motion.div>
 
           {/* Enhanced Gradient Overlay */}
           <motion.div
-            className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-[#122852]/90 via-50% to-[#122852] lg:bg-gradient-to-r lg:from-transparent lg:via-[#122852]/80 lg:via-75% lg:to-[#122852]"
+            className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-[#122852] via-50% to-[#122852] lg:bg-gradient-to-r lg:from-transparent lg:via-[#122852]/80 lg:via-75% lg:to-[#122852]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

@@ -152,28 +152,10 @@
     "title": "Our Track Record",
     "project": [
       {
-        "image": "panoramic-shot-oil-rigs-sea-with-beautiful-sunset 1.svg",
-        "title": "Offshore Natuna (2022)",
-        "subtitle": "Pipeline Inspection",
-        "desc": "Comprehensive subsea inspection of a 90 km offshore pipeline including both DNV and client scopes. The project involved visual inspection, cathodic protection measurement and thickness gauging to ensure the pipeline's structural integrity and operational safety."
-      },
-      {
-        "image": "petroleum-gas-container-ship-oil-refinery-background-energy-nautical-transportation 1.svg",
-        "title": "Java Sea (2020)",
-        "subtitle": "Platform Maintenance",
-        "desc": "Routine inspection and maintenance of subsea structures supporting offshore platforms. The project included marine growth removal, NDT testing and repair works, wreck removal, ensuring compliance with offshore safety and performance standards."
-      },
-      {
-        "image": "WhatsApp Image 2025-09-16 at 00.42.39.jpeg",
-        "title": "Makassar Strait (2021)",
-        "subtitle": "Subsea Cable Repair",
-        "desc": "Emergency repair on an offshore communication cable as a result of 50 meters. The scope of work included locating the damaged section, deploying divers for cutting and cable restoration, subsea and surface restoration of subsea data transmission."
-      },
-      {
-        "image": "WhatsApp Image 2025-09-16 at 00.47.42.jpeg",
-        "title": "Banda Sea (2023)",
-        "subtitle": "ROV Inspection",
-        "desc": "Remote operated vehicle inspection of underwater infrastructure. The project included detailed visual documentation, structural assessment, and data collection for preventive maintenance planning and operational optimization."
+        "image": "f8600e06b8c412d28cb27305b045f2177926770b.png",
+        "title": "Survey Spread",
+        "subtitle": "",
+        "desc": "Performing a survey spread service by providing personel and tools including but not limited to DGNSS Positioning System, USBL System, WSM Beacon, Telemetry, Navigation and Helsmann Software."
       }
     ]
   },

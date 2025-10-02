@@ -15,6 +15,7 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 import { useClientTranslation } from "../../lib/i18n-client";
 import { useLocale } from "./components/bilingual/TranslationProvider";
 import DrawerComponent from "./components/drawer";
+import ExperinceSection from "./components/section/new-experiece-section";
 
 const Index = () => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState<boolean>(false);
@@ -276,7 +277,8 @@ const Index = () => {
           <EquipmentSection />
         </section>
         <section id="experience">
-          <ProjectExperienceSection />
+          {/* <ProjectExperienceSection /> */}
+          <ExperinceSection />
         </section>
         <section id="contact">
           <ContactSection />

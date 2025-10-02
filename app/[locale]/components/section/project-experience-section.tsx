@@ -138,7 +138,7 @@ const ProjectExperienceSection: React.FC = () => {
                   }}
                   className="text-sm leading-relaxed text-black"
                 >
-                  {project.desc}
+                  {project.subtitle}
                 </motion.p>
               </div>
             </article>
