@@ -1,128 +1,167 @@
 "use client";
 
-import Link from "next/link";
 import { useLocale } from "../bilingual/TranslationProvider";
 import { useClientTranslation } from "@/lib/i18n-client";
 
 const Footer: React.FC = () => {
   const locale = useLocale();
   const { t } = useClientTranslation(locale);
+
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
-  return (
-    <footer className="bg-linear-to-r from-[#f75320] via-[#fb742e] to-[#fe953e] text-white">
-      <div className="max-w-[100%] p-[5%] mx-auto px-5 md:px-16 grid grid-cols-1 md:grid-cols-5 gap-10">
-        <div className="space-y-2 col-span-5 md:col-span-3">
-          <img
-            src="GAS_logo_white.png"
-            className="w-24 scale-75 md:scale-100 mb-2 md:mb-4"
-            alt=""
-          />
-          <h3 className="font-bold uppercase tracking-wide">
-            PT Geo Artha Semesta
-          </h3>
-          <address className="not-italic text-sm space-y-1">
-            <p>
-              Jl. Wijaya II No.5, RT.3/RW.1, Pulo, Kec. Kby. Baru, Kota Jakarta
-              Selatan
-            </p>
-            <p>DKI Jakarta 12160</p>
-            <p>+62 (21) 1234 0000</p>
-          </address>
-        </div>
-        <nav className="col-span-5 md:col-span-1">
-          <ul className="space-y-6 text-sm">
-            <li>
-              <button
-                onClick={() => scrollToSection("home")}
-                className="hover:text-primary transition"
-              >
-                {t("menu.home")}
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="hover:text-primary transition"
-              >
-                {t("menu.about")}
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="hover:text-primary transition"
-              >
-                {t("menu.services")}
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection("equipment")}
-                className="hover:text-primary transition"
-              >
-                {t("menu.equipment")}
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection("experience")}
-                className="hover:text-primary transition"
-              >
-                {t("menu.experience")}
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="hover:text-primary transition"
-              >
-                {t("menu.contact")}
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <div className="col-span-5 md:col-span-1 flex gap-4 items-end">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-instagram-icon lucide-instagram hover:text-pink-500 transition-colors duration-300 cursor-pointer"
-          >
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-          </svg>
 
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-linkedin-icon lucide-linkedin hover:text-blue-500 transition-colors duration-300 cursor-pointer"
-          >
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-            <rect width="4" height="12" x="2" y="9" />
-            <circle cx="4" cy="4" r="2" />
-          </svg>
+  return (
+    <footer className="bg-gradient-to-r from-[#f75320] via-[#fb742e] to-[#fe953e] text-white">
+      <div className="max-w-[100%] p-[5%] mx-auto px-5 md:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
+          {/* Left Column - Company Info */}
+          <div className="space-y-8">
+            {/* Logo and Company Name */}
+            <div className="space-y-3">
+              <img
+                src="GAS_logo_white.png"
+                className="w-20 md:w-24"
+                alt="GAS Logo"
+              />
+              <h3 className="font-bold text-lg md:text-xl tracking-wide">
+                PT GEO ARTHA SEMESTA
+              </h3>
+            </div>
+
+            {/* Head Office */}
+            <div className="space-y-2">
+              <h4 className="font-bold text-base md:text-lg">Head Office</h4>
+              <address className="not-italic text-sm md:text-base leading-relaxed">
+                Griya Loka BSD, Jl. Melinjo No. 11, Blok C.3, Rawa Buntu,
+                <br />
+                Serpong, Tangerang Selatan, Banten 15318
+              </address>
+            </div>
+
+            {/* Jakarta Office */}
+            <div className="space-y-2">
+              <h4 className="font-bold text-base md:text-lg">Jakarta Office</h4>
+              <address className="not-italic text-sm md:text-base leading-relaxed">
+                The Darmawangsa Square Lantai 2 Unit 47, Jl. Wijaya II No. 5,
+                <br />
+                RT.3/RW.1, Pulo, Kebayoran Baru, Jakarta Selatan, DKI Jakarta
+                12160
+              </address>
+            </div>
+
+            {/* Workshop */}
+            <div className="space-y-2">
+              <h4 className="font-bold text-base md:text-lg">Workshop</h4>
+              <address className="not-italic text-sm md:text-base leading-relaxed">
+                Kp. Dukuh RT 011/RW 004 Ds. Dandang, Kec. Cisauk, Kab.
+                <br />
+                Tangerang, Prov. Banten
+              </address>
+            </div>
+          </div>
+
+          {/* Right Column - Navigation & Social */}
+          <div className="flex flex-col justify-between">
+            {/* Navigation Menu */}
+            <nav>
+              <ul className="space-y-4 text-base md:text-lg">
+                <li>
+                  <button
+                    onClick={() => scrollToSection("home")}
+                    className="hover:opacity-80 transition"
+                  >
+                    {t("menu.home")}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection("about")}
+                    className="hover:opacity-80 transition"
+                  >
+                    {t("menu.about")}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection("services")}
+                    className="hover:opacity-80 transition"
+                  >
+                    {t("menu.services")}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection("equipment")}
+                    className="hover:opacity-80 transition"
+                  >
+                    {t("menu.equipment")}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection("experience")}
+                    className="hover:opacity-80 transition"
+                  >
+                    {t("menu.experience")}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection("contact")}
+                    className="hover:opacity-80 transition"
+                  >
+                    {t("menu.contact")}
+                  </button>
+                </li>
+              </ul>
+            </nav>
+
+            {/* Social Media Icons */}
+            <div className="flex gap-4 mt-8 md:mt-0 md:justify-end">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="hover:opacity-80 transition-opacity cursor-pointer"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="hover:opacity-80 transition-opacity cursor-pointer"
+              >
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </div>
+          </div>
         </div>
-        <p className=" opacity-60 col-span-5 text-sm md:text-[14px] flex flex-wrap gap-2 md:gap-4 justify-center md:justify-start">
-          © 2024 PT Geo Artha Semesta. All rights reserved.
-          <span>Terms of Service |</span>
-          <span>Privacy Policy</span>
-        </p>
+
+        {/* Copyright */}
+        <div className="mt-12 pt-6 border-t border-white/20">
+          <p className="text-sm md:text-base opacity-80">
+            © 2025 PT GEO ARTHA SEMESTA All rights reserved
+          </p>
+        </div>
       </div>
     </footer>
   );
