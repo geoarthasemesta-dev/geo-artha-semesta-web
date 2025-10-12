@@ -126,7 +126,7 @@
         "id": 4,
         "title": "Remotely Operated Vehicle (ROV):",
         "desc": "Falcon Seaeye dianggap sebagai sistem robotik listrik bawah laut kelas observasi yang paling sukses, serta telah terbukti dalam berbagai misi kompleks dan menantang di berbagai industri. ROV ini memberikan kendali kendaraan yang luar biasa dan data diagnostik yang akurat, serta kemampuan untuk menyesuaikan tampilan pilot. Desainnya ringan, portabel, ringkas, dan mampu beroperasi hingga kedalaman 300 meter.",
-        "img": "rov.jpeg",
+        "img": "rov-image.jpeg",
         "category": "Observation Class ROV",
         "availability": "Avilable"
       },

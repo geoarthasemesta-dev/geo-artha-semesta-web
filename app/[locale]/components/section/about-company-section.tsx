@@ -317,15 +317,15 @@ const AboutCompanySection: React.FC = () => {
             transition={{ duration: 1.2, delay: 0.2, ease: [0.25, 0.25, 0, 1] }}
           >
             <img
-              className="w-full h-full object-cover -mt-60 md:object-center lg:m-0"
-              src="background_section_visi_misi.jpg"
+              className="w-full h-full object-cover -mt-44 md:object-center lg:-translate-x-[20%] lg:m-0"
+              src="a7e9895ac2416ccac4e74f89cb01748ed84799d0.jpg"
               alt="Vision and Mission Background"
             />
           </motion.div>
 
           {/* Enhanced Gradient Overlay */}
           <motion.div
-            className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-[#122852] via-50% to-[#122852] lg:bg-gradient-to-r lg:from-transparent lg:via-[#122852]/80 lg:via-75% lg:to-[#122852]"
+            className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-[#122852] via-50% to-[#122852] lg:bg-gradient-to-r lg:from-transparent lg:via-[#122852] lg:via-70% lg:to-[#10264d]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -333,7 +333,7 @@ const AboutCompanySection: React.FC = () => {
           />
 
           {/* Content Overlay */}
-          <div className="relative z-10 w-full min-h-full grid grid-cols-1 lg:grid-cols-2">
+          <div className="relative z-10 mt-44 lg:mt-0 w-full min-h-full grid grid-cols-1 lg:grid-cols-2">
             {/* Empty space for mobile, image space for desktop */}
             <div className="hidden lg:block col-span-1"></div>
 

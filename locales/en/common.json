@@ -126,7 +126,7 @@
         "id": 4,
         "title": "Remotely Operated Vehicle (ROV):",
         "desc": "Falcon Seaeye is considered the most successful underwater electric robotic system of observation class and proven in intricate and demanding missions across industry. It provides exceptional vehicle control and diagnostic data as well as the ability to customize the pilot display. It is lightweight, portable, compact, and is rated to a depth of 300 m.",
-        "img": "rov.jpeg",
+        "img": "rov-image.jpeg",
         "category": "Observation Class ROV",
         "availability": "Avilable"
       },
