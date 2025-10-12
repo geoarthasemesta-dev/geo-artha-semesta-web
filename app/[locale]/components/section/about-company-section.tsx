@@ -311,10 +311,10 @@ const AboutCompanySection: React.FC = () => {
           {/* Background Image */}
           <motion.div
             className="absolute inset-0 w-full h-full"
-            initial={{ scale: 1.2, opacity: 0.7 }}
+            initial={{ scale: 3, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.2, delay: 0.2, ease: [0.25, 0.25, 0, 1] }}
+            transition={{ duration: 3, delay: 0.8, ease: [0.25, 0.25, 0, 1] }}
           >
             <img
               className="w-full h-full object-cover -mt-44 md:object-center lg:-translate-x-[20%] lg:m-0"
