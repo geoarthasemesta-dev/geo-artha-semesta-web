@@ -482,7 +482,7 @@ const AboutCompanySection: React.FC = () => {
                 return (
                   <div
                     key={index}
-                    className="hidden lg:flex col-span-1 justify-center relative"
+                    className="hidden lg:flex col-span-1 justify-center items-center relative"
                   >
                     {/* Animated Rings */}
                     <div className="border-2 border-white/30 rounded-full p-4 absolute w-[97%] h-[97%] flex items-center justify-center">
