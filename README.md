@@ -70,14 +70,14 @@ Create a `.env` file in the root directory with the following variables:
 
 ```env
 # SMTP Configuration for Email Sending
-SMTP_HOST="smtp.example.com"      # SMTP server hostname
-SMTP_PORT=587                      # SMTP port (587 for TLS, 465 for SSL)
-SMTP_USER="your-email@example.com" # SMTP authentication username
-SMTP_PASS="your-password"          # SMTP authentication password
-ADMIN_EMAIL="admin@example.com"    # Email address to receive contact form submissions
+SMTP_HOST="mail.geoarthasemesta.com"         # SMTP server hostname
+SMTP_PORT="465"                              # SMTP port (587 for TLS, 465 for SSL)
+SMTP_USER="no-reply@geoarthasemesta.com"     # SMTP authentication username
+SMTP_PASS="hostPTG@S99"                      # SMTP authentication password
+ADMIN_EMAIL="info@geoarthasemesta.com"       # Email address to receive contact form submissions
 
 # Database API Configuration
-BASE_API_ACCESS_DB="https://api.example.com"  # Base URL for database API (PHP backend)
+BASE_API_ACCESS_DB="https://geoarthasemesta.com/api"  # Base URL for database API (PHP backend)
 ```
 
 ### SMTP Configuration Examples
