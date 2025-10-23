@@ -5,6 +5,8 @@ import { useClientTranslation } from "@/lib/i18n-client";
 import { useLocale } from "../bilingual/TranslationProvider";
 
 const heroEngineers = "two-person.png";
+const bgImage = "bg-cover-section-hero.jpg";
+
 const HeroSection: React.FC = () => {
   const locale = useLocale();
   const { t } = useClientTranslation(locale);
@@ -38,8 +40,18 @@ const HeroSection: React.FC = () => {
   return (
     <AnimatedSection
       id="home"
-      className="pt-24 bg-gradient-to-tr from-[#233a65] to-[#122a53] pb-44 lg:pb-20 px-5 md:px-16 max-w-[100%] mx-auto relative min-h-screen flex lg:items-center overflow-hidden"
+      className="pt-24 min-h-[900px] pb-44 lg:pb-20 px-5 md:px-16 max-w-[100%] mx-auto relative lg:min-h-screen flex lg:items-center overflow-hidden"
     >
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={bgImage}
+          alt="Industrial offshore platform background"
+          className="w-full h-full object-cover"
+        />
+        {/* Gradient Overlay - darker on left for text readability */}
+      </div>
+
       {/* Main Content Container */}
       <div className="flex flex-col md:flex-row mt-[5%] text-center lg:text-left md:justify-center lg:items-center gap-8 z-20 w-full">
         <div className="space-y-6 lg:flex-1 p-[5%]">
@@ -117,43 +129,27 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      {/* view dekstop */}
-      <div className="lg:block hidden absolute bottom-0 right-0">
-        {/* Main Engineer Image */}
-        <div className="relative z-10 -mb-20 w-[90%]">
+      {/* Right Content - Engineers Image - Bottom Aligned */}
+      <motion.div
+        className="absolute z-10 left-1/2 -translate-x-1/2 lg:left-auto lg:right-10 lg:translate-x-0 bottom-0 w-4/6 lg:w-auto lg:max-w-2xl"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{
+          duration: 1,
+          delay: 1,
+          ease: [0.4, 0, 0.2, 1],
+        }}
+      >
+        <div className="flex justify-center w-full ">
           <img
             src={heroEngineers}
             alt="Two engineers wearing helmets, one holding a laptop, smiling in professional setting"
-            className=" max-w-full h-auto relative z-10"
-          />
-          <div className="absolute bottom-10 -right-2 w-6 h-6 bg-white/30 rounded-full" />
-        </div>
-
-        {/* Background Decorative Triangle */}
-        <div className="absolute -right-4 bottom-0 z-0 w-[95%]">
-          <img
-            src="triangle-sea.png"
-            alt="Decorative geometric element"
-            className="max-w-full h-auto"
+            className="w-full h-auto object-cover object-bottom sm:max-w-[75%]  md:max-w-[60%] lg:max-w-[100%]"
           />
         </div>
-      </div>
+      </motion.div>
 
-      {/* view tablet */}
-      <div className="flex lg:hidden absolute bottom-0 right-0 z-10 w-full justify-center">
-        <img
-          src={heroEngineers}
-          alt="Two engineers wearing helmets, one holding a laptop, smiling in professional setting"
-          className="w-[60%] h-full object-center"
-        />
-      </div>
-      <div className="flex lg:hidden absolute bottom-0 right-0 z-0 w-full justify-center">
-        <img
-          src="segitiga 1 (1).png"
-          alt="Decorative geometric element"
-          className="w-[100%] h-full object-center"
-        />
-      </div>
+      <div className="absolute z-0 inset-0 bg-gradient-to-t from-[#1e3a5f] via-[#1e3a5f]/90 lg:via-[#1e3a5f]/70 to-transparent"></div>
     </AnimatedSection>
   );
 };
