@@ -2,10 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import Footer from "./components/section/footer";
 import ContactSection from "./components/section/contact-section";
-import ProjectExperienceSection from "./components/section/project-experience-section";
 import EquipmentSection from "./components/section/equipment-section";
 import ServiceSection from "./components/section/service-section";
 import AboutCompanySection from "./components/section/about-company-section";
@@ -20,10 +19,25 @@ import ExperinceSection from "./components/section/new-experiece-section";
 const Index = () => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState<boolean>(false);
   const [isScrolling, setIsScrolling] = React.useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
   const locale = useLocale();
   const { t } = useClientTranslation(locale);
 
   const isTablet = useMediaQuery("(max-width: 1024px)");
+
+  // Handle scroll event to change navbar background
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Enhanced smooth scroll function
   const scrollToSection = (sectionId: string) => {
@@ -73,22 +87,6 @@ const Index = () => {
     setIsDrawerOpen(false); // close drawer after menu click
   };
 
-  // Alternative method using modern CSS scroll-behavior with offset
-  // const scrollToSectionCSS = (sectionId: string) => {
-  //   const element = document.getElementById(sectionId);
-  //   if (element) {
-  //     const navbarHeight = 64;
-  //     const elementPosition = element.offsetTop - navbarHeight;
-
-  //     window.scrollTo({
-  //       top: elementPosition,
-  //       behavior: "smooth",
-  //     });
-  //   }
-
-  //   setIsDrawerOpen(false);
-  // };
-
   // Add CSS for enhanced smooth scrolling
   React.useEffect(() => {
     // Add smooth scrolling to html element
@@ -119,8 +117,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen text-white bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 z-50 w-full backdrop-blur-lg shadow-lg bg-gradient-to-tr from-[#233a65] to-[#122a53] transition-all duration-300">
+      {/* Navigation with scroll effect */}
+      <nav
+        className={`fixed top-0 z-50 w-full backdrop-blur-lg shadow-lg transition-all duration-500 ${
+          isScrolled
+            ? "bg-gradient-to-tr from-[#233a65] to-[#122a53]"
+            : "bg-white/20"
+        }`}
+      >
         <div className="max-w-[100%] mx-auto px-5 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <a
@@ -215,45 +219,6 @@ const Index = () => {
         />
       )}
 
-      {/* Drawer */}
-      {/* {isDrawerOpen && (
-        <motion.div
-          initial={{ x: "100%" }}
-          animate={{ x: 0 }}
-          exit={{ x: "100%" }}
-          transition={{ type: "spring", damping: 25, stiffness: 200 }}
-          className="fixed top-0 right-0 h-full w-64 bg-gray-900 text-white shadow-xl z-50 flex flex-col p-6"
-        >
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-lg font-bold">{t("menu.drawerTitle")}</h2>
-            <button
-              onClick={() => setIsDrawerOpen(false)}
-              className="transition-transform hover:scale-110 hover:rotate-90"
-            >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-          <nav className="flex flex-col items-start space-y-6">
-            {[
-              { id: "home", label: t("menu.home") },
-              { id: "about", label: t("menu.about") },
-              { id: "services", label: t("menu.services") },
-              { id: "equipment", label: t("menu.equipment") },
-              { id: "experience", label: t("menu.experience") },
-              { id: "contact", label: t("menu.contact") },
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-left hover:text-primary transition-all duration-300 hover:translate-x-2 w-full"
-                disabled={isScrolling}
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
-        </motion.div>
-      )} */}
       <DrawerComponent
         isDrawerOpen={isDrawerOpen}
         setIsDrawerOpen={setIsDrawerOpen}
