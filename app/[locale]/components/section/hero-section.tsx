@@ -130,7 +130,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Right Content - Engineers Image - Bottom Aligned */}
-      <motion.div
+      {/* <motion.div
         className="absolute z-10 left-1/2 -translate-x-1/2 lg:left-auto lg:right-10 lg:translate-x-0 bottom-0 w-4/6 lg:w-auto lg:max-w-2xl"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -147,7 +147,7 @@ const HeroSection: React.FC = () => {
             className="w-full h-auto object-cover object-bottom sm:max-w-[75%]  md:max-w-[60%] lg:max-w-[100%]"
           />
         </div>
-      </motion.div>
+      </motion.div> */}
 
       <div className="absolute z-0 inset-0 bg-gradient-to-t from-[#1e3a5f] via-[#1e3a5f]/90 lg:via-[#1e3a5f]/70 to-transparent"></div>
     </AnimatedSection>
