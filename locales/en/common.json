@@ -18,29 +18,29 @@
   },
   "aboutSection": {
     "title": "About PT GEO Artha Semesta",
-    "description": "PT GEO Artha Semesta is Indonesian National Company specializing in professional subsea services: Subsea Survey, ROV, Diving, Subsea Inspection & Maintenance and Offshore Construction Support to Oil & Gas Industry. \n\r\n Founded and supported by experienced and professional personnel in Subsea services enable us to execute projects according to high standard quality which required by clients.",
+    "description": "PT GEO Artha Semesta is an Indonesian National Company specializing in professional Offshore and Subsea Services and Solutions; Offshore and Subsea O&M (Operation and Maintenance): Offshore and Subsea Construction Support. \n\r\n Founded and supported by experienced and professional personnel in Offshore & Subsea Industry in Indonesia enable us to execute projects according to high standard quality which required by Client.",
     "visionLabel": "Vision",
-    "vision": "Vision To become Indonesian leading Subsea Contractor by providing excellence Subsea solution; delivering world class assets and resources and ensuring project execution and adherence to the highest HSEQ Standards to Oil and Gas Industry.",
+    "vision": "To become Indonesian leading Offshore & Subsea Contractor by providing excellence solution; delivering world class assets and resources and ensuring project execution and adherence to the highest QAQC standard set by Clients",
     "missionLabel": "Mission",
     "mission": [
       {
         "id": 1,
-        "desc": "Delivering service to customer with quality and safety standard as per required in Contract."
+        "desc": "Delivering service to Client with quality and safety standard as per required by Contract;"
       },
       {
         "id": 2,
-        "desc": "Providing customer with best alternative technical and commercial solution to increase asset reliability by optimizing design, application of new equipment and new technology available"
+        "desc": "Providing customer with best alternative technical and commercial solution to increase asset reliability by optimizing design, application of new equipment and new technology available;"
       },
       {
         "id": 3,
-        "desc": "Building and Managing efficient and effective operation by employing personnel who strive and are reliable to every business challenge."
+        "desc": "Develop and manage efficient and effective operation by employing personnel who strive and are reliable to every business challenge."
       }
     ],
-    "ourCoreValueLabel": "Our CoreValue",
+    "ourCoreValueLabel": "Company Culture & Values",
     "ourCoreValue": [
       {
         "title": "Safety First",
-        "desc": " Promotes Health, Safety and Security is our Top Priority.",
+        "desc": " Promotes Health, Safety & Security is our top priority.",
         "icon": "Vector (2).svg"
       },
       {
@@ -50,7 +50,7 @@
       },
       {
         "title": "Innovation",
-        "desc": "Promotes the latest subsea technology to provide best and most effective solution.",
+        "desc": "Promotes the latest offshore and subsea technology to provide best and most effective solution.",
         "icon": "Vector (3).svg"
       },
       {
@@ -68,26 +68,24 @@
       {
         "id": 1,
         "icon": "/search_check.svg",
-        "title": "Subsea Survey & Positioning",
-        "desc": "Supported by most latest technology equipment and highly qualified surveyors and survey engineers, we provide accurate positioning, fundamental parameter for Subsea survey and engineering operations at sea."
+        "title": "Offshore and Subsea O&M",
+        "desc": "Offshore and Subsea O&M services includes: the critical inspection, repair, and upkeep of marine infrastructure like oil rigs, wind farms, and pipelines, to ensure safety, efficiency, and longevity through specialized services such as:",
+        "subDescription": [
+          "Structural repairs;",
+          "Corrosion Inspection thorough examination of structures and equipment to find, assess, and monitor corrosion using visual checks and advanced non-destructive testing (NDT) like ultrasonics, to ensure safety, preventing failures, and extending asset life by identifying issues like pitting, crevice, or galvanic corrosion, using tools from flashlights and scrapers to robotic crawlers and specialized probes;",
+          "Corrosion control including blasting/painting, grouting, Anode retrofit and anode sled installation to ensure asset integrity and operational safety;",
+          "Routine operations, using advanced techniques like Risk-Based Inspection (RBI) and specialized vessels to prevent downtime and maximize asset performance."
+        ]
       },
       {
         "id": 2,
-        "icon": "/nest_remote_comfort_sensor.svg",
-        "title": "Remotely Operated Vehicle",
-        "desc": "We provide a light and observation class ROV for inspection, survey and intervention in deep or hazardous area. \r\n\r\n Our SAAB Seaeye Falcon is widely regarded internationally as the standard observation and inspection ROV for operations to depth up to 300 meters with exceptional vehicle control and diagnostic data."
-      },
-      {
-        "id": 3,
-        "icon": "/scuba_diving.svg",
-        "title": "Subsea Inspection & Maintenance Support",
-        "desc": "We provide comprehensive subsea inspection, repair, and maintenance including but not limited to: Detailed underwater inspection, Pipeline/cable integrity-inspection/surveys, Anode retrofit and anode sled installation to ensure asset integrity and operational safety."
-      },
-      {
-        "id": 4,
         "icon": "/construction_24dp.svg ",
-        "title": "Offshore Construction Support",
-        "desc": "We provide varies of Offshore Construction Support Equipment to rent such as Underwater HP Water Jet, Pipe Cutting, Bolt Tensioner, Generator Set, Mooring Buoy, Underwater Lift Bag, and Gas Detector."
+        "title": "Offshore and Subsea Construction & Support",
+        "desc": "Offshore and Subsea Construction & Support services include:",
+        "subDescription": [
+          "Underwater Pipe and/or cable laying that involves specialized ships deploying armored fiber optic or power cables across the seabed, using plows to bury them in shallow areas for protection from fishing and anchors, while gravity handles deep-water placement, all managed with high precision for tension and route, connecting continents for global communication and energy. The process includes route surveying, burial, landing at onshore stations, and extensive permitting;",
+          "Varies of Offshore and Subsea construction support equipment to rent such as underwater HP Water Jet, Pipe Cutting, Bolt Tensioner, Generator Set, Mooring Buoy, Underwater Lift Bag, and Gas Detector."
+        ]
       }
     ]
   },
@@ -95,67 +93,103 @@
     "title": "Our Equipment",
     "viewMore": "View More",
     "viewLess": "View Less",
-    "seeDetail": "See Detail",
-    "seeLess": "See Less",
+    "viewDetails": "View Details",
+    "available": "Available",
+    "unavailable": "Not Available",
+    "descriptionLabel": "Description",
+    "equipmentIdLabel": "Equipment ID",
+    "categoryLabel": "Category",
+    "totalImagesLabel": "Total Images",
+    "contactUs": "Contact Us",
     "equipment": [
       {
         "id": 1,
-        "title": "ADL Vantage Pro:",
-        "desc": "Advanced, high-speed, high-power wireless datalink built to survive the rigors of GNSS/RTK surveying and precise positioning.",
-        "img": "dsv.svg",
-        "category": "Surveying and Positioning Equipment",
-        "availability": "Avilable"
+        "title": "SAAB Seaeye Falcon",
+        "description": "Our ROV System SAAB Seaeye Falcon is considered the most successful electric robotic system of observation class and proven in intricate and demanding missions across industry. It provides exceptional vehicle control and diagnostic data as well as the ability to customize the pilot display. It is lightweight, portable, compact and is rated to a depth of 300 m",
+        "images": [
+          "SAAB_Seaeye_Falcon_1.jpg",
+          "SAAB_Seaeye_Falcon_2.jpg",
+          "SAAB_Seaeye_Falcon_3.jpg"
+        ],
+        "category": "SAAB Seaeye Falcon",
+        "available": true
       },
       {
         "id": 2,
-        "title": "HPT 3000 USBL Tracking and Communication Transceiver:",
-        "desc": "For tracking underwater vehicles, divers, and equipment with a range up to 4000 m.",
-        "img": "underwater-cutting.svg",
-        "category": "Surveying and Positioning Equipment",
-        "availability": "Avilable"
+        "title": "Survey and Positioning Tools & Equipment",
+        "description": "Our Survey and Positioning Tools & Equipment are the most latest Survey and Positioning technology including: Gyrocompass, DGNSS Positioning System, USBL System, WSM Beacon, Telemetry, Navigation and Helsmann Software",
+        "images": [
+          "SURVEY_AND_POSITIONING_TOOL_&_EQUIPMENT_1.jpg",
+          "SURVEY_AND_POSITIONING_TOOL_&_EQUIPMENT_2.jpg",
+          "SURVEY_AND_POSITIONING_TOOL_&_EQUIPMENT_3.jpg"
+        ],
+        "category": "Survey and Positioning Tools & Equipment",
+        "available": true
       },
       {
         "id": 3,
-        "title": "Vector VS 1000 GNSS:",
-        "desc": "For Marine, Position & Heading Receiver.",
-        "img": "air-mixed-gas-diving-system.svg",
-        "category": "Surveying and Positioning Equipment",
-        "availability": "Avilable"
+        "title": "Gas Detector",
+        "description": "The Dragger X-Zone 5800 is a gas detector that can be used for the measurement of up to six gases. The internal pump and continuous power supply in the explosive area of Zone 0 extend the range of application in mobile gas detection technology",
+        "images": ["GAS_DETECTION_1.jpg"],
+        "category": "Gas Detector",
+        "available": true
       },
       {
         "id": 4,
-        "title": "Remotely Operated Vehicle (ROV):",
-        "desc": "Falcon Seaeye is considered the most successful underwater electric robotic system of observation class and proven in intricate and demanding missions across industry. It provides exceptional vehicle control and diagnostic data as well as the ability to customize the pilot display. It is lightweight, portable, compact, and is rated to a depth of 300 m.",
-        "img": "rov-image.jpeg",
-        "category": "Observation Class ROV",
-        "availability": "Avilable"
-      },
-      {
-        "id": 5,
-        "title": "Dragger X Zone 5800",
-        "desc": "The Dragger X-Zone 5800 is a gas detector that can be used for the measurement of up to six gases. The internal pump and continuous power supply in the explosive area of Zone 0 extend the range of application in mobile gas detection technology.",
-        "img": "Dragger X Zone 5800.jpeg",
-        "category": "Multi-gas detector / Area monitoring system",
-        "availability": "Avilable"
+        "title": "Mooring Set",
+        "description": "Mooring Set in Offshore & Subsea equipment functions as an anchoring system to maintain the position of the floating structure or unit so that it remains stable and does not shift due to the influence of the marine environment.",
+        "images": ["MOORING_SET_1.jpg"],
+        "category": "Mooring Set",
+        "available": true
       }
-    ],
-    "equipmentModal": {
-      "category": "Category",
-      "industrialEquipment": "Industrial Equipment",
-      "availability": "Availability",
-      "available": "Available",
-      "contactUs": "Contact Us",
-      "close": "Close"
-    }
+    ]
   },
   "projectExperienceSection": {
     "title": "Our Track Record",
     "project": [
       {
-        "image": "f8600e06b8c412d28cb27305b045f2177926770b.png",
-        "title": "Survey Spread",
+        "images": [
+          "survey_2025_2.jpg",
+          "survey_2025_1.jpg",
+          "survey_2025_3.jpg"
+        ],
+        "title": "Survey Spread - 2025",
         "subtitle": "",
-        "desc": "Performing a survey spread service by providing personel and tools including but not limited to DGNSS Positioning System, USBL System, WSM Beacon, Telemetry, Navigation and Helsmann Software."
+        "desc": "Survey Spread Services by providing personnel and Survey & Positioning Tools and Equipment",
+        "client": "PT Grindak Artha Prima",
+        "endUser": "PHE ONWJ"
+      }
+    ]
+  },
+  "certificationsSection": {
+    "title": "Legal & Certifications",
+    "subtitle": "Our commitment to quality, safety, and environmental standards",
+    "clickToView": "Click to view",
+    "fullCertificate": "Full certificate",
+    "numberLabel": "Number",
+    "issuerLabel": "Issuer",
+    "dateLabel": "Date",
+    "verifiedText": "All legal documents verified and registered with the Indonesian Government",
+    "certifications": [
+      {
+        "name": "NIB (Business Identification Number)",
+        "number": "2708240070424",
+        "description": "Risk-Based Business Licensing",
+        "issuer": "Government of the Republic of Indonesia",
+        "date": "August 27, 2024",
+        "validUntil": "July 25, 2025",
+        "images": ["nib-certification.png", "nib-lampiran.png"],
+        "color": "from-red-500 to-red-600"
+      },
+      {
+        "name": "AHU (General Legal Administration)",
+        "number": "AHU-0047528.AH.01.02.TAHUN 2025",
+        "description": "Approval of Amendment to Articles of Association of Limited Liability Company",
+        "issuer": "Decree of the Minister of Law of the Republic of Indonesia",
+        "date": "July 19, 2025",
+        "validUntil": "July 19, 2025",
+        "images": ["ahu-certification.png"],
+        "color": "from-blue-500 to-blue-600"
       }
     ]
   },

@@ -39,17 +39,6 @@ const Footer: React.FC = () => {
               </address>
             </div>
 
-            {/* Jakarta Office */}
-            <div className="space-y-2">
-              <h4 className="font-bold text-base md:text-lg">Jakarta Office</h4>
-              <address className="not-italic text-sm md:text-base leading-relaxed">
-                The Darmawangsa Square Lantai 2 Unit 47, Jl. Wijaya II No. 5,
-                <br />
-                RT.3/RW.1, Pulo, Kebayoran Baru, Jakarta Selatan, DKI Jakarta
-                12160
-              </address>
-            </div>
-
             {/* Workshop */}
             <div className="space-y-2">
               <h4 className="font-bold text-base md:text-lg">Workshop</h4>
@@ -58,6 +47,16 @@ const Footer: React.FC = () => {
                 <br />
                 Tangerang, Prov. Banten
               </address>
+            </div>
+
+            {/* Contact */}
+            <div className="space-y-2">
+              <h4 className="font-bold text-base md:text-lg">Contact Us</h4>
+              <p className="not-italic text-sm md:text-base leading-relaxed">
+                Phone/ Fax : +62-21-55691510 <br />
+                Email: info@geoarthasemesta.com <br />
+                <a href="/">Website: www.geoarthasemesta.com</a>
+              </p>
             </div>
           </div>
 

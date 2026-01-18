@@ -18,29 +18,29 @@
   },
   "aboutSection": {
     "title": "Tentang PT GEO Artha Semesta",
-    "description": "PT GEO Artha Semesta adalah Perusahaan Nasional Indonesia yang bergerak di bidang layanan bawah laut profesional: Survei Bawah Laut, ROV, Diving, Inspeksi & Pemeliharaan Bawah Laut, serta Dukungan Konstruksi Lepas Pantai untuk Industri Minyak & Gas. \n\r\n Didirikan dan didukung oleh tenaga berpengalaman serta profesional di bidang layanan bawah laut, kami mampu melaksanakan proyek sesuai standar kualitas tinggi yang dibutuhkan oleh para klien.",
+    "description": "PT GEO Artha Semesta adalah perusahaan nasional Indonesia yang mengkhususkan diri dalam Layanan dan Solusi Lepas Pantai dan Bawah Laut profesional; Operasi dan Pemeliharaan (O&M) Lepas Pantai dan Bawah Laut: Dukungan Konstruksi Lepas Pantai dan Bawah Laut. \n\r\n Didirikan dan didukung oleh personel yang berpengalaman dan profesional di Industri Lepas Pantai & Bawah Laut di Indonesia, memungkinkan kami untuk melaksanakan proyek sesuai dengan standar kualitas tinggi yang dibutuhkan oleh Klien.",
     "visionLabel": "Visi",
-    "vision": "Visi Menjadi Kontraktor Bawah Laut terkemuka di Indonesia dengan menyediakan solusi bawah laut yang unggul; menyediakan aset dan sumber daya kelas dunia, serta memastikan pelaksanaan proyek dan kepatuhan terhadap Standar HSEQ tertinggi untuk Industri Minyak dan Gas.",
+    "vision": "Menjadi kontraktor leading Offshore & Subsea terkemuka di Indonesia dengan memberikan solusi terbaik, menghadirkan aset dan sumber daya kelas dunia serta memastikan pelaksanaan proyek dan kepatuhan terhadap standar QAQC tertinggi yang ditetapkan oleh Klien.",
     "missionLabel": "Misi",
     "mission": [
       {
         "id": 1,
-        "desc": "Memberikan layanan kepada pelanggan dengan standar kualitas dan keselamatan sesuai yang dipersyaratkan dalam kontrak."
+        "desc": "Memberikan layanan kepada Klien dengan standar kualitas dan keselamatan sesuai dengan yang dipersyaratkan dalam Kontrak;"
       },
       {
         "id": 2,
-        "desc": "Menyediakan solusi teknis dan komersial terbaik bagi pelanggan untuk meningkatkan keandalan aset dengan mengoptimalkan desain, penerapan peralatan baru, dan teknologi terbaru yang tersedia."
+        "desc": "Memberikan solusi teknis dan komersial alternatif terbaik kepada pelanggan untuk meningkatkan keandalan aset dengan mengoptimalkan desain, penerapan peralatan baru, dan teknologi baru yang tersedia;"
       },
       {
         "id": 3,
-        "desc": "Membangun dan mengelola operasi yang efisien dan efektif dengan mempekerjakan tenaga kerja yang berkomitmen serta andal dalam menghadapi setiap tantangan bisnis"
+        "desc": "Mengembangkan dan mengelola operasi yang efisien dan efektif dengan mempekerjakan personel yang berdedikasi dan dapat diandalkan dalam menghadapi setiap tantangan bisnis."
       }
     ],
-    "ourCoreValueLabel": "Core Value",
+    "ourCoreValueLabel": "Budaya dan Nilai Perusahaan",
     "ourCoreValue": [
       {
         "title": "Keselamatan Utama",
-        "desc": "Mempromosikan Kesehatan, Keselamatan, dan Keamanan adalah Prioritas Utama kami.",
+        "desc": "Mempromosikan Kesehatan, Keselamatan & Keamanan adalah prioritas utama kami.",
         "icon": "Vector (2).svg"
       },
       {
@@ -50,12 +50,12 @@
       },
       {
         "title": "Inovasi",
-        "desc": "Mempromosikan teknologi bawah laut terbaru untuk memberikan solusi terbaik dan paling efektif.",
+        "desc": "Mempromosikan teknologi offshore and subsea terkini untuk memberikan solusi terbaik dan paling efektif.",
         "icon": "Vector (3).svg"
       },
       {
         "title": "Komitmen",
-        "desc": "Berkomitmen untuk memberikan Layanan Berkualitas Tinggi, Profesional dan Terpercaya.",
+        "desc": "Berkomitmen untuk memberikan Layanan Berkualitas Tinggi, Profesional, dan Terpercaya.",
         "icon": "Vector (4).svg"
       }
     ]
@@ -68,75 +68,79 @@
       {
         "id": 1,
         "icon": "/search_check.svg",
-        "title": "Subsea Survey & Positioning",
-        "desc": "Didukung oleh peralatan berteknologi terkini dan surveyor serta insinyur survei yang berkualifikasi tinggi, kami menyediakan posisi yang akurat, parameter fundamental untuk survei bawah laut dan operasi rekayasa di laut."
+        "title": "Offshore and Subsea O&M",
+        "desc": "Layanan Offshore and Subsea O&M mencakup: inspeksi kritis, perbaikan, dan pemeliharaan infrastruktur laut seperti anjungan minyak, ladang angin, dan pipa bawah laut, untuk memastikan keamanan, efisiensi, dan masa pakai yang lama melalui layanan khusus seperti:",
+        "subDescription": [
+          "Perbaikan struktural;",
+          "Corrosion Inspection: pemeriksaan menyeluruh terhadap struktur dan peralatan untuk menemukan, menilai, dan memantau korosi menggunakan pemeriksaan visual serta pengujian non-destruktif (NDT) tingkat lanjut seperti ultrasonik, guna memastikan keamanan, mencegah kegagalan, dan memperpanjang masa pakai aset dengan mengidentifikasi masalah seperti pitting, crevice, atau korosi galvanik, menggunakan peralatan mulai dari senter dan scraper hingga robotic crawlers dan probe khusus;",
+          "Pengendalian korosi termasuk blasting/painting, grouting, Anode retrofit, dan pemasangan anode sled untuk memastikan integritas aset dan keamanan operasional;",
+          "Operasi rutin, menggunakan teknik canggih seperti Risk-Based Inspection (RBI) dan kapal khusus untuk mencegah downtime serta memaksimalkan kinerja aset."
+        ]
       },
       {
         "id": 2,
-        "icon": "/nest_remote_comfort_sensor.svg",
-        "title": "Remotely Operated Vehicle",
-        "desc": "Kami menyediakan ROV kelas ringan dan observasi untuk inspeksi, survei, dan intervensi di area dalam atau berbahaya. \r\n\r\nDengan SAAB Seaeye Falcon kami diakui secara internasional sebagai standar ROV observasi dan inspeksi untuk operasi hingga kedalaman 300 meter, dengan kendali kendaraan yang luar biasa serta data diagnostik yang andal."
-      },
-      {
-        "id": 3,
-        "icon": "/scuba_diving.svg",
-        "title": "Dukungan Inspeksi & Pemeliharaan Bawah Laut",
-        "desc": "Kami menyediakan layanan inspeksi, perbaikan, dan pemeliharaan bawah laut yang komprehensif, termasuk namun tidak terbatas pada: inspeksi bawah air secara detail, inspeksi/survei integritas pipa/kabel, pemasangan ulang anoda serta instalasi anoda sled untuk memastikan integritas aset dan keselamatan operasional."
-      },
-      {
-        "id": 4,
-        "icon": "/construction_24dp.svg ",
-        "title": "Dukungan Konstruksi Lepas Pantai",
-        "desc": "Kami menyediakan berbagai peralatan pendukung konstruksi lepas pantai untuk disewa, seperti Underwater HP Water Jet, Pipe Cutting, Bolt Tensioner, Generator Set, Mooring Buoy, Underwater Lift Bag, dan Gas Detector."
+        "icon": "/construction_24dp.svg",
+        "title": "Offshore and Subsea Construction & Support",
+        "desc": "Layanan Offshore and Subsea Construction & Support meliputi:",
+        "subDescription": [
+          "Pemasangan pipa dan/atau kabel bawah laut yang melibatkan kapal khusus untuk menggelar serat optik lapis baja atau kabel daya di sepanjang dasar laut, menggunakan alat bajak (plow) untuk menanamnya di area dangkal guna perlindungan dari aktivitas memancing dan jangkar, sementara gravitasi menangani penempatan di perairan dalam, seluruhnya dikelola dengan presisi tinggi pada tegangan dan rute, menghubungkan benua untuk komunikasi dan energi global. Proses ini mencakup survei rute, penguburan kabel, pendaratan di stasiun pantai, dan perizinan yang luas;",
+          "Berbagai peralatan pendukung konstruksi Offshore and Subsea untuk disewakan seperti underwater HP Water Jet, Pipe Cutting, Bolt Tensioner, Generator Set, Mooring Buoy, Underwater Lift Bag, dan Gas Detector."
+        ]
       }
     ]
   },
   "equipmentSection": {
     "title": "Peralatan Kami",
-    "viewMore": "Semua Peralatan",
-    "viewLess": "Lebih Sedikit",
-    "seeDetail": "Lihat Detail",
-    "seeLess": "Lihat Lebih Sedikit",
+    "viewMore": "Lihat Lebih Banyak",
+    "viewLess": "Lihat Lebih Sedikit",
+    "viewDetails": "Lihat Detail",
+    "available": "Tersedia",
+    "unavailable": "Tidak Tersedia",
+    "descriptionLabel": "Deskripsi",
+    "equipmentIdLabel": "ID Peralatan",
+    "categoryLabel": "Kategori",
+    "totalImagesLabel": "Total Gambar",
+    "contactUs": "Hubungi Kami",
     "equipment": [
       {
         "id": 1,
-        "title": "ADL Vantage Pro:",
-        "desc": "Wireless datalink canggih berkecepatan tinggi dan berdaya tinggi, dirancang untuk tahan terhadap kondisi berat survei GNSS/RTK dan penentuan posisi presisi.",
-        "img": "dsv.svg",
-        "category": "Surveying and Positioning Equipment",
-        "availability": "Avilable"
+        "title": "SAAB Seaeye Falcon",
+        "description": "Sistem ROV SAAB Seaeye Falcon kami dianggap sebagai sistem robotik elektrik kelas observasi yang paling sukses dan terbukti dalam misi yang rumit dan menuntut di berbagai industri. Alat ini memberikan kontrol kendaraan dan data diagnostik yang luar biasa serta kemampuan untuk menyesuaikan tampilan pilot. Desainnya ringan, portabel, ringkas, dan memiliki rating kedalaman hingga 300 m.",
+        "images": [
+          "SAAB_Seaeye_Falcon_1.jpg",
+          "SAAB_Seaeye_Falcon_2.jpg",
+          "SAAB_Seaeye_Falcon_3.jpg"
+        ],
+        "category": "SAAB Seaeye Falcon",
+        "available": true
       },
       {
         "id": 2,
-        "title": "HPT 3000 USBL Tracking and Communication Transceiver:",
-        "desc": "Untuk pelacakan kendaraan bawah laut, penyelam, dan peralatan dengan jangkauan hingga 4000 m.",
-        "img": "underwater-cutting.svg",
-        "category": "Surveying and Positioning Equipment",
-        "availability": "Avilable"
+        "title": "Survey and Positioning Tools & Equipment",
+        "description": "Survey and Positioning Tools & Equipment kami menggunakan teknologi survei dan penentuan posisi terbaru termasuk: Gyrocompass, DGNSS Positioning System, USBL System, WSM Beacon, Telemetry, Navigation, dan Helsmann Software.",
+        "images": [
+          "SURVEY_AND_POSITIONING_TOOL_&_EQUIPMENT_1.jpg",
+          "SURVEY_AND_POSITIONING_TOOL_&_EQUIPMENT_2.jpg",
+          "SURVEY_AND_POSITIONING_TOOL_&_EQUIPMENT_3.jpg"
+        ],
+        "category": "Survey and Positioning Tools & Equipment",
+        "available": true
       },
       {
         "id": 3,
-        "title": "Vector VS 1000 GNSS:",
-        "desc": "Penerima GNSS untuk kelautan, posisi, dan arah (heading).",
-        "img": "air-mixed-gas-diving-system.svg",
-        "category": "Surveying and Positioning Equipment",
-        "availability": "Avilable"
+        "title": "Gas Detector",
+        "description": "Dragger X-Zone 5800 adalah alat pendeteksi gas yang dapat digunakan untuk mengukur hingga enam jenis gas. Pompa internal dan catu daya berkelanjutan di area eksplosif Zona 0 memperluas jangkauan aplikasi dalam teknologi deteksi gas bergerak.",
+        "images": ["GAS_DETECTION_1.jpg"],
+        "category": "Gas Detector",
+        "available": true
       },
       {
         "id": 4,
-        "title": "Remotely Operated Vehicle (ROV):",
-        "desc": "Falcon Seaeye dianggap sebagai sistem robotik listrik bawah laut kelas observasi yang paling sukses, serta telah terbukti dalam berbagai misi kompleks dan menantang di berbagai industri. ROV ini memberikan kendali kendaraan yang luar biasa dan data diagnostik yang akurat, serta kemampuan untuk menyesuaikan tampilan pilot. Desainnya ringan, portabel, ringkas, dan mampu beroperasi hingga kedalaman 300 meter.",
-        "img": "rov-image.jpeg",
-        "category": "Observation Class ROV",
-        "availability": "Avilable"
-      },
-      {
-        "id": 5,
-        "title": "Dragger X Zone 5800",
-        "desc": "Dragger X-Zone 5800 adalah alat deteksi gas yang dapat digunakan untuk mengukur hingga enam jenis gas. Pompa internal dan suplai daya berkelanjutan di area eksplosif Zona 0 memperluas jangkauan aplikasi dalam teknologi deteksi gas portabel.",
-        "img": "Dragger X Zone 5800.jpeg",
-        "category": "Multi-gas detector / Area monitoring system",
-        "availability": "Avilable"
+        "title": "Mooring Set",
+        "description": "Mooring Set pada peralatan Offshore & Subsea berfungsi sebagai sistem penambatan untuk menjaga posisi struktur atau unit terapung agar tetap stabil dan tidak bergeser akibat pengaruh lingkungan laut.",
+        "images": ["MOORING_SET_1.jpg"],
+        "category": "Mooring Set",
+        "available": true
       }
     ],
     "equipmentModal": {
@@ -152,10 +156,48 @@
     "title": "Rekam Jejak Kami",
     "project": [
       {
-        "image": "f8600e06b8c412d28cb27305b045f2177926770b.png",
-        "title": "Survey Spread",
+        "images": [
+          "survey_2025_2.jpg",
+          "survey_2025_1.jpg",
+          "survey_2025_3.jpg"
+        ],
+        "title": "Survey Spread - 2025",
         "subtitle": "",
-        "desc": "Melakukan layanan Survey Spread dengan menyediakan personel dan peralatan termasuk namun tidak terbatas pada Sistem Penentuan Posisi DGNSS, Sistem USBL, Beacon WSM, Telemetri, Navigasi, dan Perangkat Lunak Helsmann."
+        "desc": "Layanan Penyebaran Survei dengan menyediakan personel dan Peralatan dan Perlengkapan Survei & Pemosisian",
+        "client": "PT Grindak Artha Prima",
+        "endUser": "PHE ONWJ"
+      }
+    ]
+  },
+  "certificationsSection": {
+    "title": "Legalitas & Sertifikasi",
+    "subtitle": "Komitmen kami terhadap standar kualitas, keselamatan, dan lingkungan",
+    "clickToView": "Klik untuk melihat",
+    "fullCertificate": "Sertifikat lengkap",
+    "numberLabel": "Nomor",
+    "issuerLabel": "Penerbit",
+    "dateLabel": "Tanggal",
+    "verifiedText": "Semua dokumen legal terverifikasi dan terdaftar di Pemerintah Republik Indonesia",
+    "certifications": [
+      {
+        "name": "NIB (Nomor Induk Berusaha)",
+        "number": "2708240070424",
+        "description": "Perizinan Berusaha Berbasis Risiko",
+        "issuer": "Pemerintah Republik Indonesia",
+        "date": "27 Agustus 2024",
+        "validUntil": "25 Juli 2025",
+        "images": ["nib-certification.png", "nib-lampiran.png"],
+        "color": "from-red-500 to-red-600"
+      },
+      {
+        "name": "AHU (Administrasi Hukum Umum)",
+        "number": "AHU-0047528.AH.01.02.TAHUN 2025",
+        "description": "Persetujuan Perubahan Anggaran Dasar Perseroan Terbatas",
+        "issuer": "Keputusan Menteri Hukum Republik Indonesia",
+        "date": "19 Juli 2025",
+        "validUntil": "19 Juli 2025",
+        "images": ["ahu-certification.png"],
+        "color": "from-blue-500 to-blue-600"
       }
     ]
   },

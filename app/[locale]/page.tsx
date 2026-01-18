@@ -15,6 +15,9 @@ import { useClientTranslation } from "../../lib/i18n-client";
 import { useLocale } from "./components/bilingual/TranslationProvider";
 import DrawerComponent from "./components/drawer";
 import ExperinceSection from "./components/section/new-experiece-section";
+// import ManagementMessageSection from "./components/section/management-message-section";
+// import { CertificationsSection } from "./components/section/sertification-section";
+// import { TestimonialsSection } from "./components/section/testimoni-section";
 
 const Index = () => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState<boolean>(false);
@@ -241,10 +244,19 @@ const Index = () => {
         <section id="equipment">
           <EquipmentSection />
         </section>
+        {/* <section id="management-message">
+          <ManagementMessageSection />
+        </section> */}
         <section id="experience">
           {/* <ProjectExperienceSection /> */}
           <ExperinceSection />
         </section>
+        {/* <section id="experience">
+          <TestimonialsSection />
+        </section> */}
+        {/* <section id="experience">
+          <CertificationsSection />
+        </section> */}
         <section id="contact">
           <ContactSection />
         </section>
