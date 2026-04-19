@@ -212,9 +212,11 @@ const ExperienceSection = () => {
                   )}
 
                   {/* Description */}
-                  <p className="text-gray-200 text-sm md:text-lg lg:text-xl leading-relaxed max-w-2xl backdrop-blur-sm bg-white/5 p-4 md:p-6 rounded-xl border border-white/10 mb-6">
-                    {exp.desc}
-                  </p>
+                  {exp.desc && (
+                    <p className="text-gray-200 text-sm md:text-lg lg:text-xl leading-relaxed max-w-2xl backdrop-blur-sm bg-white/5 p-4 md:p-6 rounded-xl border border-white/10 mb-6">
+                      {exp.desc}
+                    </p>
+                  )}
 
                   {/* Client & End User Info */}
                   <div className="flex flex-col md:flex-row gap-4 md:gap-8">

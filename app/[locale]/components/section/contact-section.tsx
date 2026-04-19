@@ -204,7 +204,7 @@ const ContactSection: React.FC = () => {
                   htmlFor="subject"
                   className="block text-gray-700 font-medium mb-2"
                 >
-                  Subject (Optional)
+                  {t("contactSection.subject")} (Optional)
                 </label>
                 <div className="relative w-full">
                   <select
@@ -215,7 +215,9 @@ const ContactSection: React.FC = () => {
                     disabled={isLoading}
                     className="w-full appearance-none px-4 py-3 border border-[#233a65] text-black placeholder:text-gray-400 rounded-lg focus:outline-none focus:border-[#f97316] focus:ring-2 focus:ring-[#f97316]/20 bg-white/90 backdrop-blur-sm transition-all duration-300 hover:shadow-md pr-10 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <option value="">Pilih Subject</option>
+                    <option value="">
+                      {t("contactSection.subjectPlaceholder")}
+                    </option>
                     <option value="General Inquiry">General Inquiry</option>
                     <option value="Job Opportunity">Job Opportunity</option>
                     <option value="Partnership">Partnership</option>

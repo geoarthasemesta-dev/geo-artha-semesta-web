@@ -158,6 +158,30 @@
         "desc": "Survey Spread Services by providing personnel and Survey & Positioning Tools and Equipment",
         "client": "PT Grindak Artha Prima",
         "endUser": "PHE ONWJ"
+      },
+      {
+        "images": [
+          "ROV_Spread_Service.jpeg",
+          "survey_2025_1.jpg",
+          "survey_2025_3.jpg"
+        ],
+        "title": "ROV Spread Service",
+        "subtitle": "",
+        "desc": "",
+        "client": "Fabila Teknik Sejahtera",
+        "endUser": "PHE ONWJ"
+      },
+      {
+        "images": [
+          "Rental_Generator_Set 150_KVA.jpeg",
+          "survey_2025_1.jpg",
+          "survey_2025_3.jpg"
+        ],
+        "title": "Rental Generator Set 150 KVA",
+        "subtitle": "",
+        "desc": "",
+        "client": "Fabila Teknik Sejahtera",
+        "endUser": "PHE ONWJ"
       }
     ]
   },
@@ -204,6 +228,8 @@
     "message": "Message",
     "messagePlaceholder": "Write your message here",
     "button": "Submit",
-    "loading": "Sending..."
+    "loading": "Sending...",
+    "subject": "Subject",
+    "subjectPlaceholder": "Choose a subject"
   }
 }
