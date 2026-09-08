@@ -33,9 +33,10 @@ const Footer: React.FC = () => {
             <div className="space-y-2">
               <h4 className="font-bold text-base md:text-lg">Head Office</h4>
               <address className="not-italic text-sm md:text-base leading-relaxed">
-                Griya Loka BSD, Jl. Melinjo No. 11, Blok C.3, Rawa Buntu,
+                The Darmawangsa Square Lantai 2 Unit 47 Jl. Wijaya II No.5,
+                RT.3/RW.1 Kelurahan Pulo,
                 <br />
-                Serpong, Tangerang Selatan, Banten 15318
+                Kec. Kebayoran Baru Jakarta Selatan, Provinsi DKI Jakarta 12160
               </address>
             </div>
 
@@ -53,7 +54,7 @@ const Footer: React.FC = () => {
             <div className="space-y-2">
               <h4 className="font-bold text-base md:text-lg">Contact Us</h4>
               <p className="not-italic text-sm md:text-base leading-relaxed">
-                Phone/ Fax : +62-21-55691510 <br />
+                Phone/ Fax : 021-72786688 <br />
                 Email: info@geoarthasemesta.com <br />
                 <a href="/">Website: www.geoarthasemesta.com</a>
               </p>
