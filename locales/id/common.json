@@ -14,7 +14,25 @@
     "contactUs": "Hubungi Kami",
     "ourService": "Layanan Kami",
     "ourServiceDekstop": "Jelajahi Layanan Kami",
-    "contactUsDekstop": "Hubungi Kami Hari Ini"
+    "contactUsDekstop": "Hubungi Kami Hari Ini",
+    "slides": [
+      {
+        "title": "Keunggulan dalam Solusi Bawah Laut untuk Industri Minyak & Gas",
+        "description": "PT GEO Artha Semesta adalah perusahaan nasional terpercaya yang bergerak di bidang layanan bawah laut profesional, menghadirkan solusi berkualitas tinggi untuk industri minyak & gas."
+      },
+      {
+        "title": "Keahlian Terpercaya dalam Operasi Lepas Pantai",
+        "description": "Didukung oleh tenaga ahli berpengalaman, kami menghadirkan layanan survei bawah laut, operasi ROV, dan jasa penyelaman berkelas dunia di seluruh Indonesia."
+      },
+      {
+        "title": "Teknologi ROV & Bawah Air yang Canggih",
+        "description": "Dilengkapi dengan sistem ROV dan teknologi bawah air mutakhir untuk memastikan presisi dan keselamatan dalam setiap operasi bawah laut."
+      },
+      {
+        "title": "Layanan Survei & Inspeksi yang Komprehensif",
+        "description": "Menyediakan layanan survei hidrografi, inspeksi bawah air, dan pemosisian profesional dengan standar kualitas tertinggi."
+      }
+    ]
   },
   "aboutSection": {
     "title": "Tentang PT GEO Artha Semesta",

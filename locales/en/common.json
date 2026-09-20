@@ -14,7 +14,25 @@
     "contactUs": "Contact Us",
     "ourService": "Our Services",
     "ourServiceDekstop": "Explore Our Services",
-    "contactUsDekstop": "Contact Us Today"
+    "contactUsDekstop": "Contact Us Today",
+    "slides": [
+      {
+        "title": "Excellence in Subsea Solutions for the Oil & Gas Industry",
+        "description": "PT GEO Artha Semesta is a trusted Indonesian company specializing in professional subsea services, delivering high-quality solutions for the oil & gas industry."
+      },
+      {
+        "title": "Trusted Expertise in Offshore Operations",
+        "description": "Supported by experienced experts, we deliver world-class subsea survey, ROV operations, and diving services across Indonesia."
+      },
+      {
+        "title": "Advanced ROV & Underwater Technology",
+        "description": "Equipped with state-of-the-art ROV systems and underwater technology to ensure precision and safety in every subsea operation."
+      },
+      {
+        "title": "Comprehensive Survey & Inspection Services",
+        "description": "Providing professional hydrographic survey, underwater inspection, and positioning services with the highest quality standards."
+      }
+    ]
   },
   "aboutSection": {
     "title": "About PT GEO Artha Semesta",

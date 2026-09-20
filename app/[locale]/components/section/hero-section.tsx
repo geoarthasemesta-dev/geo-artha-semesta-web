@@ -1,11 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { AnimatedSection } from "./animated-section";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useClientTranslation } from "@/lib/i18n-client";
 import { useLocale } from "../bilingual/TranslationProvider";
-
-const heroEngineers = "two-person.png";
-const bgImage = "bg-cover-section-hero.jpg";
+import { HERO_SLIDES, SLIDE_INTERVAL_MS, SLIDE_TRANSITION_DURATION } from "./hero-slides-data";
 
 const HeroSection: React.FC = () => {
   const locale = useLocale();
@@ -33,27 +31,47 @@ const HeroSection: React.FC = () => {
 
     return () => clearTimeout(timeout);
   }, [index, isDeleting, fullText]);
+
+  // Slideshow effect for background image
+  const [currentSlide, setCurrentSlide] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, SLIDE_INTERVAL_MS);
+    return () => clearInterval(timer);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const activeSlide = HERO_SLIDES[currentSlide];
 
   return (
     <AnimatedSection
       id="home"
       className="pt-24 min-h-[900px] pb-44 lg:pb-20 px-5 md:px-16 max-w-[100%] mx-auto relative lg:min-h-screen flex lg:items-center overflow-hidden"
     >
-      {/* Background Image with Overlay */}
+      {/* Background Slideshow Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={bgImage}
-          alt="Industrial offshore platform background"
-          className="w-full h-full object-cover"
-        />
-        {/* Gradient Overlay - darker on left for text readability */}
+        <AnimatePresence mode="popLayout">
+          <motion.img
+            key={activeSlide.id}
+            src={activeSlide.image}
+            alt="Hero Background"
+            className="w-full h-full object-cover absolute inset-0"
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: SLIDE_TRANSITION_DURATION }}
+          />
+        </AnimatePresence>
       </div>
+      
+      <div className="absolute z-0 inset-0 bg-gradient-to-t from-[#1e3a5f] via-[#1e3a5f]/90 lg:via-[#1e3a5f]/70 to-transparent"></div>
 
       {/* Main Content Container */}
-      <div className="flex flex-col md:flex-row mt-[5%] text-center lg:text-left md:justify-center lg:items-center gap-8 z-20 w-full">
+      <div className="flex flex-col md:flex-row mt-[5%] text-center lg:text-left md:justify-center lg:items-center gap-8 z-20 w-full relative">
         <div className="space-y-6 lg:flex-1 p-[5%]">
           <motion.h1
             className="text-3xl sm:text-4xl font-extrabold max-w-xl leading-tight min-h-[120px] text-white md:min-h-[90px]"
@@ -128,28 +146,6 @@ const HeroSection: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* Right Content - Engineers Image - Bottom Aligned */}
-      {/* <motion.div
-        className="absolute z-10 left-1/2 -translate-x-1/2 lg:left-auto lg:right-10 lg:translate-x-0 bottom-0 w-4/6 lg:w-auto lg:max-w-2xl"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{
-          duration: 1,
-          delay: 1,
-          ease: [0.4, 0, 0.2, 1],
-        }}
-      >
-        <div className="flex justify-center w-full ">
-          <img
-            src={heroEngineers}
-            alt="Two engineers wearing helmets, one holding a laptop, smiling in professional setting"
-            className="w-full h-auto object-cover object-bottom sm:max-w-[75%]  md:max-w-[60%] lg:max-w-[100%]"
-          />
-        </div>
-      </motion.div> */}
-
-      <div className="absolute z-0 inset-0 bg-gradient-to-t from-[#1e3a5f] via-[#1e3a5f]/90 lg:via-[#1e3a5f]/70 to-transparent"></div>
     </AnimatedSection>
   );
 };

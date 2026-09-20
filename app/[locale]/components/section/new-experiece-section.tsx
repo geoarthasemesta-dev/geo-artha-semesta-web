@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronRight, ChevronLeft, Building2, Users } from "lucide-react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useLocale } from "../bilingual/TranslationProvider";
 import { useClientTranslation } from "@/lib/i18n-client";
 
@@ -40,6 +40,15 @@ const ExperienceSection = () => {
           : [],
       }))
     : [];
+
+  // Autoplay functionality
+  useEffect(() => {
+    if (projects.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % projects.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [projects.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % projects.length);
