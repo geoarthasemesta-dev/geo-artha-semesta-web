@@ -68,7 +68,11 @@ const HeroSection: React.FC = () => {
         </AnimatePresence>
       </div>
       
-      <div className="absolute z-0 inset-0 bg-gradient-to-t from-[#1e3a5f] via-[#1e3a5f]/90 lg:via-[#1e3a5f]/70 to-transparent"></div>
+      {/* Top Gradient Overlay for Navbar Visibility */}
+      <div className="absolute z-0 top-0 left-0 right-0 h-48 bg-gradient-to-b from-black/60 to-transparent"></div>
+
+      {/* Bottom Gradient Overlay */}
+      <div className="absolute z-0 inset-0 bg-gradient-to-t from-[#1e3a5f] via-[#1e3a5f]/90 lg:via-[#1e3a5f]/70 to-transparent pointer-events-none"></div>
 
       {/* Main Content Container */}
       <div className="flex flex-col md:flex-row mt-[5%] text-center lg:text-left md:justify-center lg:items-center gap-8 z-20 w-full relative">

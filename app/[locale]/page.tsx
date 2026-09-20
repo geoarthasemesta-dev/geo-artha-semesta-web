@@ -122,10 +122,10 @@ const Index = () => {
     <div className="min-h-screen text-white bg-white">
       {/* Navigation with scroll effect */}
       <nav
-        className={`fixed top-0 z-50 w-full backdrop-blur-lg shadow-lg transition-all duration-500 ${
+        className={`fixed top-0 z-50 w-full backdrop-blur-lg shadow-lg transition-colors duration-600 ease-in-out ${
           isScrolled
-            ? "bg-gradient-to-tr from-[#233a65] to-[#122a53]"
-            : "bg-white/20"
+            ? "bg-[#1e3a5f]/95"
+            : "bg-transparent"
         }`}
       >
         <div className="max-w-[100%] mx-auto px-5 sm:px-6 lg:px-8">
