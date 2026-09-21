@@ -214,6 +214,26 @@
     "verifiedText": "All legal documents verified and registered with the Indonesian Government",
     "certifications": [
       {
+        "name": "NIB (Business Identification Number)",
+        "number": "2708240070424",
+        "description": "Risk-Based Business Licensing",
+        "issuer": "Government of the Republic of Indonesia",
+        "date": "August 27, 2024",
+        "validUntil": "July 25, 2025",
+        "images": ["nib-certification.png", "nib-lampiran.png"],
+        "color": "from-red-500 to-red-600"
+      },
+      {
+        "name": "AHU (General Legal Administration)",
+        "number": "AHU-0047528.AH.01.02.TAHUN 2025",
+        "description": "Approval of Amendment to Articles of Association of Limited Liability Company",
+        "issuer": "Decree of the Minister of Law of the Republic of Indonesia",
+        "date": "July 19, 2025",
+        "validUntil": "July 19, 2025",
+        "images": ["ahu-certification.png"],
+        "color": "from-blue-500 to-blue-600"
+      },
+      {
         "name": "SPDA (Administrative Document Replacement Certificate)",
         "number": "92895/PHM/2026",
         "description": "Upstream Oil & Gas Goods/Services Provider Certificate - Verified through the SKK Migas CIVD system",

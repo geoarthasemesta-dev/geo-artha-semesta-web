@@ -16,7 +16,7 @@ import { useLocale } from "./components/bilingual/TranslationProvider";
 import DrawerComponent from "./components/drawer";
 import ExperinceSection from "./components/section/new-experiece-section";
 // import ManagementMessageSection from "./components/section/management-message-section";
-// import { CertificationsSection } from "./components/section/sertification-section";
+import { CertificationsSection } from "./components/section/sertification-section";
 // import { TestimonialsSection } from "./components/section/testimoni-section";
 
 const Index = () => {
@@ -241,6 +241,9 @@ const Index = () => {
         <section id="services">
           <ServiceSection />
         </section>
+        <section id="experience">
+          <CertificationsSection />
+        </section>
         <section id="equipment">
           <EquipmentSection />
         </section>
@@ -253,9 +256,6 @@ const Index = () => {
         </section>
         {/* <section id="experience">
           <TestimonialsSection />
-        </section> */}
-        {/* <section id="experience">
-          <CertificationsSection />
         </section> */}
         <section id="contact">
           <ContactSection />

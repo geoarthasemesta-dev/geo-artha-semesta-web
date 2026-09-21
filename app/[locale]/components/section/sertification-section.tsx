@@ -101,7 +101,7 @@ export const CertificationsSection: React.FC = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-[#f97316] to-[#ea580c] mx-auto mt-4"></div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="flex justify-center gap-8">
           {certifications.map((cert, index) => (
             <motion.div
               key={cert.name}

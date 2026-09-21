@@ -38,12 +38,10 @@ const ServiceSection: React.FC = () => {
     }));
   };
 
-  console.log("expandedServices[service.id]", expandedServices);
-
   return (
     <AnimatedSection
       id="services"
-      className="bg-white pb-60 md:pb-80 lg:pb-0 w-full max-w-[100%] mx-auto relative px-5 md:px-20 text-white overflow-hidden"
+      className="bg-white shadow-lg shadow-inner pb-60 md:pb-80 lg:pb-0 w-full max-w-[100%] mx-auto relative px-5 md:px-20 text-white overflow-hidden"
     >
       <div className="max-w-[100%] mx-auto px-5 lg:px-16 py-20 text-[#f97316] z-50">
         {/* Enhanced Title Animation */}
