@@ -228,7 +228,7 @@
         "issuer": "PT Pertamina Hulu Mahakam / SKK Migas",
         "date": "10 September 2026",
         "validUntil": "30 April 2027",
-        "images": ["SPDA_CIVD_SKK_MIGAS_PT_GEO ARTHA SEMESTA_page-0001.jpg", "SPDA_CIVD_SKK_MIGAS_PT_GEO ARTHA SEMESTA_page-0002.jpg", "SPDA_CIVD_SKK_MIGAS_PT_GEO ARTHA SEMESTA_page-0003.jpg", "SPDA_CIVD_SKK_MIGAS_PT_GEO ARTHA SEMESTA_page-0004.jpg", "SPDA_CIVD_SKK_MIGAS_PT_GEO ARTHA SEMESTA_page-0005.jpg", "SPDA_CIVD_SKK_MIGAS_PT_GEO ARTHA SEMESTA_page-0006.jpg"],
+        "images": ["SPDA_CIVD_SKK_MIGAS_PT_GEO ARTHA SEMESTA_page-0001.jpg", "SPDA_CIVD_SKK_MIGAS_PT_GEO ARTHA SEMESTA_page-0002.jpg", "SPDA_CIVD_SKK_MIGAS_PT_GEO ARTHA SEMESTA_page-0003.jpg"],
         "color": "from-green-500 to-green-600"
       }
     ]
