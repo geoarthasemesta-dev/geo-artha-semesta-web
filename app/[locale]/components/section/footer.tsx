@@ -59,6 +59,15 @@ const Footer: React.FC = () => {
                 <a href="/">Website: www.geoarthasemesta.com</a>
               </p>
             </div>
+
+            {/* ISO Certification Badge */}
+            <div className="mt-4 pt-4 border-t border-white/20">
+              <img
+                src="/iso-white.png"
+                alt="ISO Certified"
+                className="h-24 w-auto object-contain"
+              />
+            </div>
           </div>
 
           {/* Right Column - Navigation & Social */}
