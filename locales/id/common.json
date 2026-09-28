@@ -183,7 +183,8 @@
         "subtitle": "",
         "desc": "",
         "client": "PT Grindak Artha Prima",
-        "endUser": "PHE ONWJ"
+        "endUser": "PHE ONWJ",
+        "status": "Completed"
       },
       {
         "images": [
@@ -195,7 +196,8 @@
         "subtitle": "",
         "desc": "",
         "client": "Fabila Teknik Sejahtera",
-        "endUser": "PHE ONWJ"
+        "endUser": "PHE ONWJ",
+        "status": "Completed"
       },
       {
         "images": [
@@ -207,7 +209,17 @@
         "subtitle": "",
         "desc": "",
         "client": "Fabila Teknik Sejahtera",
-        "endUser": "PHE ONWJ"
+        "endUser": "PHE ONWJ",
+        "status": "Ongoing"
+      },
+      {
+        "images": ["Compressor Airman PDS 400S.webp"],
+        "title": "Compressor Airman PDS 400S",
+        "subtitle": "",
+        "desc": "",
+        "client": "Fabila Teknik Sejahtera",
+        "endUser": "PHE ONJW",
+        "status": "Ongoing"
       }
     ]
   },

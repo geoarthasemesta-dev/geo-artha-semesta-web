@@ -13,6 +13,7 @@ interface Project {
   subtitle: string;
   client: string;
   endUser: string;
+  status: "Completed" | "Ongoing";
 }
 
 const ExperienceSection = () => {
@@ -256,6 +257,19 @@ const ExperienceSection = () => {
                           </p>
                           <p className="text-white font-semibold text-sm md:text-base">
                             {exp.endUser}
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
+                    {exp.status && (
+                      <div className="flex min-w-40 items-center gap-3 backdrop-blur-sm bg-white/5 px-4 py-3 rounded-lg border border-white/10">
+                        <div>
+                          <p className="text-xs text-gray-400 uppercase tracking-wider">
+                            Status
+                          </p>
+                          <p className="text-white uppercase font-semibold text-sm md:text-base">
+                            {exp.status}
                           </p>
                         </div>
                       </div>
